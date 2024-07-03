@@ -1640,7 +1640,6 @@ entry(
 6 R  u0 p0 c0 {3,S}
 """,
     thermo=ThermoData(
-    thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([11.08, 14.41, 16.06, 16.83, 17.25, 17.21, 16.97], 'J/(mol*K)'),
         H298=(-65.13, 'kJ/mol'),
