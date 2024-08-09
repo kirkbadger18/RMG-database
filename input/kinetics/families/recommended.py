@@ -125,6 +125,7 @@ surface = {
     'Surface_Dissociation_Beta_vdW',
     'Surface_Abstraction_Beta_vdW',
     'Surface_Abstraction_Single_vdW',
+    'Surface_Dissociation_NO2'
 }
 
 # reaction families for halogen chemistry only
