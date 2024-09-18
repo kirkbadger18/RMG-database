@@ -125,7 +125,7 @@ L1: Combined
     L2: R-H
       L3: CR-H
       L3: C-H
-	L4: CH3
+	    L4: CH3
       L3: O-H
 L1: VacantSite
 """

@@ -19,16 +19,16 @@ so k should be in (m2/mol/s)
 
 template(reactants=["Combined", "VacantSite"], products=["Adsorbate1", "Adsorbate2"], ownReverse=False)
 
-reverse = "Surface_Association"
+reverse = "Surface_Association_NO2"
 
 reactantNum=2
 productNum=2
 
 recipe(actions=[
+    ['BREAK_BOND', '*1', 1, '*2'],
     ['FORM_BOND', '*2', 1, '*4'],
     ['CHANGE_BOND', '*2', 1, '*4'],
-    ['BREAK_BOND', '*1', 1, '*2'],
-    ['LOSE_PAIR', '*2', '1'],
+    ['LOSE_PAIR','*2','1'],
     ['GAIN_PAIR', '*1', '1'],
 ])
 
@@ -37,10 +37,10 @@ entry(
     label = "Combined",
     group =
 """
-1 *1 N   u0 p0 c+1 {2,S} {3,S} {4,D}
-2 *2 R   u0 p3 c-1 {1,S}
-3 *3 Xo  u0 {1,S}
-4    O   u0 p2 c0 {1,D}
+1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 R!H u0 px cx {1,S}
+3 *3 Xo u0 p0 c0 {1,[S,D]}
+4    R!H u0 px c0 {1,[S,D]}
 """,
     kinetics = None,
 )
@@ -50,7 +50,7 @@ entry(
     label="VacantSite",
     group =
 """
-1 *4 Xv u0
+1 *4 Xv u0 p0 c0
 """,
     kinetics = None,
 )

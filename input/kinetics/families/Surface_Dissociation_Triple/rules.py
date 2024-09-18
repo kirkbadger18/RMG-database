@@ -25,3 +25,4 @@ E0 and alpha are taken from:
 Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from transition state theory) divided by 2.39e-9 mol cm^-2 (surface site density of Pt(111)
     """
 )
+
