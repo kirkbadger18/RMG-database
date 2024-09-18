@@ -133,7 +133,7 @@ surface = {
     'Surface_vdW_to_charged_mono',
     'Surface_Adsorption_Double_Charged',
     'Surface_Dissociation_Beta_to_Charged',
-    'Surface_Charged_Bidentate_Dissociation',
+#    'Surface_Charged_Bidentate_Dissociation',
 }
 
 # reaction families for halogen chemistry only
