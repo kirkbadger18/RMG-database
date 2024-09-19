@@ -127,12 +127,12 @@ surface = {
     'Surface_Abstraction_Single_vdW',
     ### New from Kirk ##
 #    'Surface_Dissociation_Triple',
-    'Surface_Dissociation_Charge_Separation',
-    'Surface_Dissociation_Charge_Double',
-    'Surface_Dissociation_Charge_Single',
-    'Surface_vdW_to_charged_mono',
-    'Surface_Adsorption_Double_Charged',
-    'Surface_Dissociation_Beta_to_Charged',
+#    'Surface_Dissociation_Charge_Separation',
+#    'Surface_Dissociation_Charge_Double',
+#    'Surface_Dissociation_Charge_Single',
+#    'Surface_vdW_to_charged_mono',
+#    'Surface_Adsorption_Double_Charged',
+#    'Surface_Dissociation_Beta_to_Charged',
 #    'Surface_Charged_Bidentate_Dissociation',
 }
 
