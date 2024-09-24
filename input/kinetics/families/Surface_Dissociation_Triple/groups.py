@@ -46,9 +46,9 @@ entry(
     label = "Combined",
     group =
 """
-1 *1 R!H u0 px c0 {3,[S]} {2,[T]}
+1 *1 C u0 p0 c0 {3,[S]} {2,[T]}
 2 *2 R!H u0 px c0 {1,[T]}
-3 *3 Xo u0 {1,[S]}
+3 *3 Xo u0 p0 c0 {1,[S]}
 """,
     kinetics = None,
 )
@@ -101,12 +101,12 @@ L1: VacantSite
 #
 #)
 
-forbidden(
-    label = "wrongbonds",
-    group =
-"""
-1 *1 C ux px cx {3,[S,D,T,Q]} {2,[S,D]}
-2 *2 R!H ux px cx {1,[S,D]}
-3 *3 Xo u0 p0 c0 {1,[S,D,T,Q]}
-""",
-)
+#forbidden(
+#    label = "wrongbonds",
+#    group =
+#"""
+#1 *1 C ux px cx {3,[S,D,T,Q]} {2,[S,D]}
+#2 *2 R!H ux px cx {1,[S,D]}
+#3 *3 Xo u0 p0 c0 {1,[S,D,T,Q]}
+#""",
+#)
