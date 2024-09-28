@@ -119,14 +119,42 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 7,
+    label = "N-R",
+    group =
+"""
+1 *1 R!H u0 {2,[S,D]} {4,[D,T]}
+2 *2 N u0 p1 c0 {1,[S,D]} {3,S}
+3 *3 R u0 px c0 {2,S}
+4 *4 Xo  u0 {1,[D,T]}  
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 8,
+    label = "R-N",
+    group =
+"""
+1 *1 R!H u0 {2,[S,D,T]} {4,[D,T]}
+2 *2 R!H u0 px c0 {1,[S,D,T]} {3,S}
+3 *3 N u0 p1 c0 {2,S}
+4 *4 Xo  u0 {1,[D,T]}  
+""",
+    kinetics = None,
+)
+
 tree(
 """
 L1: Combined
     L2: R-H
+    L2: R-N
       L3: CR-H
       L3: C-H
 	    L4: CH3
       L3: O-H
+    L2: N-R
 L1: VacantSite
 """
 )

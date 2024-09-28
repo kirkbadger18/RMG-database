@@ -9,10 +9,10 @@ entry(
     index = 1,
     label = "Combined",
     kinetics = SurfaceArrheniusBEP(
-        A = (4.18e17, 'm^2/(mol*s)'),
+        A = (1.78e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.84,
-        E0 = (44.25, 'kcal/mol'),
+        alpha = 0.0,
+        E0 = (12, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

@@ -27,3 +27,20 @@ BEP values from "Combined DFT, Microkinetic, and Experimental Study of Ethanol S
 From Table 7 includes beta and alpha position. Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from transition state theory) divided by 2.39e-9 mol cm^-2 (surface site density of Pt(111)
 """
 )
+
+entry(
+    index = 2,
+    label = "N-R;Adsorbate1",
+    kinetics = SurfaceArrheniusBEP(
+        A = (2.62e18, 'm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.567,
+        E0 = (138, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u""" 
+"""
+)

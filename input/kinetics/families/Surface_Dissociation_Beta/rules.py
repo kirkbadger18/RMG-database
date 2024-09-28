@@ -84,3 +84,37 @@ Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from tr
 A divided by 3 because of reaction path degeneracy for =R-CH3 dissociation (3 equivalent H atoms)
 """
 )
+
+entry(
+    index = 5,
+    label = "N-R;VacantSite",
+     kinetics = SurfaceArrheniusBEP(
+        A = (2.62e18, 'm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.567,
+        E0 = (138, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 6,
+    label = "R-N;VacantSite",
+     kinetics = SurfaceArrheniusBEP(
+        A = (2.62e18, 'm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.567,
+        E0 = (138, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)

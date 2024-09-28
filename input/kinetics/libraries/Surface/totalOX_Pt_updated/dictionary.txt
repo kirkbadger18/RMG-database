@@ -107,12 +107,6 @@ C2H4
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {2,S}
 
-C2H2
-1 C u0 p0 c0 {2,T} {3,S}
-2 C u0 p0 c0 {1,T} {4,S}
-3 H u0 p0 c0 {1,S}
-4 H u0 p0 c0 {2,S}
-
 C2H4X
 1 C u0 p0 c0 {2,D} {3,S} {4,S}
 2 C u0 p0 c0 {1,D} {5,S} {6,S}
@@ -206,19 +200,6 @@ C2H6
 7 H u0 p0 c0 {2,S}
 8 H u0 p0 c0 {2,S}
 
-h-CCX
-1 C u0 p0 {2,S} {3,T}
-2 C u0 p0 {1,S} {4,T}
-3 X u0 p0 {1,T} 
-4 X u0 p0 {2,T}
-
-C2H2X
-1 C u0 p0 c0 {2,T} {3,S}
-2 C u0 p0 c0 {1,T} {4,S}
-3 H u0 p0 c0 {1,S}
-4 H u0 p0 c0 {2,S}
-5 X u0 p0 c0
-
 CH3XCO
 1 O u0 p2 c0 {3,D}
 2 C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
@@ -227,22 +208,4 @@ CH3XCO
 5 H u0 p0 c0 {2,S}
 6 H u0 p0 c0 {2,S}
 7 X u0 p0 c0 {3,S}
-
-N_X
-1 N u0 p1 c0 {2,T}
-2 X u0 p0 c0 {1,T}
-
-N2
-1 N u0 p1 c0 {2,T}
-2 N u0 p1 c0 {1,T}
-
-NO_X
-1 O u0 p2 c0 {2,D}
-2 N u0 p1 c0 {1,D} {3,S}
-3 X u0 p0 c0 {2,S}
-
-NO
-multiplicity 2
-1 O u0 p2 c0 {2,D}
-2 N u1 p1 c0 {1,D}
 
