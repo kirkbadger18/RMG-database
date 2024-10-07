@@ -2348,10 +2348,10 @@ entry(
     label = "C*N*",
     group =
 """
-1 * X u0 {3,[S,D,T]}
-2 X u0 {4,[S,D]}
-3 C  u0 {1,[S,D,T]} {4,[S,D]}
-4 N  u0 {2,[S,D]} {3,[S,D]}
+1 * X u0 p0 c0 {3,[S,D,T]}
+2 X u0 p0 c0 {4,[S,D]}
+3 C u0 p0 c0 {1,[S,D,T]} {4,[S,D]}
+4 N u0 px cx {2,[S,D]} {3,[S,D]}
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),

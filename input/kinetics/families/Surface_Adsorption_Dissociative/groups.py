@@ -39,8 +39,8 @@ entry(
     group =
 """
 multiplicity [1]
-1 *1 R u0 px cx {2,S}
-2 *2 R u0 px cx {1,S}
+1 *1 R u0 px c0 {2,S}
+2 *2 R u0 px c0 {1,S}
 """,
     kinetics = None,
 )

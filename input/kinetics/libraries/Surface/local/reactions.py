@@ -22,7 +22,6 @@ entry(
 CO adsorption on Pt(111). From W. A. Brown, R. Kose, D. A. King, "Femtomole Adsorption Calorimetry on Single-Crystal Surfaces" Chem. Rev. 1998, 98, 797-831
 """
 )
-
 entry(
     index = 2,
     label = "OCX + OX <=> CO2X + Pt",
@@ -506,25 +505,49 @@ This is R11 in Table S2 and S4
 
 entry(
     index = 44,
-    label = "NO_X <=> NO + Pt",
-    kinetics = SurfaceArrhenius(
-        A = (2.6E17, '1/s'),   
-        n = 0.0,
-        Ea = (184295.9, 'J/mol'),  
+    label = "NO + Pt <=> NO_X",
+    kinetics = StickingCoefficient(
+        A = 0.1556,
+        n = 0,
+        Ea = (0, 'J/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
     shortDesc = u"""Surface_Adsorption_Single""",
     longDesc = u"""
-"Structure- and Temperature-Dependence of Pt-Catalyzed Ammonia Oxidation Rates and Selectivities."
-DMa, Hanyu; Schneider, William F.(2019). ACS Catalysis, 9(3), 2407-2414. 
-https://doi.org/10.1021/acscatal.8b04251
+"Dual layer automotive ammonia oxidation catalysts: Experiments and computer simulation"
+Scheuer et al. Applied Catalysis B: Environmental 111–112 (2012) 445–455
+https://doi.org/10.1016/j.apcatb.2011.10.032
 
-Ea = 1.91eV = 184295.9J/mol
+This reaction used RMG's surface site density of Pt111 = 2.483E-9(mol/cm^2) to calculate the A factor.
+A = ((290/Pa)/s)*(2.483e-9(mol/cm^2))*sqrt(2*pi*(30(g/mol))*the molar gas constant*(298 kelvin)) = 0.1556
 
-This is R13 in Table S2 and S4
+This is R7 in Table 1 
 """,
     metal = "Pt",
-    facet = "111",
 )
 
+entry(
+    index = 45,
+    label = "NO2 + Pt <=> NO2_X",
+    kinetics = StickingCoefficient(
+        A = 1,
+        n = 0,
+        Ea = (0, 'J/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Surface_Adsorption_Single""",
+    longDesc = u"""
+"Dual layer automotive ammonia oxidation catalysts: Experiments and computer simulation"
+Scheuer et al. Applied Catalysis B: Environmental 111–112 (2012) 445–455
+https://doi.org/10.1016/j.apcatb.2011.10.032
+
+This reaction used RMG's surface site density of Pt111 = 2.483E-9(mol/cm^2) to calculate the A factor.
+A = ((48000/Pa)/s)*(2.483e-9(mol/cm^2))*sqrt(2*pi*(46(g/mol))*the molar gas constant*(298 kelvin)) = 31.894218
+Sticking coefficient is larger than 1, skip this reaction.
+
+This is R14 in Table 1 
+""",
+    metal = "Pt",
+)

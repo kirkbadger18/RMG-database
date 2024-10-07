@@ -109,7 +109,7 @@ surface = {
     'Surface_Adsorption_Dissociative',
     'Surface_Dissociation',
     'Surface_Abstraction',  
-    'Surface_Dissociation_Double_vdW',         
+#    'Surface_Dissociation_Double_vdW',         
     'Surface_Dissociation_vdW', ###
     'Surface_Abstraction_vdW',
     'Surface_Dissociation_Beta', 
@@ -118,13 +118,13 @@ surface = {
     'Surface_Monodentate_to_Bidentate',
     'Surface_Dissociation_to_Bidentate', 
     'Surface_vdW_to_Bidentate',
-    'Surface_Adsorption_Dissociative_Double',
+#    'Surface_Adsorption_Dissociative_Double',
     'Surface_Abstraction_Beta',
     'Surface_Abstraction_Beta_double_vdW',
     'Surface_Dissociation_Double',
     'Surface_Dissociation_Beta_vdW',
     'Surface_Abstraction_Beta_vdW',
-    'Surface_Abstraction_Single_vdW',
+#    'Surface_Abstraction_Single_vdW',
     ### New from Kirk ##
 #    'Surface_Dissociation_Triple',
     'Surface_Dissociation_Charge_Separation',
@@ -134,6 +134,9 @@ surface = {
     'Surface_Adsorption_Double_Charged',
     'Surface_Dissociation_Beta_to_Charged',
     'Surface_Charged_Bidentate_Dissociation',
+#    'Surface_Abstraction_Charge_Separation',
+#    'Surface_Abstraction_Charge_Single',
+#    'Surface_Monodentate_to_Charged_Bidentate',
 }
 
 # reaction families for halogen chemistry only

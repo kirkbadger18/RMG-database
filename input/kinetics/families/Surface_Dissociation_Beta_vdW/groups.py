@@ -34,9 +34,9 @@ entry(
     label = "Combined",
     group =
 """
-1 *1 R!H u0 px cx {2,S} {4,S}
-2 *2 R!H u0 px cx {1,S} {3,S}
-3 *3 R   u0 {2,S}
+1 *1 R!H u0 px c0 {2,S} {4,S}
+2 *2 R!H u0 px c0 {1,S} {3,S}
+3 *3 R   u0 c0 {2,S}
 4 *4 Xo  u0 {1,S}
 """,
     kinetics = None,

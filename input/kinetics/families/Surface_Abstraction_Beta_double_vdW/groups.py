@@ -36,8 +36,8 @@ entry(
     label = "Donating",
     group =
 """
-1 *1 R!H u0 px cx {2,[S,D]} {4,S}
-2 *2 R!H u0 px cx {1,[S,D]} {3,S}
+1 *1 R!H u0 px c0 {2,[S,D]} {4,S}
+2 *2 R!H u0 px c0 {1,[S,D]} {3,S}
 3 *3 R   u0 {2,S}
 4 *5 Xo  u0 {1,S}
 """,
@@ -50,7 +50,7 @@ entry(
     group =
 """
 1 *6 Xo  u0 {2,S}
-2 *4 R!H u0 px cx {1,S}	
+2 *4 R!H u0 px c0 {1,S}	
 """,
     kinetics = None,
 )

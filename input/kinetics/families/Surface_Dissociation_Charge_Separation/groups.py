@@ -7,9 +7,9 @@ longDesc = u"""
 Surface bond fission of one species into two distinct adsorbates. Atom *1 is bonded to the surface (*3). The image below shows a single bond, but single, double, and triple are possible. What matters is that the bond between *1 and *2 must be single.
     # NOTE: we should probably include vdW, too!
 
- *1--*2                 *1p    *2
-  |            ---->    |      ||
-~*3~ + ~*4~~           ~*3~ + ~*4~~
+   *1[+]--*2[-]          *1      *2
+    |            ---->    |      ||
+  ~*3~ + ~*4~~           ~*3~ + ~*4~~
 
 
 The rate, which should be in mol/m2/s,
