@@ -9,19 +9,51 @@ entry(
     index = 1,
     label = "Combined;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+        A = (1.39e22, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha = 0.791,
+        E0 = (129, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
     rank = 0,
     shortDesc = u"""Default""",
     longDesc = u"""
-E0 and alpha are taken from:
-"Universal Brønsted-Evans-Polanyi Relations for C–C, C–O, C–N, N–O, N–N, and O–O Dissociation Reactions" by Wang, ..., Norskov/ Catal. Lett (2011) 141:370-373, DOI: 10.1007/s10562-010-0477-y
-(actual value for E0 was 1.92 eV.)
-Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from transition state theory) divided by 2.39e-9 mol cm^-2 (surface site density of Pt(111)
-    """
+"""
 )
+
+entry(
+    index = 2,
+    label = "C;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (7.49E21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+
+entry(
+    index = 3,
+    label = "O;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (3.18e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 1.02,
+        E0 = (193, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+

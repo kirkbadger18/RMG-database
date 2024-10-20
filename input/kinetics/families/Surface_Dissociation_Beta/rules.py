@@ -85,14 +85,15 @@ A divided by 3 because of reaction path degeneracy for =R-CH3 dissociation (3 eq
 """
 )
 
+
 entry(
     index = 5,
-    label = "N-R;VacantSite",
-     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+    label = "C-N;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (7.49E21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -104,12 +105,12 @@ entry(
 
 entry(
     index = 6,
-    label = "R-N;VacantSite",
-     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+    label = "N-C;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (7.49E21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -118,3 +119,89 @@ entry(
     longDesc = u"""
 """
 )
+
+entry(
+    index = 7,
+    label = "N-H;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (2.72e22, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha =0.26,
+        E0 = (116, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 8,
+    label = "N-O;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (3.18e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 1.02,
+        E0 = (193, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 9,
+    label = "N-R;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (1.39e22, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.791,
+        E0 = (129, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 10,
+    label = "O-N;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (3.18e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 1.02,
+        E0 = (193, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 11,
+    label = "R-N;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (1.39e22, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.791,
+        E0 = (129, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+

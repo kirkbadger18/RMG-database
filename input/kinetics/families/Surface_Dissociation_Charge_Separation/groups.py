@@ -55,9 +55,63 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 3,
+    label = "C",
+    group =
+"""
+1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 C u0 px cx {1,S}
+3 *3 Xo u0 p0 c0 {1,[S,D]}
+4    R!H u0 px c0 {1,[S,D]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 4,
+    label = "N",
+    group =
+"""
+1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 N u0 px cx {1,S}
+3 *3 Xo u0 p0 c0 {1,[S,D]}
+4    R!H u0 px c0 {1,[S,D]}
+""",
+    kinetics = None,
+)
+entry(
+    index = 5,
+    label = "O",
+    group =
+"""
+1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 O u0 px cx {1,S}
+3 *3 Xo u0 p0 c0 {1,[S,D]}
+4    R!H u0 px c0 {1,[S,D]}
+""",
+    kinetics = None,
+)
+
 tree(
 """
 L1: Combined
+	L2: N
+	L2: C
+	L2: O
 L1: VacantSite
 """
 )
+
+#forbidden(
+#    label = "Bidentate",
+#    group =
+#"""
+#1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
+#2 *2 R!H u0 px cx {1,S} {5,[S,D,T]}
+#3 *3 Xo u0 p0 c0 {1,[S,D]}
+#4    R!H u0 px c0 {1,[S,D]}
+#5 Xo u0 {2,[S,D,T]}
+#""",
+#)
+

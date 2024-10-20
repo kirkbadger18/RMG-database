@@ -381,3 +381,15 @@ L1: Combined
 L1: VacantSite
 """
 )
+
+forbidden(
+    label = "Surf_Atom",
+    group =
+"""
+1 *1 R!H u0 c0 {2,S} {3,[S,D,T]}
+2 *2 R   u0 c0 {1,S} {4,[S,D,T]}
+3 *3 Xo  u0 {1,[S,D,T]}
+4 Xo u0 {2,[S,D,T]}
+""",
+)
+

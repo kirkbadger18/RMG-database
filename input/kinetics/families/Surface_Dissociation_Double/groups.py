@@ -115,6 +115,17 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 8,
+    label = "N=C",
+    group =
+"""
+1 *1 N  u0 p1 c0 {2,D} {3,S}
+2 *2 C  u0 p0 c0 {1,D}
+3 *3 Xo u0 p0 {1,S}
+""",
+    kinetics = None,
+)
 
 tree(
 """
@@ -124,6 +135,7 @@ L1: Combined
 	    L3: C=C
         L3: C=N
     L2: N=R
+	L3: N=C
 L1: VacantSite
 """
 )
@@ -144,8 +156,8 @@ forbidden(
     group =
 """
 1 *1 R!H u0 px c0 {2,D} {3,[S,D]}
-2 *2 R!H u0 px c0 {1,D}
+2 *2 R!H u0 px c0 {1,D} {4,[S,D]}
 3 *3 Xo  u0 {1,[S,D]}
-4    Xo  u0
+4    Xo  u0 {2,[S,D]} 
 """,
 )

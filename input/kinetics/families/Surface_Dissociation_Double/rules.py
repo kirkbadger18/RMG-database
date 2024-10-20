@@ -68,10 +68,10 @@ entry(
     index = 4,
     label = "C=N;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.94e18, 'm^2/(mol*s)'),
+        A = (7.49e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.36,
-        E0 = (142, 'kJ/mol'),
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -85,10 +85,27 @@ entry(
     index = 5,
     label = "N=R;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+        A = (1.39e22, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha = 0.791,
+        E0 = (129, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 6,
+    label = "N=C;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (7.49e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

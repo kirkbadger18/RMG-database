@@ -586,9 +586,9 @@ multiplicity [1]
 tree(
 """
 L1: Adsorbate
+    L2: CH4
     L2: H
         L3: H2
-        L3: CH4
         L3: NH3
     L2: C
         L3: CC

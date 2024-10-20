@@ -477,37 +477,9 @@ entry(
 
 entry(
     index = 43,
-    label = "N_X + N_X <=> N2 + Pt + Pt",
-    kinetics = SurfaceArrhenius(
-        A = (3.71E20, 'cm^2/(mol*s)'), 
-        n = 0.0,
-        Ea = (244119.7, 'J/mol'),  
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""N2 Surface_Adsorption_Dissociative""",
-    longDesc = u"""
-"Structure- and Temperature-Dependence of Pt-Catalyzed Ammonia Oxidation Rates and Selectivities."
-DMa, Hanyu; Schneider, William F.(2019). ACS Catalysis, 9(3), 2407-2414. 
-https://doi.org/10.1021/acscatal.8b04251
-
-This reaction used RMG's surface site density of Pt111 = 2.483E-9(mol/cm^2) to calculate the A factor.
-A = 9.2E12(1/s)/2.483E-9(mol/cm^2) = 3.71E21 cm^2/(mol*s)
-revised A from 3.71E21 to 3.71E20 based on the ammonia model
-
-Ea = 2.53eV = 244119.7J/mol
-
-This is R11 in Table S2 and S4
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 44,
-    label = "NO + Pt <=> NO_X",
+    label = "NO + Pt <=> NOX",
     kinetics = StickingCoefficient(
-        A = 0.1556,
+        A = 0.88,
         n = 0,
         Ea = (0, 'J/mol'),
         Tmin = (200, 'K'),
@@ -515,23 +487,31 @@ entry(
     ),
     shortDesc = u"""Surface_Adsorption_Single""",
     longDesc = u"""
-"Dual layer automotive ammonia oxidation catalysts: Experiments and computer simulation"
-Scheuer et al. Applied Catalysis B: Environmental 111–112 (2012) 445–455
-https://doi.org/10.1016/j.apcatb.2011.10.032
+""",
+    metal = "Pt",
+)
 
-This reaction used RMG's surface site density of Pt111 = 2.483E-9(mol/cm^2) to calculate the A factor.
-A = ((290/Pa)/s)*(2.483e-9(mol/cm^2))*sqrt(2*pi*(30(g/mol))*the molar gas constant*(298 kelvin)) = 0.1556
-
-This is R7 in Table 1 
+entry(
+    index = 44,
+    label = "NO2 + Pt <=> NO2X",
+    kinetics = StickingCoefficient(
+        A = .97,
+        n = 0,
+        Ea = (0, 'J/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Surface_Adsorption_Single""",
+    longDesc = u"""
 """,
     metal = "Pt",
 )
 
 entry(
     index = 45,
-    label = "NO2 + Pt <=> NO2_X",
+    label = "N2O + Pt <=> N2OX",
     kinetics = StickingCoefficient(
-        A = 1,
+        A = .005,
         n = 0,
         Ea = (0, 'J/mol'),
         Tmin = (200, 'K'),
@@ -539,15 +519,101 @@ entry(
     ),
     shortDesc = u"""Surface_Adsorption_Single""",
     longDesc = u"""
-"Dual layer automotive ammonia oxidation catalysts: Experiments and computer simulation"
-Scheuer et al. Applied Catalysis B: Environmental 111–112 (2012) 445–455
-https://doi.org/10.1016/j.apcatb.2011.10.032
-
-This reaction used RMG's surface site density of Pt111 = 2.483E-9(mol/cm^2) to calculate the A factor.
-A = ((48000/Pa)/s)*(2.483e-9(mol/cm^2))*sqrt(2*pi*(46(g/mol))*the molar gas constant*(298 kelvin)) = 31.894218
-Sticking coefficient is larger than 1, skip this reaction.
-
-This is R14 in Table 1 
 """,
     metal = "Pt",
 )
+
+entry(
+    index = 46,
+    label = "NH3 + Pt <=> NH3X",
+    kinetics = StickingCoefficient(
+        A = .73,
+        n = 0,
+        Ea = (0, 'J/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Surface_Adsorption_Single""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+)
+
+entry(
+    index = 47,
+    label = "N2 + Pt + Pt <=> NX + NX",
+    kinetics = StickingCoefficient(
+        A = 0.0001,
+        n = 0,
+        Ea = (154, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Surface_Adsorption_Single""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+)
+
+
+#entry(
+#    index = 58,
+#    label = "NX + NX <=> N2 +Pt + Pt",
+#    kinetics = SurfaceArrhenius(
+#        A = (3.71E20, 'cm^2/(mol*s)'), 
+#        n = 0.0,
+#        Ea = (244119.7, 'J/mol'),  
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""N2 Surface_Adsorption_Dissociative""",
+#    longDesc = u"""
+#"Structure- and Temperature-Dependence of Pt-Catalyzed Ammonia Oxidation Rates and Selectivities."
+#DMa, Hanyu; Schneider, William F.(2019). ACS Catalysis, 9(3), 2407-2414. 
+#https://doi.org/10.1021/acscatal.8b04251
+#
+#This reaction used RMG's surface site density of Pt111 = 2.483E-9(mol/cm^2) to calculate the A factor.
+#A = 9.2E12(1/s)/2.483E-9(mol/cm^2) = 3.71E21 cm^2/(mol*s)
+#revised A from 3.71E21 to 3.71E20 based on the ammonia model
+#
+#Ea = 2.53eV = 244119.7J/mol
+#
+#This is R11 in Table S2 and S4
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
+
+entry(
+    index = 48,
+    label = "NX + OX <=> NOX + Pt",
+    kinetics = SurfaceArrhenius(
+        A = (3.34E21, 'cm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (201.7, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Nitrogen/51""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+entry(
+    index = 49,
+    label = "NOX + OX <=> NO2X + Pt",
+    kinetics = SurfaceArrhenius(
+        A = (3.34E21, 'cm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (149.6, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Nitrogen/51""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+

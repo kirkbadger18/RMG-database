@@ -225,10 +225,10 @@ entry(
     index = 12,
     label = "C-N;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (1.57e18, 'm^2/(mol*s)'),
+        A = (7.49E21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.176,
-        E0 = (171, 'kJ/mol'),
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -240,12 +240,12 @@ entry(
 
 entry(
     index = 13,
-    label = "O-N;VacantSite",
+    label = "N-C;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+        A = (7.49E21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -257,12 +257,12 @@ entry(
 
 entry(
     index = 14,
-    label = "N-N;VacantSite",
+    label = "N-H;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+        A = (2.72e22, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha =0.26,
+        E0 = (116, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -274,12 +274,12 @@ entry(
 
 entry(
     index = 15,
-    label = "N-C;VacantSite",
+    label = "N-O;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (1.57e18, 'm^2/(mol*s)'),
+        A = (3.18e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.176,
-        E0 = (171, 'kJ/mol'),
+        alpha = 1.02,
+        E0 = (193, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -291,12 +291,12 @@ entry(
 
 entry(
     index = 16,
-    label = "N-H;VacantSite",
+    label = "N;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (3.97e18, 'm^2/(mol*s)'),
+        A = (1.39e22, 'cm^2/(mol*s)'),
         n = 0,
-        alpha =0.54,
-        E0 = (120, 'kJ/mol'),
+        alpha = 0.791,
+        E0 = (129, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -305,22 +305,4 @@ entry(
     longDesc = u"""
 """
 )
-
-entry(
-    index = 17,
-    label = "N-O;VacantSite",
-    kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
-        n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    rank = 0,
-    shortDesc = u"""Default""",
-    longDesc = u"""
-"""
-)
-
 
