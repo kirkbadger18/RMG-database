@@ -30,9 +30,9 @@ entry(
     label = "Monodentate",
     group =
 """
-1 *1 R!H     u0 {2,[D,T]} {3,[S,D]}
-2 *2 R!H     u0 {1,[D,T]} 
-3 *3 Xo      u0 {1,[S,D]}
+1 *1 R!H u0 px cx {2,[D,T]} {3,[S,D]}
+2 *2 R!H u0 px c0 {1,[D,T]} 
+3 *3 Xo  u0 p0 c0 {1,[S,D]}
 """,
     kinetics = None,
 )
@@ -42,7 +42,7 @@ entry(
     label="VacantSite",
     group =
 """
-1 *4 Xv u0
+1 *4 Xv u0 p0 c0
 """,
     kinetics = None,
 )
@@ -51,7 +51,6 @@ entry(
 tree(
 """
 L1: Monodentate
-
 L1: VacantSite
 """
 )

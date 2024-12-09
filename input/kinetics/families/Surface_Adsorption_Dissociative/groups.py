@@ -39,8 +39,8 @@ entry(
     group =
 """
 multiplicity [1]
-1 *1 R u0 px cx {2,S}
-2 *2 R u0 px cx {1,S}
+1 *1 R u0 px c0 {2,S}
+2 *2 R u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -215,7 +215,6 @@ entry(
     label = "CH4",
     group =
 """
-multiplicity [1]
 1 *1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2 *2 H u0 p0 c0 {1,S}
 3    H u0 p0 c0 {1,S}
@@ -230,7 +229,6 @@ entry(
     label = "C2H6",
     group =
 """
-multiplicity [1]
 1 *1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
 2    C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
 3 *2 H u0 p0 c0 {1,S}
@@ -248,7 +246,6 @@ entry(
     label = "C3H8",
     group =
 """
-multiplicity [1]
 1  *1 C u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
 2     C u0 p0 c0 {1,S} {3,S} {7,S} {8,S}
 3     C u0 p0 c0 {2,S} {9,S} {10,S} {11,S}
@@ -269,7 +266,6 @@ entry(
     label = "CH3OH",
     group =
 """
-multiplicity [1]
 1    O u0 p2 c0 {2,S} {6,S}
 2 *1 C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
 3 *2 H u0 p0 c0 {2,S}
@@ -286,7 +282,6 @@ entry(
     label = "C2H4",
     group =
 """
-multiplicity [1]
 1 *1 C u0 p0 c0 {2,D} {3,S} {4,S}
 2    C u0 p0 c0 {1,D} {5,S} {6,S}
 3 *2 H u0 p0 c0 {1,S}
@@ -528,5 +523,153 @@ forbidden(
     longDesc =
 u"""
 The adsorbing molecule should not have a charge on the surface.
+""",
+)
+
+forbidden(
+    label = "H2O",
+    group =
+"""
+multiplicity [1]
+1 *1 O u0 p2 c0 {2,S} {3,S}
+2 *2 H u0 p0 c0 {1,S}
+3    H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+H2O is assumed to physisorb and then dissociate, do not consider both pathways at the same time
+""",
+)
+
+forbidden(
+    label = "C2H4",
+    group =
+"""
+1 *1 C u0 p0 c0 {2,D} {3,S} {4,S}
+2    C u0 p0 c0 {1,D} {5,S} {6,S}
+3 *2 H u0 p0 c0 {1,S}
+4    H u0 p0 c0 {1,S}
+5    H u0 p0 c0 {2,S}
+6    H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+C2H4 is assumed to physisorb and then dissociate, do not consider both pathways at the same time
+""",
+)
+
+forbidden(
+    label = "C-C",
+    group =
+"""
+1 *1 C u0 {2,S}
+2 *2 C u0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+No C-C breaking upon dissociative adsorption
+""",
+)
+
+
+forbidden(
+    label = "H2CO",
+    group =
+"""
+1 *1 C u0 p0 c0 {2,D} {3,S} {4,S}
+2    O u0 p2 c0 {1,D}
+3 *2 H u0 p0 c0 {1,S}
+4    H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+H2CO is assumed to physisorb and then dissociate, do not consider both pathways at the same time
+""",
+)
+
+forbidden(
+    label = "CH3-OH",
+    group =
+"""
+1 *2 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+2 *1 O u0 p2 c0 {1,S} {6,S}
+3    H u0 p0 c0 {1,S}
+4    H u0 p0 c0 {1,S}
+5    H u0 p0 c0 {1,S}
+6    H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+CH3OH is assumed to physisorb and then dissociate, do not consider both pathways at the same time
+""",
+)
+
+forbidden(
+    label = "CH3O-H",
+    group =
+"""
+1    C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+2 *1 O u0 p2 c0 {1,S} {6,S}
+3    H u0 p0 c0 {1,S}
+4    H u0 p0 c0 {1,S}
+5    H u0 p0 c0 {1,S}
+6 *2 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+CH3OH is assumed to physisorb and then dissociate, do not consider both pathways at the same time
+""",
+)
+
+forbidden(
+    label = "O-O",
+    group =
+"""
+1 *1 O u0 p2 c0 {2,S}
+2 *2 O u0 p2 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Don't break O-O bonds for dissociative adsorption
+""",
+)
+
+forbidden(
+    label = "R3C-O",
+    group =
+"""
+1 *2 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+2 *1 O u0 p2 c0 {1,S}
+3    R u0 px c0 {1,S}
+4    R u0 px c0 {1,S}
+5    R u0 px c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Don't break RC-O bonds for dissociative adsorption
+""",
+)
+
+forbidden(
+    label = "R2C-O",
+    group =
+"""
+1 *2 C u0 p0 c0 {2,S} {3,S} {4,D}
+2 *1 O u0 p2 c0 {1,S}
+3    R u0 px c0 {1,S}
+4    R!H u0 px c0 {1,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+Don't break RC-O bonds for dissociative adsorption
 """,
 )

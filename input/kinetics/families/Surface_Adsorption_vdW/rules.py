@@ -22,5 +22,21 @@ entry(
     longDesc = u"""Made up"""
 )
 
+entry(
+    index = 2,
+    label = "CH4;VacantSite",
+    kinetics = StickingCoefficientBEP(
+        A = 1e-10,
+        n = 0,
+        alpha = 0,
+        E0 = (0, 'kcal/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""Made up"""
+)
+
 
 

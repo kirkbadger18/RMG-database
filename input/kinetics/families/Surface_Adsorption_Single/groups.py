@@ -33,7 +33,7 @@ entry(
     group =
 """
 multiplicity [2]
-1 *1 [H,C,N,O,S,F,Cl,Br] u1
+1 *1 R u1
 """,
     kinetics = None,
 )
@@ -214,7 +214,7 @@ L1: Adsorbate
     L2: C
         L3: C-H
         L3: CH=O
-        L3: CH2-H
+        L3: CH2-H 
     L2: N
         L3: N=O
     L2: O
@@ -248,15 +248,15 @@ e.g. this is not allowed:
 """,
 )
 
-forbidden(
-    label = "chargedSpecies",
-    group =
-"""
-1 *1 R u1 c[+1,-1]
-""",
-    shortDesc = u"""""",
-    longDesc =
-u"""
-The adsorbing atom should not have a charge
-""",
-)
+#forbidden(
+#    label = "chargedSpecies",
+#    group =
+#"""
+#1 *1 R u1 c[+1,-1]
+#""",
+#    shortDesc = u"""""",
+#    longDesc =
+#u"""
+#The adsorbing atom should not have a charge
+#""",
+#)

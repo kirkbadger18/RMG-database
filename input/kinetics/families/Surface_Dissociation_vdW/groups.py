@@ -35,8 +35,8 @@ entry(
     group =
 """
 multiplicity [1]
-1 *1 R!H u0 px cx {2,[S,D]}
-2 *2 R   u0 px cx {1,[S,D]}
+1 *1 R!H u0 px c0 {2,[S]}
+2 *2 R   u0 px c0 {1,[S]}
 3 *3 Xv  u0 p0 c0
 """,
     kinetics = None,
@@ -241,6 +241,20 @@ multiplicity [1]
     kinetics = None,
 )
 
+entry(
+    index = 16,
+    label = "N-R",
+    group =
+"""
+multiplicity [1]
+1 *1 R!H u0 px c0 {2,[S]}
+2 *2 N   u0 p1 c0 {1,[S]}
+3 *3 Xv  u0 p0 c0
+""",
+    kinetics = None,
+)
+
+
 tree(
 """
 L1: Combined
@@ -256,7 +270,8 @@ L1: Combined
         L3: N-H
     L2: C-R
         L3: C-C
-        L3: C-OH       
+        L3: C-OH      
+    L2: N-R
 L1: VacantSite
 """
 )

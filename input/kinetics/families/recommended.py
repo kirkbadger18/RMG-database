@@ -129,7 +129,20 @@ surface = {
     #'Surface_Carbonate_F_CO_Decomposition',
     #'Surface_Carbonate_2F_Decomposition',
     #'Surface_Carbonate_CO_Decomposition'
-}
+    ### New from Kirk ##
+#    'Surface_Dissociation_Triple',
+#    'Surface_Dissociation_Beta_Double',
+    'Surface_Dissociation_Charge_Separation',
+    'Surface_Dissociation_Charge_Double',
+    'Surface_Dissociation_Charge_Single',
+    'Surface_vdW_to_charged_mono',
+    'Surface_Adsorption_Double_Charged',
+    'Surface_Dissociation_Beta_to_Charged',
+    'Surface_Charged_Bidentate_Dissociation',
+#    'Surface_Abstraction_Charge_Separation',
+#    'Surface_Abstraction_Charge_Single',
+#    'Surface_Monodentate_to_Charged_Bidentate',
+    }
 
 # reaction families for halogen chemistry only
 halogens = {

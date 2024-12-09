@@ -63,3 +63,55 @@ E0 and alpha are taken from Table 5 for Pt from Sutton and Vlachos, "Ethanol Act
 Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from transition state theory) divided by 2.39e-9 mol cm^-2 (surface site density of Pt(111)
     """
 )
+
+entry(
+    index = 4,
+    label = "C=N;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (7.49e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 5,
+    label = "N=R;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (1.39e22, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.791,
+        E0 = (129, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+
+entry(
+    index = 6,
+    label = "N=C;VacantSite",
+    kinetics = SurfaceArrheniusBEP(
+        A = (7.49e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.994,
+        E0 = (145, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
+

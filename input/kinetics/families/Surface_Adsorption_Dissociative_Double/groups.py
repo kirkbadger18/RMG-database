@@ -37,8 +37,8 @@ entry(
     group =
 """
 multiplicity [1]
-1 *2 R!H u0 px cx {2,D}
-2 *3 R!H u0 px cx {1,D}
+1 *2 R!H u0 px c0 {2,D}
+2 *3 R!H u0 px c0 {1,D}
 """,
     kinetics = None,
 )

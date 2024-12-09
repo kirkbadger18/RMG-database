@@ -38,8 +38,8 @@ entry(
 """
 multiplicity [1]
 1 *1 Xv u0 p0 c0
-2 *2 R  u0 px cx {3,S}
-3 *3 R  u0 px cx {2,S}
+2 *2 R!H  u0 px c0 {3,S}
+3 *3 R  u0 px c0 {2,S}
 """,
     kinetics = None,
 )
@@ -50,7 +50,7 @@ entry(
     group =
 """
 1 *5 X   u0 p0 c0 {2,[D,T,Q]}
-2 *4 R!H ux px cx {1,[D,T,Q]}
+2 *4 R!H ux px c0 {1,[D,T,Q]}
 """,
     kinetics = None,
 )

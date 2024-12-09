@@ -34,9 +34,9 @@ entry(
     label = "Combined",
     group =
 """
-1 *1 R!H u0 px cx {2,S} {4,S}
-2 *2 R!H u0 px cx {1,S} {3,S}
-3 *3 R   u0 {2,S}
+1 *1 R!H u0 px c0 {2,S} {4,S}
+2 *2 R!H u0 px c0 {1,S} {3,S}
+3 *3 R   u0 c0 {2,S}
 4 *4 Xo  u0 {1,S}
 """,
     kinetics = None,
@@ -106,6 +106,31 @@ entry(
     kinetics = None,
 )
 
+entry(
+    index = 7,
+    label = "N-R",
+    group =
+"""
+1 *1 R!H u0 px c0 {2,S} {4,S}
+2 *2 N u0 p1 c0 {1,S} {3,S}
+3 *3 R   u0 c0 {2,S}
+4 *4 Xo  u0 {1,S}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 8,
+    label = "R-N",
+    group =
+"""
+1 *1 R!H u0 px c0 {2,S} {4,S}
+2 *2 R!H u0 px c0 {1,S} {3,S}
+3 *3 N   u0 p1 c0 {2,S}
+4 *4 Xo  u0 {1,S}
+""",
+    kinetics = None,
+)
 
 tree(
 """
@@ -114,6 +139,8 @@ L1: Combined
 	   L3: C-H
 		L4: CH3
 	   L3: O-H
+	L2: R-N
+	L2: N-R
 L1: VacantSite
 """
 )

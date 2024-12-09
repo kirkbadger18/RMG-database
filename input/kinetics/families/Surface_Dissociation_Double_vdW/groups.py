@@ -40,8 +40,8 @@ entry(
 """
 multiplicity [1]
 1 *1 Xv  u0 p0 c0
-2 *2 R!H u0 px cx {3,D}
-3 *3 R!H u0 px cx {2,D}
+2 *2 R!H u0 px c0 {3,D}
+3 *3 R!H u0 px c0 {2,D}
 """,
     kinetics = None,
 )

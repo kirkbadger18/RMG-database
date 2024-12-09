@@ -44,7 +44,7 @@ entry(
     index = 3,
     label = "CH4;VacantSite1;VacantSite2",
     kinetics = StickingCoefficientBEP(
-        A = 1.51,
+        A = 3.02,
         n = 0,
         alpha =0.0,
         E0 = (58.0, 'kJ/mol'),
@@ -55,7 +55,7 @@ entry(
     shortDesc = u"""CH4 dissociative adsorption""",
     longDesc = u"""
 Data from G.W. Cushing, J.K. Navin, S.B. Donald, L. Valdez, V. Johanek, I. Harrison "C-H Bond Activation of Light Alkanes on Pt(111): Dissociative Sticking Coefficients, Evans-Polanyi Relation, and Gas-Surface Energy Transfer" J. Phys. Chem. C, 2010, 114, 17222-17232, DOI:10.1021/jp105073.
-A (6.04) divided by 4 because of surface degeneracy for CH4
+A (6.04) divided by 2 because of surface degeneracy for CH4
 """
 )
 
