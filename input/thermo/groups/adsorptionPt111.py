@@ -1466,9 +1466,9 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([11.47, 13.93, 15.02, 15.51, 15.73, 15.66, 15.64], 'J/(mol*K)'),
-        H298=(-456.26, 'kJ/mol'),
-        S298=(-176.1, 'J/(mol*K)'),
+        Cpdata=([3.55, 5.56, 6.5, 6.97, 7.34, 7.44, 7.62], 'J/(mol*K)'),
+        H298=(-432.07, 'kJ/mol'),
+        S298=(-161.89, 'J/(mol*K)'),
     ),
     shortDesc=u"""Came from averaged on Pt(111)""",
     longDesc=u"""Calculated by Kirk Badger at Brown University using statistical mechanics (files: compute_NASA_for_Pt-adsorbates.ipynb and compute_NASA_for_Pt-gas_phase.ipynb).
@@ -1476,7 +1476,7 @@ entry(
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
             kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',fmax=1e-2.
-
+***********
    NR2
    |
    C
