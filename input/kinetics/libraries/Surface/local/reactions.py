@@ -590,7 +590,7 @@ entry(
 
 entry(
     index = 41,
-    label = "XNOH + Pt <=> XNO + XH",
+    label = "XNOH + Pt <=> XN + XOH",
     kinetics = SurfaceArrhenius(
         A = (4.42E21, 'cm^2/(mol*s)'),  
         n = 0.0,
