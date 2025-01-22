@@ -46,7 +46,7 @@ entry(
     kinetics = StickingCoefficientBEP(
         A = 3.02,
         n = 0,
-        alpha =0.0,
+        alpha = 0.0,
         E0 = (58.0, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -65,7 +65,7 @@ entry(
     kinetics = StickingCoefficientBEP(
         A = 0.342,
         n = 0,
-        alpha =0.0,
+        alpha = 0.0,
         E0 = (42.7, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -84,7 +84,7 @@ entry(
     kinetics = StickingCoefficientBEP(
         A = 0.198,
         n = 0,
-        alpha =0.0,
+        alpha = 0.0,
         E0 = (33.6, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -135,7 +135,7 @@ entry(
     kinetics = StickingCoefficientBEP(
         A = 0.033,
         n = 0,
-        alpha =0.76,
+        alpha = 0.76,
         E0 = (107.1, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),

@@ -12,7 +12,7 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (4.18e17, 'm^2/(mol*s)'),
         n = 0.,
-        alpha =0.68,
+        alpha = 0.68,
         E0 = (106.1, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -31,7 +31,7 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (4.18e17, 'm^2/(mol*s)'),
         n = 0.,
-        alpha =0.68,
+        alpha = 0.68,
         E0 = (106.1, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -50,7 +50,7 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (4.18e17, 'm^2/(mol*s)'),
         n = 0.,
-        alpha =0.02,
+        alpha = 0.02,
         E0 = (1.9, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -69,7 +69,7 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (1.393e17, 'm^2/(mol*s)'),
         n = 0.,
-        alpha =0.68,
+        alpha = 0.68,
         E0 = (106.1, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
@@ -89,7 +89,7 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (1.393e17, 'm^2/(mol*s)'),
         n = 0.,
-        alpha =0.68,
+        alpha = 0.68,
         E0 = (106.1, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
