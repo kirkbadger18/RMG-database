@@ -6352,7 +6352,7 @@ entry(
     label = "NNOX",
     molecule =
 """
-1 Xv  u0  p0  c0
+1 X  u0  p0  c0
 2 N  u0  p2  c-1  {3,D}
 3 N  u0  p1  c+1  {2,D} {4,D}
 4 O  u0  p0  c0  {3,D}
