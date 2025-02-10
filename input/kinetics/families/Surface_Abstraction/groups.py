@@ -105,8 +105,8 @@ entry(
     label = "C",
     group =
 """
-1 *1 C  ux px cx {2,[D,T,Q]}
-2 *2 Xo u0 p0 c0 {1,[D,T,Q]}
+1 *1 C  ux px cx {2,[D,T]}
+2 *2 Xo u0 p0 c0 {1,[D,T]}
 """,
     kinetics = None,
 )
