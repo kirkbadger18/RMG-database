@@ -210,7 +210,7 @@ L1: Donating
 )
 
 forbidden(
-    label = "Surf_Atom",
+    label = "Surf_Atom1",
     group =
 """
 1 *1 R!H u0 px c0 {2,S} {4,[D,T]}
@@ -222,7 +222,7 @@ forbidden(
 )
 
 forbidden(
-    label = "Surf_Atom",
+    label = "Surf_Atom2",
     group =
 """
 1 *1 R!H u0 px c0 {2,S} {4,[D,T]}
@@ -230,5 +230,16 @@ forbidden(
 3 *3 R   u0 {2,S}
 4 *5 Xo  u0 {1,[D,T]}
 5 Xo u0 {2,[S,D]}
+""",
+)
+
+forbidden(
+    label = "R not H",
+    group =
+"""
+1 *1 R!H u0 px c0 {2,S} {4,[D,T]}
+2 *2 R!H u0 px c0 {1,S} {3,S}
+3 *3 R!H   u0 {2,S}
+4 *5 Xo  u0 {1,[D,T]}
 """,
 )
