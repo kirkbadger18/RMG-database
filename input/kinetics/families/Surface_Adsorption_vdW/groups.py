@@ -76,8 +76,8 @@ entry(
     group =
 """
 multiplicity [1]
-1    C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2 *1 H u0 p0 c0 {1,S}
+1 *1 C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+2    H u0 p0 c0 {1,S}
 3    H u0 p0 c0 {1,S}
 4    H u0 p0 c0 {1,S}
 5    H u0 p0 c0 {1,S}
