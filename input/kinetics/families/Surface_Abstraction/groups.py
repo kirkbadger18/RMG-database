@@ -627,10 +627,10 @@ forbidden(
 )
 
 forbidden(
-    label = "non-H",
+    label = "C",
     group =
 """
-1 *4 R!H ux px c0 {2,S}
+1 *4 C ux px c0 {2,S}
 2 *3 R!H ux px c0 {1,S} {3,[S,D,T]}
 3 *5 Xo  u0 p0 c0 {2,[S,D,T]}
 """,

@@ -234,12 +234,12 @@ forbidden(
 )
 
 forbidden(
-    label = "R not H",
+    label = "C",
     group =
 """
 1 *1 R!H u0 px c0 {2,S} {4,[D,T]}
 2 *2 R!H u0 px c0 {1,S} {3,S}
-3 *3 R!H   u0 {2,S}
+3 *3 C   u0 {2,S}
 4 *5 Xo  u0 {1,[D,T]}
 """,
 )

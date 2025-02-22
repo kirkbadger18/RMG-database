@@ -549,3 +549,13 @@ L1: Adsorbate1
         L3: *#N
 """
 )
+
+forbidden(
+    label = "C",
+    group =
+"""
+1 *1 X u0 p0 c0 {2,vdW}
+2 *2 R!H  u0 px c0 {1,vdW} {3,S}
+3 *3 C  u0 px c0 {2,S}
+""",
+)
