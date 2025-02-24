@@ -142,7 +142,7 @@ surface = {
 #    'Surface_Dissociation_Double_Charge_Separation',
 #    'Surface_Abstraction_Charge_Separation',
 #    'Surface_Abstraction_Charge_Single',
-#    'Surface_Monodentate_to_Charged_Bidentate',
+    'Surface_Monodentate_to_Charged_Bidentate',
     }
 
 # reaction families for halogen chemistry only
