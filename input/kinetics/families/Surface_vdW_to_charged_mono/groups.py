@@ -30,6 +30,8 @@ recipe(actions=[
     ['CHANGE_BOND', '*1', 1, '*2'],
     ['GAIN_PAIR', '*3', 1],
     ['LOSE_PAIR', '*2', 1],
+    ['LOSE_CHARGE','*3','1'],
+    ['GAIN_CHARGE', '*2', '1'],
 ])
 
 entry(
@@ -38,8 +40,8 @@ entry(
     group =
 """
 1 *1 Xv u0
-2 *2 N  u0 p1 cx {3,D} {4,S}
-3 *3 R!H u0 px cx {2,D} 
+2 *2 R!H  u0 p1 c0 {3,D} {4,S}
+3 *3 R!H u0 px c0 {2,D} 
 4  R u0 px c0 {2,S}
 """,
     kinetics = None,

@@ -28,6 +28,8 @@ recipe(actions=[
     ['CHANGE_BOND', '*1', 1, '*3'],
     ['LOSE_PAIR','*1','1'],
     ['GAIN_PAIR', '*2', '1'],
+    ['LOSE_CHARGE','*2','1'],
+    ['GAIN_CHARGE', '*1', '1'],
 ])
 
 entry(
@@ -35,8 +37,8 @@ entry(
     label = "Adsorbate",
     group =
 """
-1 *1 N u0 p1 cx {2,D} {3,S}  
-2 *2 R!H u0 px cx {1,D} 
+1 *1 R!H u0 p1 c0 {2,D} {3,S}  
+2 *2 R!H u0 px c0 {1,D} 
 3    R u0 px c0 {1,S}
 """,
     kinetics = None,

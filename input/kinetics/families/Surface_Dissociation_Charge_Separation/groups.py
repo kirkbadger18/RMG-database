@@ -30,6 +30,8 @@ recipe(actions=[
     ['CHANGE_BOND', '*2', 1, '*4'],
     ['LOSE_PAIR','*2','1'],
     ['GAIN_PAIR', '*1', '1'],
+    ['LOSE_CHARGE','*1','1'],
+    ['GAIN_CHARGE', '*2', '1'],
 ])
 
 entry(
@@ -37,8 +39,8 @@ entry(
     label = "Combined",
     group =
 """
-1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
-2 *2 R!H u0 px cx {1,S}
+1 *1 R!H u0 px c+1 {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 R!H u0 px c-1 {1,S}
 3 *3 Xo u0 p0 c0 {1,[S,D]}
 4    R!H u0 px c0 {1,[S,D]}
 """,
@@ -60,8 +62,8 @@ entry(
     label = "C",
     group =
 """
-1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
-2 *2 C u0 px cx {1,S}
+1 *1 R!H u0 px c+1 {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 C u0 px c-1 {1,S}
 3 *3 Xo u0 p0 c0 {1,[S,D]}
 4    R!H u0 px c0 {1,[S,D]}
 """,
@@ -73,8 +75,8 @@ entry(
     label = "N",
     group =
 """
-1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
-2 *2 N u0 px cx {1,S}
+1 *1 R!H u0 px c+1 {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 N u0 px c-1 {1,S}
 3 *3 Xo u0 p0 c0 {1,[S,D]}
 4    R!H u0 px c0 {1,[S,D]}
 """,
@@ -85,8 +87,8 @@ entry(
     label = "O",
     group =
 """
-1 *1 N u0 p0 cx {2,S} {3,[S,D]} {4,[S,D]}
-2 *2 O u0 px cx {1,S}
+1 *1 R!H u0 px c+1 {2,S} {3,[S,D]} {4,[S,D]}
+2 *2 O u0 px c-1 {1,S}
 3 *3 Xo u0 p0 c0 {1,[S,D]}
 4    R!H u0 px c0 {1,[S,D]}
 """,

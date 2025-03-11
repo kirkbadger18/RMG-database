@@ -9,10 +9,10 @@ entry(
     index = 1,
     label = "Abstracting;Donating",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.62e18, 'm^2/(mol*s)'),
+        A = (2.48e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.567,
-        E0 = (138, 'kJ/mol'),
+        alpha = 0.39,
+        E0 = (92.5, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

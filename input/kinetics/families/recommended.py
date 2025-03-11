@@ -116,7 +116,7 @@ surface = {
     'Surface_Adsorption_Bidentate',
     'Surface_Bidentate_Dissociation',
     'Surface_Monodentate_to_Bidentate',
-    'Surface_Dissociation_to_Bidentate', 
+    #'Surface_Dissociation_to_Bidentate', 
     'Surface_vdW_to_Bidentate',
     #'Surface_Adsorption_Dissociative_Double',
     'Surface_Abstraction_Beta',
@@ -139,9 +139,9 @@ surface = {
     'Surface_Adsorption_Double_Charged',
     'Surface_Dissociation_Beta_to_Charged',
     'Surface_Charged_Bidentate_Dissociation',
-#    'Surface_Dissociation_Double_Charge_Separation',
-#    'Surface_Abstraction_Charge_Separation',
-#    'Surface_Abstraction_Charge_Single',
+    #'Surface_Dissociation_Double_Charge_Separation',
+    'Surface_Abstraction_Charge_Separation',
+    'Surface_Abstraction_Charge_Single',
     'Surface_Monodentate_to_Charged_Bidentate',
     }
 
