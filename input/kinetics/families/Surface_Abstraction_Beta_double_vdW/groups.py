@@ -116,7 +116,7 @@ L1: Abstracting
     L2: OH
 L1: Donating
     L2: R-C-H
-	L3: R-CH3
+	    L3: R-CH3
     L2: R-O-H
 """
 )

@@ -238,23 +238,6 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (2.48e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.791,
-        E0 = (129, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    rank = 0,
-    shortDesc = u"""Default""",
-    longDesc = u"""
-"""
-)
-
-entry(
-    index = 13,
-    label = "O;*N-H",
-    kinetics = SurfaceArrheniusBEP(
-        A = (2.48e21, 'cm^2/(mol*s)'),
-        n = 0,
         alpha = 0.39,
         E0 = (92.5, 'kJ/mol'),
         Tmin = (200, 'K'),
@@ -265,6 +248,7 @@ entry(
     longDesc = u"""
 """
 )
+
 entry(
     index = 14,
     label = "N;*OH",

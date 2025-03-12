@@ -111,8 +111,8 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (2.48e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.791,
-        E0 = (129, 'kJ/mol'),
+        alpha = 0.814,
+        E0 = (123, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -128,8 +128,8 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (2.48e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.791,
-        E0 = (129, 'kJ/mol'),
+        alpha = 0.814,
+        E0 = (123, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

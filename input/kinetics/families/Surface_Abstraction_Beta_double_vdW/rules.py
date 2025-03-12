@@ -102,3 +102,5 @@ From Table 7 includes beta and alpha position. Pre-exponential coefficient is ca
 Divided by 3 because of reaction path degeneracy for CH3 (3 equivalent H atoms)
 """
 )
+
+
