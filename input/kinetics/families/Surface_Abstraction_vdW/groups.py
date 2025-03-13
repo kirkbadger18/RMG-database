@@ -559,3 +559,15 @@ forbidden(
 3 *3 C  u0 px c0 {2,S}
 """,
 )
+
+forbidden(
+    label = "C",
+    group =
+"""
+1 *1 X u0 p0 c0 {2,vdW}
+2 *2 R!H  u0 px c0 {1,vdW} {3,S}
+3 *3 R  u0 px c0 {2,S} {4,[S,D,T]}
+4 Xo u0 c0 {3,[S,D,T]}
+""",
+)
+

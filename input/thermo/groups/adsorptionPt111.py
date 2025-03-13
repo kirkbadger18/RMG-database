@@ -3884,7 +3884,9 @@ entry(
 """,
     metal = "Pt",
     facet = "111",
-)entry(
+)
+
+entry(
     index = 122,
     label = "(ONOR)X",
     group =

@@ -147,7 +147,7 @@ L1: Donating
 )
 
 forbidden(
-    label = "Donating_Bidentate",
+    label = "Surface_atom",
     group =
 """
 1 *1 R!H u0 px cx {2,S} {4,S}
@@ -158,15 +158,6 @@ forbidden(
 """
 )
 
-#forbidden(
-#    label="Abstracting_Bidentate",
-#    group =
-#"""
-#1 *6 Xo  u0 {2,D}
-#2 *4 R!H u0 px cx {1,D}	
-#3    Xo  u0 
-#"""
-#)
 forbidden(
     label="C",
     group =

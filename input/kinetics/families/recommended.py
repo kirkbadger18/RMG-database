@@ -140,7 +140,7 @@ surface = {
     'Surface_Dissociation_Beta_to_Charged',
     'Surface_Charged_Bidentate_Dissociation',
     #'Surface_Dissociation_Double_Charge_Separation',
-    'Surface_Abstraction_Charge_Separation',
+    #'Surface_Abstraction_Charge_Separation',
     'Surface_Abstraction_Charge_Single',
     'Surface_Monodentate_to_Charged_Bidentate',
     }

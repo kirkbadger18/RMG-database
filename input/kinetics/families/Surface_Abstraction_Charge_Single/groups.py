@@ -66,14 +66,25 @@ L1: Donating
 )
 
 forbidden(
-    label = "Bidentate",
+    label = "Surface_Atom",
     group =
 """
-1 *4 R u0 px c0 {2,S}
-2 *3 N u0 p0 cx {1,S} {3,D} {4,S}
+1 *4 R u0 px c0 {2,S} {5,[S,D,T]}
+2 *3 R!H u0 px c+1 {1,S} {3,D} {4,S}
 3 *5 Xo u0 p0 c0 {2,D}
-4 *6 R u0 px cx {2,S}
-5 Xo u0
+4 *6 R!H u0 px c-1 {2,S}
+5 Xo u0 c0 {1,[S,D,T]}
+""",
+)
+
+forbidden(
+    label = "C",
+    group =
+"""
+1 *4 C u0 p0 c0 {2,S}
+2 *3 R!H u0 px c+1 {1,S} {3,D} {4,S}
+3 *5 Xo u0 p0 c0 {2,D}
+4 *6 R!H u0 px c-1 {2,S}
 """,
 )
 
