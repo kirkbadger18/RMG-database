@@ -26,7 +26,7 @@ Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from tr
 )
 
 entry(
-    index = 1,
+    index = 2,
     label = "Abstracting;*R-H",
     kinetics = SurfaceArrheniusBEP(
         A = (4.18e17, 'm^2/(mol*s)'),
@@ -250,7 +250,7 @@ entry(
 )
 
 entry(
-    index = 14,
+    index = 13,
     label = "N;*OH",
     kinetics = SurfaceArrheniusBEP(
         A = (2.48e21, 'cm^2/(mol*s)'),
