@@ -374,19 +374,19 @@ entry(
     longDesc = u"""my value"""
 )
 
-#entry(
-#    index = 27,
-#    label = "XCXC <=> XC + XC",
-#    kinetics = SurfaceArrhenius(
-#        A=(4.22E12, '1/s'),
-#        n = 0.0,
-#        Ea=(104, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""DFT value from Katrin Blondal"""
-#)
+entry(
+    index = 27,
+    label = "XCXC <=> XC + XC",
+    kinetics = SurfaceArrhenius(
+        A=(4.22E12, '1/s'),
+        n = 0.0,
+        Ea=(104, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""DFT value from Katrin Blondal"""
+)
 
 entry(
     index = 28,
@@ -416,47 +416,47 @@ entry(
     longDesc = u"""my value"""
 )
 
-#entry(
-#    index = 30,
-#    label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
-#    kinetics = SurfaceArrhenius(
-#        A=(1.07E+30, 'cm^4/(mol^2*s)'),
-#        n = 0,
-#        Ea=(103, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
-#)
+entry(
+    index = 30,
+    label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
+    kinetics = SurfaceArrhenius(
+        A=(1.07E+30, 'cm^4/(mol^2*s)'),
+        n = 0,
+        Ea=(103, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
+)
 
-#entry(
-#    index = 31,
-#    label = "CHCHX + Pt <=> XCHXCH",
-#    kinetics = SurfaceArrhenius(
-#        A=(5.0E21, 'cm^2/(mol*s)'),
-#        n = 0.0,
-#        Ea=(0.0, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
-#)
+entry(
+    index = 31,
+    label = "CHCHX + Pt <=> XCHXCH",
+    kinetics = SurfaceArrhenius(
+        A=(5.0E21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea=(0.0, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
+)
 
-#entry(
-#    index = 32,
-#    label = "C2H4X + Pt <=> XCH2XCH2",
-#    kinetics = SurfaceArrhenius(
-#        A=(1.78E21, 'cm^2/(mol*s)'),
-#        n = 0.0,
-#        Ea=(12, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Default""",
-#    longDesc = u"""DFT value from Katrin Blondal"""
-#)
+entry(
+    index = 32,
+    label = "C2H4X + Pt <=> XCH2XCH2",
+    kinetics = SurfaceArrhenius(
+        A=(1.78E21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea=(12, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""DFT value from Katrin Blondal"""
+)
 
 entry(
     index = 33,
@@ -539,21 +539,21 @@ entry(
     metal = "Pt",
 )
 
-entry(
-    index = 38,
-    label = "N2 + Pt + Pt <=> XN + XN",
-    kinetics = StickingCoefficient(
-        A = 0.0001,
-        n = 0,
-        Ea = (154, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Surface_Adsorption_Single""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-)
+#entry(
+#    index = 38,
+#    label = "N2 + Pt + Pt <=> XN + XN",
+#    kinetics = StickingCoefficient(
+#        A = 0.0001,
+#        n = 0,
+#        Ea = (154, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Surface_Adsorption_Single""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#)
 
 entry(
     index = 39,
