@@ -393,15 +393,15 @@ forbidden(
 """,
 )
 
-forbidden(
-    label = "beta_Surf_Atom",
-    group =
-"""
-1 *1 R!H u0 c0 {2,S} {3,[S,D,T]}
-2 *2 R   u0 c0 {1,S} {4,[S,D,T]}
-3 *3 Xo  u0 {1,[S,D,T]}
-4 R u0 c0 {2,[S,D,T]} {5,[S,D,T]}
-5 Xo u0 {4,[S,D,T]}
-""",
-)
+#forbidden(
+#    label = "beta_Surf_Atom",
+#    group =
+#"""
+#1 *1 R!H u0 c0 {2,S} {3,[S,D,T]}
+#2 *2 R   u0 c0 {1,S} {4,[S,D,T]}
+#3 *3 Xo  u0 {1,[S,D,T]}
+#4 R u0 c0 {2,[S,D,T]} {5,[S,D,T]}
+#5 Xo u0 {4,[S,D,T]}
+#""",
+#)
 
