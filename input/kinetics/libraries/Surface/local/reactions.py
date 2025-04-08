@@ -28,7 +28,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.133e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (89.7586504161358, 'kJ/mol'),
+        Ea=(92.15, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -70,7 +70,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(5.36e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (59.57231944799423, 'kJ/mol'),
+        Ea=(59.5, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -84,7 +84,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(2.94e13, '1/s'),
         n = 0,
-        Ea = (141.04116037130356, 'kJ/mol'),
+        Ea=(140.09, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -98,7 +98,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(3.09e15, '1/s'),
         n = 0,
-        Ea = (225.62227907776833, 'kJ/mol'),
+        Ea=(228.00, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -112,7 +112,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(2.32e30, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea = (47.890931747853756, 'kJ/mol'),
+        Ea=(49.00, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -126,7 +126,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.08e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (70.63945650786161, 'kJ/mol'),
+        Ea=(72.88, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -140,7 +140,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(8.5e12, '1/s'),
         n = 0,
-        Ea = (90.6391273111105, 'kJ/mol'),
+        Ea=(90.20, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -155,7 +155,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.87e30, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea = (46.184616250097754, 'kJ/mol'),
+        Ea=(46.13, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -169,7 +169,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(2.033e22, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (150.59382080376147, 'kJ/mol'),
+        Ea=(151.29, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -183,7 +183,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.4e12, '1/s'),
         n = 0,
-        Ea = (78.91320257216692, 'kJ/mol'),
+        Ea=(77.48, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -197,7 +197,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(2.225e20, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (31.77964893043041, 'kJ/mol'),
+        Ea=(36.36, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -211,7 +211,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(8.144e19, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (90.85509986579419, 'kJ/mol'),
+        Ea=(91.65, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -225,7 +225,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.921e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (85.07730926632881, 'kJ/mol'),
+        Ea=(84.11, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -239,7 +239,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.059e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (25.496534278094767, 'kJ/mol'),
+        Ea=(23.81, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -281,7 +281,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.337e20, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (87.44147800773382, 'kJ/mol'),
+        Ea=(87.97, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -295,7 +295,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(5.510e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (30.865869693756103, 'kJ/mol'),
+        Ea=(32.43, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -310,7 +310,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(9.748e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (132.98844825714826, 'kJ/mol'),
+        Ea=(131.94, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -324,7 +324,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(8.714e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (100.22441839367151, 'kJ/mol'),
+        Ea=(105.14, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -338,7 +338,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(8.712e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (154.3626144850254, 'kJ/mol'),
+        Ea=(153.19, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -352,7 +352,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(3.845e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (231.94285821557045, 'kJ/mol'),
+        Ea=(233.59, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -366,7 +366,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(3.449e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (178.15109522372484, 'kJ/mol'),
+        Ea=(175.88, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -374,19 +374,19 @@ entry(
     longDesc = u"""my value"""
 )
 
-entry(
-    index = 27,
-    label = "XCXC <=> XC + XC",
-    kinetics = SurfaceArrhenius(
-        A=(4.22E12, '1/s'),
-        n = 0.0,
-        Ea=(104, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""DFT value from Katrin Blondal"""
-)
+#entry(
+#    index = 27,
+#    label = "XCXC <=> XC + XC",
+#    kinetics = SurfaceArrhenius(
+#        A=(4.22E12, '1/s'),
+#        n = 0.0,
+#        Ea=(104, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""DFT value from Katrin Blondal"""
+#)
 
 entry(
     index = 28,
@@ -394,7 +394,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(5.19e19, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (32.55345641076565, 'kJ/mol'),
+        Ea=(34, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -408,7 +408,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(9.69e21, 'cm^2/(mol*s)'),
         n = 0,
-        Ea = (42.11709717661142, 'kJ/mol'),
+        Ea=(48, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -416,47 +416,47 @@ entry(
     longDesc = u"""my value"""
 )
 
-entry(
-    index = 30,
-    label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
-    kinetics = SurfaceArrhenius(
-        A=(1.07E+30, 'cm^4/(mol^2*s)'),
-        n = 0,
-        Ea=(103, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
-)
+#entry(
+#    index = 30,
+#    label = "XCCH3 + Pt + Pt <=> XCXCH2 + XH",
+#    kinetics = SurfaceArrhenius(
+#        A=(1.07E+30, 'cm^4/(mol^2*s)'),
+#        n = 0,
+#        Ea=(103, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""my value, it is endothermic, but kept in this direction, since we are going to switch it later afterwards due to the coverage dependence of CCH3"""
+#)
 
-entry(
-    index = 31,
-    label = "CHCHX + Pt <=> XCHXCH",
-    kinetics = SurfaceArrhenius(
-        A=(5.0E21, 'cm^2/(mol*s)'),
-        n = 0.0,
-        Ea=(0.0, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
-)
+#entry(
+#    index = 31,
+#    label = "CHCHX + Pt <=> XCHXCH",
+#    kinetics = SurfaceArrhenius(
+#        A=(5.0E21, 'cm^2/(mol*s)'),
+#        n = 0.0,
+#        Ea=(0.0, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
+#)
 
-entry(
-    index = 32,
-    label = "C2H4X + Pt <=> XCH2XCH2",
-    kinetics = SurfaceArrhenius(
-        A=(1.78E21, 'cm^2/(mol*s)'),
-        n = 0.0,
-        Ea=(12, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""DFT value from Katrin Blondal"""
-)
+#entry(
+#    index = 32,
+#    label = "C2H4X + Pt <=> XCH2XCH2",
+#    kinetics = SurfaceArrhenius(
+#        A=(1.78E21, 'cm^2/(mol*s)'),
+#        n = 0.0,
+#        Ea=(12, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""DFT value from Katrin Blondal"""
+#)
 
 entry(
     index = 33,
@@ -539,21 +539,21 @@ entry(
     metal = "Pt",
 )
 
-#entry(
-#    index = 38,
-#    label = "N2 + Pt + Pt <=> XN + XN",
-#    kinetics = StickingCoefficient(
-#        A = 0.0001,
-#        n = 0,
-#        Ea = (154, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Surface_Adsorption_Single""",
-#    longDesc = u"""
-#""",
-#    metal = "Pt",
-#)
+entry(
+    index = 38,
+    label = "N2 + Pt + Pt <=> XN + XN",
+    kinetics = StickingCoefficient(
+        A = 0.0001,
+        n = 0,
+        Ea = (154, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Surface_Adsorption_Single""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+)
 
 entry(
     index = 39,
@@ -561,7 +561,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (2.99E21, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (217.239971190691, 'kJ/mol'),
+        Ea = (214, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -571,7 +571,6 @@ entry(
     metal = "Pt",
     facet = "111",
 )
-
 entry(
     index = 40,
     label = "XNO2 + Pt <=> XNO + XO",
@@ -595,7 +594,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (4.56E21, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (85.66976892203093, 'kJ/mol'),
+        Ea = (83, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -606,22 +605,22 @@ entry(
     facet = "111",
 )
 
-#entry(
-#    index = 42,
-#    label = "XOXNO  <=> XNO2 + Pt",
-#    kinetics = SurfaceArrhenius(
-#        A = (6.63E11, 'cm^2/(mol*s)'),  
-#        n = 0.0,
-#        Ea = (6, 'kJ/mol'),  
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Nitrogen/51""",
-#    longDesc = u"""
-#""",
-#    metal = "Pt",
-#    facet = "111",
-#)
+entry(
+    index = 42,
+    label = "XOXNO  <=> XNO2 + Pt",
+    kinetics = SurfaceArrhenius(
+        A = (6.63E11, 'cm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (6, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Nitrogen/51""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
 
 entry(
     index = 43,
@@ -629,7 +628,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (5.44E22, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (143.7167221903801, 'kJ/mol'),
+        Ea = (138, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -646,7 +645,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (2.04E22, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (118.74255970865488, 'kJ/mol'),
+        Ea = (113, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -663,7 +662,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (3.00E22, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (94.46104251593351, 'kJ/mol'),
+        Ea = (89, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -680,7 +679,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (1.70E22, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (186.72720339894295, 'kJ/mol'),
+        Ea = (181, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -697,7 +696,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (1.44E22, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (178.104965262115, 'kJ/mol'),
+        Ea = (172, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -714,7 +713,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (3.38E21, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (173.42062543332577, 'kJ/mol'),
+        Ea = (155, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -731,7 +730,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (1.79E20, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (257.3345665037632, 'kJ/mol'),
+        Ea = (250, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -742,20 +741,20 @@ entry(
     facet = "111",
 )
 
-#entry(
-#    index = 50,
-#    label = "XOXNO <=> XNO + XO",
-#    kinetics = SurfaceArrhenius(
-#        A = (3.30E12, 'cm^2/(mol*s)'),  
-#        n = 0.0,
-#        Ea = (68.19834292680025, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
-#    longDesc = u"""
-#""",
-#    metal = "Pt",
-#    facet = "111",
-#)
+entry(
+    index = 50,
+    label = "XOXNO <=> XNO + XO",
+    kinetics = SurfaceArrhenius(
+        A = (3.30E12, 'cm^2/(mol*s)'),  
+        n = 0.0,
+        Ea = (62, 'kJ/mol'),  
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
 

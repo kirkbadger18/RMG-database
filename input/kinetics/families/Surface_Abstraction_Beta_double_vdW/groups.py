@@ -121,18 +121,19 @@ L1: Donating
 """
 )
 
+#forbidden(
+#    label = "C",
+#    group =
+#"""
+#1 *1 R!H u0 px c0 {2,[S,D]} {4,S}
+#2 *2 R!H u0 px c0 {1,[S,D]} {3,S}
+#3 *3 C   u0 {2,S}
+#4 *5 Xo  u0 {1,S}
+#""",
+#)
+
 forbidden(
-    label = "C",
-    group =
-"""
-1 *1 R!H u0 px c0 {2,[S,D]} {4,S}
-2 *2 R!H u0 px c0 {1,[S,D]} {3,S}
-3 *3 C   u0 {2,S}
-4 *5 Xo  u0 {1,S}
-""",
-)
-forbidden(
-    label = "Surf_atom",
+    label = "Surf_atom1",
     group =
 """
 1 *1 R!H u0 px c0 {2,[S,D]} {4,S}
@@ -140,6 +141,31 @@ forbidden(
 3 *3 R   u0 {2,S} {5,[S,D,T]}
 4 *5 Xo  u0 {1,S}
 5 Xo u0 c0 {3,[S,D,T]} 
+""",
+)
+
+forbidden(
+    label = "Surf_atom2",
+    group =
+"""
+1 *1 R!H u0 px c0 {2,[S,D]} {4,S}
+2 *2 R!H u0 px c0 {1,[S,D]} {3,S} {5,[S,D,T]}
+3 *3 R   u0 {2,S} 
+4 *5 Xo  u0 {1,S}
+5 Xo u0 c0 {2,[S,D,T]} 
+""",
+)
+
+forbidden(
+    label = "Surf_beta",
+    group =
+"""
+1 *1 R!H u0 px c0 {2,[S,D]} {4,S}
+2 *2 R!H u0 px c0 {1,[S,D]} {3,S}
+3 *3 R   u0 {2,S} {5,[S,D,T]} 
+4 *5 Xo  u0 {1,S}
+5 R!H u0 c0 {3,[S,D,T]} {6,[S,D,T]}
+6 Xo u0 {5,[S,D,T]}
 """,
 )
 

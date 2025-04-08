@@ -549,15 +549,15 @@ L1: Adsorbate1
 """
 )
 
-forbidden(
-    label = "C",
-    group =
-"""
-1 *1 Xv u0 p0 c0
-2 *2 R!H  u0 px c0 {3,S}
-3 *3 C u0 p0 c0 {2,S}
-""",
-)
+#forbidden(
+#    label = "C",
+#    group =
+#"""
+#1 *1 Xv u0 p0 c0
+#2 *2 R!H  u0 px c0 {3,S}
+#3 *3 C u0 p0 c0 {2,S}
+#""",
+#)
 
 forbidden(
     label = "surf",

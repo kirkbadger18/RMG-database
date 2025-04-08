@@ -147,7 +147,7 @@ L1: Donating
 )
 
 forbidden(
-    label = "Surface_atom",
+    label = "Surface_atom1",
     group =
 """
 1 *1 R!H u0 px cx {2,S} {4,S}
@@ -159,13 +159,38 @@ forbidden(
 )
 
 forbidden(
-    label="C",
+    label = "Surface_atom2",
     group =
 """
-1 *1 R!H u0 px c0 {2,S} {4,S}
-2 *2 R!H u0 px c0 {1,S} {3,S}
-3 *3 C   u0 {2,S}
+1 *1 R!H u0 px cx {2,S} {4,S}
+2 *2 R   u0 px cx {1,S} {3,S} {5,[S,D,T]}
+3 *3 R   u0 {2,S}
 4 *5 Xo  u0 {1,S}
+5    Xo  u0 {2,[S,D,T]} 
 """
 )
+
+forbidden(
+    label = "Surface_atom2",
+    group =
+"""
+1 *1 R!H u0 px cx {2,S} {4,S}
+2 *2 R   u0 px cx {1,S} {3,S}
+3 *3 R   u0 {2,S} {5,[S,D,T]}
+4 *5 Xo  u0 {1,S}
+5 R!H u0 {3,[S,D,T]} [6,[S,D,T]}
+6 Xo u0 {5,[S,D,T]}
+"""
+)
+
+#forbidden(
+#    label="C",
+#    group =
+#"""
+#1 *1 R!H u0 px c0 {2,S} {4,S}
+#2 *2 R!H u0 px c0 {1,S} {3,S}
+#3 *3 C   u0 {2,S}
+#4 *5 Xo  u0 {1,S}
+#"""
+#)
 
