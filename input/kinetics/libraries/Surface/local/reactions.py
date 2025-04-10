@@ -605,22 +605,22 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 42,
-    label = "XOXNO  <=> XNO2 + Pt",
-    kinetics = SurfaceArrhenius(
-        A = (6.63E11, 'cm^2/(mol*s)'),  
-        n = 0.0,
-        Ea = (6, 'kJ/mol'),  
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Nitrogen/51""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
+#entry(
+#    index = 42,
+#    label = "XOXNO  <=> XNO2 + Pt",
+#    kinetics = SurfaceArrhenius(
+#        A = (6.63E11, 'cm^2/(mol*s)'),  
+#        n = 0.0,
+#        Ea = (6, 'kJ/mol'),  
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Nitrogen/51""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 
 entry(
     index = 43,
@@ -741,20 +741,20 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 50,
-    label = "XOXNO <=> XNO + XO",
-    kinetics = SurfaceArrhenius(
-        A = (3.30E12, 'cm^2/(mol*s)'),  
-        n = 0.0,
-        Ea = (62, 'kJ/mol'),  
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
+#entry(
+#    index = 50,
+#    label = "XOXNO <=> XNO + XO",
+#    kinetics = SurfaceArrhenius(
+#        A = (3.30E12, 'cm^2/(mol*s)'),  
+#        n = 0.0,
+#        Ea = (62, 'kJ/mol'),  
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 

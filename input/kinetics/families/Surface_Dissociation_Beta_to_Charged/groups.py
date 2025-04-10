@@ -36,11 +36,10 @@ entry(
     label = "Combined",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 R!H u0 px c0 {1,S} {3,S}
 3 *3 R   u0 px c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -60,11 +59,10 @@ entry(
     label = "R-H",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 R!H u0 px c0 {1,S} {3,S}
 3 *3 H   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -74,12 +72,11 @@ entry(
     label = "CR-H",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
-2 *2 C u0 p0 c0 {1,S} {3,S} {6,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
+2 *2 C u0 p0 c0 {1,S} {3,S} {5,S}
 3 *3 H   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
-6 R!H u0 {2,S}
+5 R!H u0 {2,S}
 """,
     kinetics = None,
 )
@@ -89,11 +86,10 @@ entry(
     label = "C-H",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 C u0 p0 c0 {1,S} {3,S}
 3 *3 H   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -103,13 +99,12 @@ entry(
     label = "CH3",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
-2 *2 C u0 p0 c0 {1,S} {3,S} {6,S} {7,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
+2 *2 C u0 p0 c0 {1,S} {3,S} {5,S} {6,S}
 3 *3 H   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
+5 H u0 p0 {2,S}
 6 H u0 p0 {2,S}
-7 H u0 p0 {2,S}
 """,
     kinetics = None,
 )
@@ -119,12 +114,11 @@ entry(
     label = "O-H",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
-2 *2 O u0 p2 c0 {1,S} {3,S} {6,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
+2 *2 O u0 p2 c0 {1,S} {3,S} {5,S}
 3 *3 H   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
-6 H u0 p0 {2,S}
+5 H u0 p0 {2,S}
 """,
     kinetics = None,
 )
@@ -134,11 +128,10 @@ entry(
     label = "R-N",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 R!H u0 px c0 {1,S} {3,S}
 3 *3 N   u0 p1 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -148,11 +141,10 @@ entry(
     label = "C-N",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 C u0 p0 c0 {1,S} {3,S}
 3 *3 N   u0 p1 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -162,11 +154,10 @@ entry(
     label = "O-N",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 O u0 p2 c0 {1,S} {3,S}
 3 *3 N   u0 p1 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -176,11 +167,10 @@ entry(
     label = "N-R",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 N u0 p1 c0 {1,S} {3,S}
 3 *3 R   u0 px c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -190,11 +180,10 @@ entry(
     label = "N-H",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 N u0 p1 c0 {1,S} {3,S}
 3 *3 H   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -204,11 +193,10 @@ entry(
     label = "N-O",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 N u0 p1 c0 {1,S} {3,S}
 3 *3 O   u0 p1 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -218,11 +206,10 @@ entry(
     label = "N-C",
     group =
 """
-1 *1 R!H u0 p1 c0 {4,S} {2,S} {5,S}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
 2 *2 N u0 p1 c0 {1,S} {3,S}
 3 *3 C   u0 p0 c0 {2,S}
 4 *4 Xo  u0 p0 c0 {1,S}
-5    R   u0 px c0 {1,S}
 """,
     kinetics = None,
 )
@@ -247,14 +234,13 @@ L1: VacantSite
 )
 
 forbidden(
-    label = "Bidentate",
+    label = "Surf",
     group =
 """
-1 *1 N u0 p1 cx {4,S} {2,S} {5,S}
-2 *2 R!H u0 px cx {1,S} {3,S}
-3 *3 R   u0 px c0 {2,S} {6,[S,D,T]}
+1 *1 R!H u0 p1 c0 {4,S} {2,S}
+2 *2 R!H u0 px c0 {1,S} {3,S}
+3 *3 R   u0 px c0 {2,S} {5,[S,D,T]}
 4 *4 Xo  u0 p0 c0 {1,S}
-5  R u0 px c0 {1,S}
-6 Xo u0 {3,[S,D,T]}
+5 Xo u0 c0 {3,[S,D,T]}
 """,
 )

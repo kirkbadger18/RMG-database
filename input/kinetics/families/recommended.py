@@ -133,7 +133,7 @@ surface = {
 ###    'Surface_Dissociation_Triple',
 ###    'Surface_Dissociation_Beta_Double',
     'Surface_Dissociation_Charge_Separation',
-    'Surface_Dissociation_Charge_Double',
+###    'Surface_Dissociation_Charge_Double',
     'Surface_Dissociation_Charge_Single',
     'Surface_vdW_to_charged_mono',
     'Surface_Adsorption_Double_Charged',
