@@ -171,7 +171,7 @@ forbidden(
 )
 
 forbidden(
-    label = "Surface_atom2",
+    label = "Surface_beta",
     group =
 """
 1 *1 R!H u0 px cx {2,S} {4,S}
