@@ -77,14 +77,25 @@ forbidden(
 """,
 )
 
-#forbidden(
-#    label = "C",
-#    group =
-#"""
-#1 *4 C u0 p0 c0 {2,S}
-#2 *3 R!H u0 px c+1 {1,S} {3,D} {4,S}
-#3 *5 Xo u0 p0 c0 {2,D}
-#4 *6 R!H u0 px c-1 {2,S}
-#""",
-#)
-#
+forbidden(
+    label = "C",
+    group =
+"""
+1 *4 C u0 p0 c0 {2,S}
+2 *3 R!H u0 px c+1 {1,S} {3,D} {4,S}
+3 *5 Xo u0 p0 c0 {2,D}
+4 *6 R!H u0 px c-1 {2,S}
+""",
+)
+
+forbidden(
+    label = "N",
+    group =
+"""
+1 *4 N u0 p1 c0 {2,S}
+2 *3 R!H u0 px c+1 {1,S} {3,D} {4,S}
+3 *5 Xo u0 p0 c0 {2,D}
+4 *6 R!H u0 px c-1 {2,S}
+""",
+)
+

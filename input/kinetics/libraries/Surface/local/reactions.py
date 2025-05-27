@@ -380,7 +380,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(4.22E12, '1/s'),
         n = 0.0,
-        Ea=(104, 'kJ/mol'),
+        Ea=(104, 'kJ/mol'), #104 #189
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -422,7 +422,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(1.07E+30, 'cm^4/(mol^2*s)'),
         n = 0,
-        Ea=(103, 'kJ/mol'),
+        Ea=(103, 'kJ/mol'), #103 #174
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -436,7 +436,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A=(5.0E21, 'cm^2/(mol*s)'),
         n = 0.0,
-        Ea=(0.0, 'kJ/mol'),
+        Ea=(5.0, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -444,19 +444,19 @@ entry(
     longDesc = u"""Barrierless according to DFT calculations by Katrin Blondal"""
 )
 
-entry(
-    index = 32,
-    label = "C2H4X + Pt <=> XCH2XCH2",
-    kinetics = SurfaceArrhenius(
-        A=(1.78E21, 'cm^2/(mol*s)'),
-        n = 0.0,
-        Ea=(12, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""DFT value from Katrin Blondal"""
-)
+#entry(
+#    index = 32,
+#    label = "C2H4X + Pt <=> XCH2XCH2",
+#    kinetics = SurfaceArrhenius(
+#        A=(1.78E21, 'cm^2/(mol*s)'),
+#        n = 0.0,
+#        Ea=(12, 'kJ/mol'), #12 #51
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""DFT value from Katrin Blondal"""
+#)
 
 entry(
     index = 33,
@@ -571,6 +571,7 @@ entry(
     metal = "Pt",
     facet = "111",
 )
+
 entry(
     index = 40,
     label = "XNO2 + Pt <=> XNO + XO",

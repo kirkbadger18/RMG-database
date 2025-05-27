@@ -320,3 +320,33 @@ u"""
 C should not match to *2 with a less heavy atom
 """,
 )
+
+forbidden(
+    label = "N-O",
+    group =
+"""
+1 *2 O u0 {2,S}
+2 *1 N u0 {1,S}
+3 *3 Xv u0 p0 c0
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+ should not match to *2 with a less heavy atom
+""",
+)
+
+forbidden(
+    label = "H-N",
+    group =
+"""
+1 *2 N u0 {2,S}
+2 *1 H u0 {1,S}
+3 *3 Xv u0 p0 c0
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+ should not match to *2 with a less heavy atom
+""",
+)
