@@ -6358,13 +6358,13 @@ entry(
     label = "OXCXCH2",
     molecule =
 """
-1 X  u0  p0  c0 {3,S}
-2 X  u0  p0  c0 {4,S}
-3 C  u0  p0  c0 {1,S} {5,D} {4,S}
-4 C  u0  p0  c0 {2,S} {3,S} {6,S} {7,S}
-5 O  u0  p2  c0 {3,D}
-6 H  u0  p0  c0 {4,S}
-7 H  u0  p0  c0 {4,S}
+1 X u0 p0 c0 {3,S}
+2 X u0 p0 c0 {4,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,D}
+4 C u0 p0 c0 {2,S} {3,S} {6,S} {7,S}
+5 O u0 p2 c0 {3,D}
+6 H u0 p0 c0 {4,S}
+7 H u0 p0 c0 {4,S}
 """,
     thermo = NASA(
         polynomials = [
@@ -6379,7 +6379,7 @@ entry(
             using PAW pseudopotentials and the BEEF-vdW functional for an optimized 3x3 supercell (1/9ML coverage)
             following the procedure outlined by Blondal et al (DOI:10.1021/acs.iecr.9b01464). The following settings were applied:
             kpoints=(5x5x1), 4 layers (2 bottom layers fixed), ecutwfc=60 Ry, smearing='mazari-vanderbilt', mixing_mode='local-TF',
-            fmax=1e-2. DFT binding energy: -1.331 eV.
+            fmax=1e-3. DFT binding energy: -1.331 eV.
 """,
     metal = "Pt",
     facet = "111",
