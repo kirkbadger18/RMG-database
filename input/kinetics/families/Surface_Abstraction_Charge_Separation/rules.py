@@ -9,15 +9,15 @@ entry(
     index = 1,
     label = "Abstracting;Donating",
     kinetics = SurfaceArrheniusBEP(
-        A = (5.09e21, 'cm^2/(mol*s)'),
+        A = (4.18e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.768,
-        E0 = (124, 'kJ/mol'),
+        alpha = 0.84,
+        E0 = (185, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
     rank = 0,
-    shortDesc = u"""Default""",
+    shortDesc = u"""copy of dissociation double""",
     longDesc = u"""
 
 """,
