@@ -40,9 +40,9 @@ entry(
     index = 3,
     label = "O2 + Pt + Pt <=> XO + XO",
     kinetics = StickingCoefficient(
-        A=0.064,
+        A=0.05,
         n =0,
-        Ea=(0.0, 'J/mol'),
+        Ea=(8.4, 'J/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
