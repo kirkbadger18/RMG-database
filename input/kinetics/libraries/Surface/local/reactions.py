@@ -42,7 +42,7 @@ entry(
     kinetics = StickingCoefficient(
         A=0.05,
         n =0,
-        Ea=(8.4, 'J/mol'),
+        Ea=(8.4, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -815,8 +815,8 @@ entry(
     label = "NNOX + Pt <=> XNO + XN",
     kinetics = SurfaceArrhenius(
         A = (4.18e17, 'm^2/(mol*s)'),  
-        n = 0.0,
-        Ea = (97, 'kJ/mol'),  
+        n = 0,
+        Ea=(97, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
