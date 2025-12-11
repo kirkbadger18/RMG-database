@@ -559,9 +559,9 @@ entry(
     index = 39,
     label = "XNO + Pt <=> XN + XO",
     kinetics = SurfaceArrhenius(
-        A = (2.99E21, 'cm^2/(mol*s)'),  
+        A = (5.21E21, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (214, 'kJ/mol'),  
+        Ea = (117, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
