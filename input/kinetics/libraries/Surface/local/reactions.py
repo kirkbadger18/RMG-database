@@ -545,7 +545,7 @@ entry(
     kinetics = StickingCoefficient(
         A = 0.0001,
         n = 0,
-        Ea = (176, 'kJ/mol'),
+        Ea = (231, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -816,7 +816,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (4.18e17, 'm^2/(mol*s)'),  
         n = 0,
-        Ea=(97, 'kJ/mol'),
+        Ea=(81, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
