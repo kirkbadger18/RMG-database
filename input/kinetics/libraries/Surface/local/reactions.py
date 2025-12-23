@@ -507,21 +507,21 @@ entry(
     metal = "Pt",
 )
 
-entry(
-    index = 36,
-    label = "NNO + Pt <=> NNOX",
-    kinetics = StickingCoefficient(
-        A = .1,
-        n = 0,
-        Ea = (0, 'J/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Surface_Adsorption_Single""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-)
+#entry(
+#    index = 36,
+#    label = "NNO + Pt <=> NNOX",
+#    kinetics = StickingCoefficient(
+#        A = .1,
+#        n = 0,
+#        Ea = (0, 'J/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Surface_Adsorption_Single""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#)
 
 entry(
     index = 37,
@@ -561,7 +561,7 @@ entry(
     kinetics = SurfaceArrhenius(
         A = (5.21E21, 'cm^2/(mol*s)'),  
         n = 0.0,
-        Ea = (117, 'kJ/mol'),  
+        Ea = (120, 'kJ/mol'),  
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -810,21 +810,20 @@ entry(
     facet = "111",
 )
 
-entry(
-    index = 54,
-    label = "NNOX + Pt <=> XNO + XN",
-    kinetics = SurfaceArrhenius(
-        A = (4.18e17, 'm^2/(mol*s)'),  
-        n = 0,
-        Ea=(81, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
-    longDesc = u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
+#entry(
+#    index = 54,
+#    label = "NNOX + Pt <=> XNO + XN",
+#    kinetics = SurfaceArrhenius(
+#        A = (4.18e17, 'm^2/(mol*s)'),  
+#        n = 0,
+#        Ea=(97, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+#    longDesc = u"""
+#""",
+#    metal = "Pt",
+#    facet = "111",
+#)
 
