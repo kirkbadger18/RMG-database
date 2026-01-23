@@ -35,7 +35,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([3.517, 7.712, 10.239, 11.76, 13.248, 13.831, 14.211], 'J/(mol*K)'),
-        H298=(-191.523, 'kJ/mol'),
+        H298=(-191.979, 'kJ/mol'),
         S298=(-186.544, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
@@ -89,7 +89,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-0.57, 4.379, 7.518, 9.51, 11.661, 12.666, 13.548], 'J/(mol*K)'),
-        H298=(-327.663, 'kJ/mol'),
+        H298=(-329.086, 'kJ/mol'),
         S298=(-195.899, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
@@ -326,7 +326,7 @@ entry(
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
         Cpdata=([-5.689, -0.923, 1.99, 3.824, 5.844, 6.836, 7.789], 'J/(mol*K)'),
-        H298=(-420.548, 'kJ/mol'),
+        H298=(-441.89, 'kJ/mol'),
         S298=(-193.307, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXC', 'XCHXC', 'XCHXC', 'XCHXC']""",
