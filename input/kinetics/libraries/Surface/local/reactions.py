@@ -135,7 +135,7 @@ entry(
 )
 
 entry(
-    index = 10,
+    index = 10, #Vlachos Ethane
     label = "XCHXCH <=> XCH + XCH",
     kinetics = SurfaceArrhenius(
         A=(8.5e12, '1/s'),
@@ -178,7 +178,7 @@ entry(
 )
 
 entry(
-    index = 13,
+    index = 13, #Vlachos Ethane
     label = "XCHXC <=> XCH + XC",
     kinetics = SurfaceArrhenius(
         A=(1.4e12, '1/s'),
@@ -375,7 +375,7 @@ entry(
 )
 
 entry(
-    index = 27,
+    index = 27, #Vlachos Ethane
     label = "XCXC <=> XC + XC",
     kinetics = SurfaceArrhenius(
         A=(4.22E12, '1/s'),
@@ -1021,6 +1021,40 @@ entry(
         A = (1.66e22, 'cm^2/(mol*s)'),
         n = 0.0,
         Ea = (132, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 67,
+    label = "XNO2 + XCXCH2 <=> XNO + OXCXCH2",
+    kinetics = SurfaceArrhenius(
+        A = (9.04e19, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (69, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 68,
+    label = "XNOH + XC <=> XNO + XCH",
+    kinetics = SurfaceArrhenius(
+        A = (6.01e20, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (91, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
