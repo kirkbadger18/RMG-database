@@ -9,22 +9,17 @@ entry(
     index = 1,
     label = "Combined",
     kinetics = SurfaceArrheniusBEP(
-        A = (1.187E12, '1/s'),
+        A = (4.55E13, '1/s'),
         n = 0.0, 
-        alpha = 0.842,
-        E0 = (145.69, 'kJ/mol'),
+        alpha = 1.17,
+        E0 = (167, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
     rank = 0,
     shortDesc = u"""Default""",
     longDesc = u"""
-A factors are averages of training reactions 1-4 and the reverse direction of training reactions 5-7, 
-and alpha and E0 are BEP parameters from training reactions 1-4 and the reverse of training reactions 5-7.
 
-Details on the computational method to derive the rate constants for the BEP relation are provided in "Automatic mechanism generation involving 
-kinetics of surface reactions with bidentate adsorbates" by B. Kreitz, K. Blöndal, K. Badger, R. H. West and C. F. Goldsmith, Digital Discovery, 2024, 3, 173
-doi:10.1039/d3dd00184a
 """
 )
 
@@ -50,8 +45,8 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (1e13, '1/s'),
         n = 0,
-        alpha = 0.768,
-        E0 = (124, 'kJ/mol'),
+        alpha = 0.967,
+        E0 = (194, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -66,8 +61,8 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (1e13, '1/s'),
         n = 0,
-        alpha = 0.768,
-        E0 = (124, 'kJ/mol'),
+        alpha = 0.52,
+        E0 = (126, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -82,8 +77,8 @@ entry(
     kinetics = SurfaceArrheniusBEP(
         A = (1e13, '1/s'),
         n = 0,
-        alpha = 0.768,
-        E0 = (124, 'kJ/mol'),
+        alpha = 0.52,
+        E0 = (126, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

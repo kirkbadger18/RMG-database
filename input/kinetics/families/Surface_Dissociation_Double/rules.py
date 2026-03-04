@@ -66,29 +66,12 @@ Pre-exponential coefficient is calculated from 1e13 s^-1 (standard guess from tr
 
 entry(
     index = 4,
-    label = "C=N;VacantSite",
-    kinetics = SurfaceArrheniusBEP(
-        A = (4.94e21, 'cm^2/(mol*s)'),
-        n = 0,
-        alpha = 0.957,
-        E0 = (135, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    rank = 0,
-    shortDesc = u"""Default""",
-    longDesc = u"""
-"""
-)
-
-entry(
-    index = 5,
     label = "N=R;VacantSite",
     kinetics = SurfaceArrheniusBEP(
-        A = (8.38e21, 'cm^2/(mol*s)'),
+        A = (9.88e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.768,
-        E0 = (124, 'kJ/mol'),
+        alpha = 0.52,
+        E0 = (126, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -98,20 +81,4 @@ entry(
 """
 )
 
-entry(
-    index = 6,
-    label = "N=C;VacantSite",
-    kinetics = SurfaceArrheniusBEP(
-        A = (4.94e21, 'cm^2/(mol*s)'),
-        n = 0,
-        alpha = 0.957,
-        E0 = (135, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    rank = 0,
-    shortDesc = u"""Default""",
-    longDesc = u"""
-"""
-)
 

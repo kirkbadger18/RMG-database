@@ -36,19 +36,19 @@ entry(
     longDesc = u"""my value"""
 )
 
-entry(
-    index = 3,
-    label = "O2 + Pt + Pt <=> XO + XO",
-    kinetics = StickingCoefficient(
-        A=0.06,
-        n =0,
-        Ea=(0, 'kJ/mol'),
-        Tmin = (200, 'K'),
-        Tmax = (3000, 'K'),
-    ),
-    shortDesc = u"""Default""",
-    longDesc = u"""O2 adsorption on Pt(111). From W. A. Brown, R. Kose, D. A. King, "Femtomole Adsorption Calorimetry on Single-Crystal Surfaces" Chem. Rev. 1998, 98, 797-831"""
-)
+#entry(
+#    index = 3,
+#    label = "O2 + Pt + Pt <=> XO + XO",
+#    kinetics = StickingCoefficient(
+#        A=0.06,
+#        n =0,
+#        Ea=(0, 'kJ/mol'),
+#        Tmin = (200, 'K'),
+#        Tmax = (3000, 'K'),
+#    ),
+#    shortDesc = u"""Default""",
+#    longDesc = u"""O2 adsorption on Pt(111). From W. A. Brown, R. Kose, D. A. King, "Femtomole Adsorption Calorimetry on Single-Crystal Surfaces" Chem. Rev. 1998, 98, 797-831"""
+#)
 
 entry(
     index = 4,
@@ -1055,6 +1055,71 @@ entry(
         A = (6.01e20, 'cm^2/(mol*s)'),
         n = 0.0,
         Ea = (91, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 69,
+    label = "XOXO <=> XO + XO",
+    kinetics = SurfaceArrhenius(
+        A = (4.21e12, '1/s'),
+        n = 0.0,
+        Ea = (59, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 70,
+    label = "O2 + Pt + Pt <=> XOXO",
+    kinetics = StickingCoefficient(
+        A = 0.22,
+        n = 0,
+        Ea=(0, 'J/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Default""",
+    longDesc = u"""  """
+)
+
+entry(
+    index = 71,
+    label = "XNO2 + XCCH3 <=> XNO + OXCCH3",
+    kinetics = SurfaceArrhenius(
+        A = (5.82e18, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (109, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    shortDesc = u"""Unpublished NOx containing exhaust gas conversion project""",
+    longDesc = u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
+
+entry(
+    index = 72,
+    label = "XNOH + XCH2XCH <=> XNO + XCH2XCH2",
+    kinetics = SurfaceArrhenius(
+        A = (5.71e21, 'cm^2/(mol*s)'),
+        n = 0.0,
+        Ea = (109, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),

@@ -32,10 +32,10 @@ entry(
     index = 2,
     label = "AdsorbateVdW;*N",
     kinetics = SurfaceArrheniusBEP(
-        A = (5.09e21, 'cm^2/(mol*s)'),
+        A = (5.20e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.768,
-        E0 = (124, 'kJ/mol'),
+        alpha = 0.52,
+        E0 = (126, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -45,21 +45,21 @@ entry(
 """
 )
 
-#entry(
-#    index = 3,
-#    label = "O-R;*N",
-#    kinetics = SurfaceArrheniusBEP(
-#        A = (5.09e21, 'cm^2/(mol*s)'),
-#        n = 0,
-#        alpha = 0.305,
-#        E0 = (48.5, 'kJ/mol'),
-#        Tmin = (200, 'K'),
-#        Tmax = (3000, 'K'),
-#    ),
-#    rank = 0,
-#    shortDesc = u"""Default""",
-#    longDesc = u"""
-#"""
-#)
+entry(
+    index = 3,
+    label = "O-R;*N",
+    kinetics = SurfaceArrheniusBEP(
+        A = (5.09e21, 'cm^2/(mol*s)'),
+        n = 0,
+        alpha = 0.695,
+        E0 = (48.5, 'kJ/mol'),
+        Tmin = (200, 'K'),
+        Tmax = (3000, 'K'),
+    ),
+    rank = 0,
+    shortDesc = u"""Default""",
+    longDesc = u"""
+"""
+)
 
 

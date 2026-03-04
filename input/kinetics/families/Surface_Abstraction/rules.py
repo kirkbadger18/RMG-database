@@ -234,12 +234,12 @@ Divided by 3 because of reaction path degeneracy for CH3 (3 equivalent H atoms)
 
 entry(
     index = 12,
-    label = "O;*N-H",
+    label = "Abstracting;*N-H",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.48e21, 'cm^2/(mol*s)'),
+        A = (3.06e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.39,
-        E0 = (92.5, 'kJ/mol'),
+        alpha = 0.0768,
+        E0 = (101, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -251,12 +251,12 @@ entry(
 
 entry(
     index = 13,
-    label = "N;*OH",
+    label = "N=;*R-H",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.48e21, 'cm^2/(mol*s)'),
+        A = (3.06e21, 'cm^2/(mol*s)'),
         n = 0,
-        alpha = 0.61,
-        E0 = (92.5, 'kJ/mol'),
+        alpha = 0.923,
+        E0 = (101, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
@@ -270,10 +270,10 @@ entry(
     index = 14,
     label = "O;*C-H",
     kinetics = SurfaceArrheniusBEP(
-        A = (2.48e21, 'cm^2/(mol*s)'),
+        A = (4.03e21, 'cm^2/(mol*s)'),
         n = 0,
         alpha = 0.0,
-        E0 = (153, 'kJ/mol'),
+        E0 = (151, 'kJ/mol'),
         Tmin = (200, 'K'),
         Tmax = (3000, 'K'),
     ),
