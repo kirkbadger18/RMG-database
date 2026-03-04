@@ -1067,7 +1067,7 @@ entry(
 
 entry(
     index = 69,
-    label = "XOXO <=> XO + XO",
+    label = "O2X + Pt <=> XO + XO",
     kinetics = SurfaceArrhenius(
         A = (4.21e12, '1/s'),
         n = 0.0,
@@ -1084,7 +1084,7 @@ entry(
 
 entry(
     index = 70,
-    label = "O2 + Pt + Pt <=> XOXO",
+    label = "O2 + Pt <=> O2X",
     kinetics = StickingCoefficient(
         A = 0.22,
         n = 0,

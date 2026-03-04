@@ -366,9 +366,7 @@ XCXCO
 4 X u0 p0 c0 {2,S}
 5 X u0 p0 c0 {3,T}
 
-XOXO
-1 X  u0 p0 c0 {3,S}
-2 X  u0 p0 c0 {4,S}
-3 O  u0 p2 c0 {1,S} {4,S}
-4 O  u0 p2 c0 {2,S} {3,S}
-
+O2X
+1 O u1 p2 c0 {2,S}
+2 O u1 p2 c0 {1,S}
+3 X u0 P0 c0

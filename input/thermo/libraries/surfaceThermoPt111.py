@@ -2765,13 +2765,12 @@ The two lowest frequencies, 41.92 and 44.79,where replaced by the 2D gas model.
 
 entry(
     index = 85,
-    label = "XOXO",
+    label = "O2X",
     molecule = 
 """
-1 X  u0 p0 c0 {3,S}
-2 X  u0 p0 c0 {4,S}
-3 O  u0 p2 c0 {1,S} {4,S}
-4 O  u0 p2 c0 {2,S} {3,S}
+1 O u1 p2 c0 {2,S}
+2 O u1 p2 c0 {1,S}
+3 X u0 P0 c0
 """,
     thermo = NASA(
         polynomials = [
