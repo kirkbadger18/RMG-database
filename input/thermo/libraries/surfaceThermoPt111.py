@@ -2770,7 +2770,7 @@ entry(
 """
 1 O u1 p2 c0 {2,S}
 2 O u1 p2 c0 {1,S}
-3 X u0 P0 c0
+3 X u0 p0 c0
 """,
     thermo = NASA(
         polynomials = [
