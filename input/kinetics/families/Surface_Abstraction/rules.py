@@ -251,7 +251,7 @@ entry(
 
 entry(
     index = 13,
-    label = "N=;*R-H",
+    label = "N=*;*R-H",
     kinetics = SurfaceArrheniusBEP(
         A = (3.06e21, 'cm^2/(mol*s)'),
         n = 0,
