@@ -1069,7 +1069,7 @@ entry(
     index = 69,
     label = "O2X + Pt <=> XO + XO",
     kinetics = SurfaceArrhenius(
-        A = (4.21e12, '1/s'),
+        A = (1.75e21, '1/s'),
         n = 0.0,
         Ea = (59, 'kJ/mol'),
         Tmin = (200, 'K'),

@@ -34,9 +34,9 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([3.515, 7.708, 10.235, 11.756, 13.246, 13.829, 14.21], 'J/(mol*K)'),
-        H298=(-191.597, 'kJ/mol'),
-        S298=(-186.418, 'J/(mol*K)'),
+        Cpdata=([3.499, 7.709, 10.256, 11.795, 13.309, 13.906, 14.302], 'J/(mol*K)'),
+        H298=(-193.95, 'kJ/mol'),
+        S298=(-186.722, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCHXCCH3',
@@ -44,13 +44,13 @@ shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC'
 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XO', 'XOXCNH',
 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH',
 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XNHXNH', 'CH3XNXNOH', 'XNHXN',
-'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXO', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3',
-'XCXC', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH',
-'XCHXCHCH3', 'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCH2XNH', 'XCH2XN',
-'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN',
-'XNXCOH', 'XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH',
-'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XNHXNH',
-'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXO', 'XCXCCH2', 'XCXCH2',
+'XNXNCH3', 'XOXNH', 'XOXNO', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC',
+'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3',
+'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH',
+'XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO',
+'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XNHXNH',
+'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XOXNH', 'XOXNO', 'XCXCCH2', 'XCXCH2',
 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH',
 'XCH2XCOH', 'XCHXCHCH3', 'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCXCCH2',
 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXCCH3',
@@ -69,7 +69,7 @@ shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC'
 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCHXN', 'XNXCOH', 'XNHXNH',
 'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH', 'CH3XNXNOH', 'XNHXNH', 'CH3XNXNOH',
 'XNHXN', 'XNXNCH3', 'XNHXN', 'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXNH', 'XOXNH',
-'XOXNO', 'XOXNO', 'XOXO', 'XOXO']""",
+'XOXNO', 'XOXNO']""",
 longDesc=u"""
 """,
     metal = "Pt",
@@ -1043,29 +1043,6 @@ longDesc=u"""
 
 entry(
     index = 41,
-    label = "OXOX",
-    group=
-"""
-1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {4,S}
-3 O  u0 p2 c0 {1,S} {4,S}
-4 O  u0 p2 c0 {2,S} {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([4.469, 7.642, 9.016, 9.521, 9.599, 9.382, 8.923], 'J/(mol*K)'),
-        H298=(-56.284, 'kJ/mol'),
-        S298=(-168.993, 'J/(mol*K)'),
-    ),
-shortDesc=u"""Averaged from: ['XOXO', 'XOXO', 'XOXO', 'XOXO']""",
-longDesc=u"""
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 42,
     label = "RXbridgedBidentate",
     group=
 """
@@ -1101,7 +1078,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 43,
+    index = 42,
     label = "CXRCX",
     group=
 """
@@ -1133,7 +1110,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 44,
+    index = 43,
     label = "C#X-R-C#X",
     group=
 """
@@ -1157,7 +1134,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 45,
+    index = 44,
     label = "C#X-R-C-XR2",
     group=
 """
@@ -1183,7 +1160,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 46,
+    index = 45,
     label = "C#X-R-C=XR",
     group=
 """
@@ -1208,7 +1185,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 47,
+    index = 46,
     label = "C#X-R=C-XR",
     group=
 """
@@ -1233,7 +1210,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 48,
+    index = 47,
     label = "C=X=R-C-XR2",
     group=
 """
@@ -1259,7 +1236,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 49,
+    index = 48,
     label = "R2C-X-R-C-XR2",
     group=
 """
@@ -1287,7 +1264,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 50,
+    index = 49,
     label = "RC-X=R-C-XR2",
     group=
 """
@@ -1314,7 +1291,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 51,
+    index = 50,
     label = "RC-X=R=C-XR",
     group=
 """
@@ -1340,7 +1317,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 52,
+    index = 51,
     label = "RC-X=R=C=X",
     group=
 """
@@ -1365,7 +1342,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 53,
+    index = 52,
     label = "RC=X-R-C-XR2",
     group=
 """
@@ -1392,7 +1369,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 54,
+    index = 53,
     label = "RC=X-R-C=XR",
     group=
 """
@@ -1418,7 +1395,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 55,
+    index = 54,
     label = "RC=X-R=C-XR",
     group=
 """
@@ -1444,7 +1421,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 56,
+    index = 55,
     label = "CXROX",
     group=
 """
@@ -1469,7 +1446,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 57,
+    index = 56,
     label = "RC-X=R-O-X",
     group=
 """
@@ -1494,7 +1471,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 58,
+    index = 57,
     label = "OXROX",
     group=
 """
@@ -1519,7 +1496,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 59,
+    index = 58,
     label = "O-X-C-O-X",
     group=
 """
@@ -1544,7 +1521,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 60,
+    index = 59,
     label = "RXsingleChemisorbed",
     group=
 """
@@ -1626,7 +1603,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 61,
+    index = 60,
     label = "CX",
     group=
 """
@@ -1680,7 +1657,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 62,
+    index = 61,
     label = "C#XR",
     group=
 """
@@ -1706,7 +1683,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 63,
+    index = 62,
     label = "C#XCR2",
     group=
 """
@@ -1731,7 +1708,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 64,
+    index = 63,
     label = "C#XCR3",
     group=
 """
@@ -1757,7 +1734,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 65,
+    index = 64,
     label = "C#XN",
     group=
 """
@@ -1780,7 +1757,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 66,
+    index = 65,
     label = "C#XOR",
     group=
 """
@@ -1803,7 +1780,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 67,
+    index = 66,
     label = "C-XR2",
     group=
 """
@@ -1834,7 +1811,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 68,
+    index = 67,
     label = "C-XRCR2",
     group=
 """
@@ -1862,7 +1839,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 69,
+    index = 68,
     label = "C-XRN",
     group=
 """
@@ -1886,7 +1863,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 70,
+    index = 69,
     label = "C-XRNR",
     group=
 """
@@ -1911,7 +1888,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 71,
+    index = 70,
     label = "C-XRO",
     group=
 """
@@ -1936,7 +1913,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 72,
+    index = 71,
     label = "C-XR3",
     group=
 """
@@ -1965,7 +1942,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 73,
+    index = 72,
     label = "C-XR2CR3",
     group=
 """
@@ -1995,7 +1972,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 74,
+    index = 73,
     label = "C-XR2N",
     group=
 """
@@ -2019,7 +1996,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 75,
+    index = 74,
     label = "C-XR2OR",
     group=
 """
@@ -2045,7 +2022,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 76,
+    index = 75,
     label = "C=X(=R)",
     group=
 """
@@ -2068,7 +2045,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 77,
+    index = 76,
     label = "C=X(=C)",
     group=
 """
@@ -2091,7 +2068,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 78,
+    index = 77,
     label = "C=X(=NR)",
     group=
 """
@@ -2114,7 +2091,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 79,
+    index = 78,
     label = "C=XR2",
     group=
 """
@@ -2143,7 +2120,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 80,
+    index = 79,
     label = "C=XRCR2",
     group=
 """
@@ -2169,7 +2146,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 81,
+    index = 80,
     label = "C=XRCR3",
     group=
 """
@@ -2197,7 +2174,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 82,
+    index = 81,
     label = "C=XRN",
     group=
 """
@@ -2221,7 +2198,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 83,
+    index = 82,
     label = "C=XROR",
     group=
 """
@@ -2246,7 +2223,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 84,
+    index = 83,
     label = "NX",
     group=
 """
@@ -2279,7 +2256,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 85,
+    index = 84,
     label = "N-XR",
     group=
 """
@@ -2303,7 +2280,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 86,
+    index = 85,
     label = "N-XCR",
     group=
 """
@@ -2327,7 +2304,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 87,
+    index = 86,
     label = "N-XCR2",
     group=
 """
@@ -2351,7 +2328,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 88,
+    index = 87,
     label = "N-XNR",
     group=
 """
@@ -2375,7 +2352,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 89,
+    index = 88,
     label = "N-XR2",
     group=
 """
@@ -2403,7 +2380,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 90,
+    index = 89,
     label = "N-XRCR",
     group=
 """
@@ -2427,7 +2404,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 91,
+    index = 90,
     label = "N-XRCR3",
     group=
 """
@@ -2453,7 +2430,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 92,
+    index = 91,
     label = "N-XRNR",
     group=
 """
@@ -2477,7 +2454,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 93,
+    index = 92,
     label = "N-XRNR2",
     group=
 """
@@ -2502,7 +2479,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 94,
+    index = 93,
     label = "N-XROR",
     group=
 """
@@ -2526,7 +2503,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 95,
+    index = 94,
     label = "N[+]-XR[-]R",
     group=
 """
@@ -2550,7 +2527,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 96,
+    index = 95,
     label = "N[+]=XR[-]R",
     group=
 """
@@ -2574,7 +2551,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 97,
+    index = 96,
     label = "N=XR",
     group=
 """
@@ -2598,7 +2575,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 98,
+    index = 97,
     label = "N=XC#R",
     group=
 """
@@ -2621,7 +2598,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 99,
+    index = 98,
     label = "N=XC-R",
     group=
 """
@@ -2644,7 +2621,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 100,
+    index = 99,
     label = "N=XN",
     group=
 """
@@ -2666,7 +2643,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 101,
+    index = 100,
     label = "N=XOR",
     group=
 """
@@ -2689,7 +2666,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 102,
+    index = 101,
     label = "OX",
     group=
 """
@@ -2715,7 +2692,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 103,
+    index = 102,
     label = "O-XR",
     group=
 """
@@ -2741,7 +2718,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 104,
+    index = 103,
     label = "O-XCR2",
     group=
 """
@@ -2766,7 +2743,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 105,
+    index = 104,
     label = "O-XCR3",
     group=
 """
@@ -2792,7 +2769,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 106,
+    index = 105,
     label = "O-XN",
     group=
 """
@@ -2815,7 +2792,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 107,
+    index = 106,
     label = "O-XOR",
     group=
 """
@@ -2838,7 +2815,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 108,
+    index = 107,
     label = "RXvdW",
     group=
 """
@@ -2883,7 +2860,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 109,
+    index = 108,
     label = "(CR2)X",
     group=
 """
@@ -2907,7 +2884,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 110,
+    index = 109,
     label = "(CRCR)X",
     group=
 """
@@ -2932,7 +2909,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 111,
+    index = 110,
     label = "(CRN)X",
     group=
 """
@@ -2955,7 +2932,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 112,
+    index = 111,
     label = "(CR3)X",
     group=
 """
@@ -2984,7 +2961,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 113,
+    index = 112,
     label = "(CR2CR)X",
     group=
 """
@@ -3011,7 +2988,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 114,
+    index = 113,
     label = "(CR2N)X",
     group=
 """
@@ -3035,7 +3012,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 115,
+    index = 114,
     label = "(CR2O)X",
     group=
 """
@@ -3061,7 +3038,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 116,
+    index = 115,
     label = "(CR4)X",
     group=
 """
@@ -3091,7 +3068,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 117,
+    index = 116,
     label = "(CR3CR3)X",
     group=
 """
@@ -3121,7 +3098,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 118,
+    index = 117,
     label = "(CR3N)X",
     group=
 """
@@ -3146,7 +3123,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 119,
+    index = 118,
     label = "(CR3OR)X",
     group=
 """
@@ -3174,7 +3151,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 120,
+    index = 119,
     label = "(NR2)X",
     group=
 """
@@ -3198,7 +3175,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 121,
+    index = 120,
     label = "(N=C)X",
     group=
 """
@@ -3221,7 +3198,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 122,
+    index = 121,
     label = "(NR3)X",
     group=
 """
@@ -3248,7 +3225,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 123,
+    index = 122,
     label = "(NC)X",
     group=
 """
@@ -3270,7 +3247,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 124,
+    index = 123,
     label = "(NN)X",
     group=
 """
@@ -3293,7 +3270,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 125,
+    index = 124,
     label = "(NO)X",
     group=
 """
@@ -3315,7 +3292,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 126,
+    index = 125,
     label = "(OR)X",
     group=
 """
@@ -3339,7 +3316,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 127,
+    index = 126,
     label = "(ONR)X",
     group=
 """
@@ -3363,7 +3340,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 128,
+    index = 127,
     label = "(ONN)X",
     group=
 """
@@ -3387,7 +3364,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 129,
+    index = 128,
     label = "(ONOR)X",
     group=
 """
@@ -3411,7 +3388,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 130,
+    index = 129,
     label = "(OR2)X",
     group=
 """
@@ -3435,7 +3412,7 @@ longDesc=u"""
 )
 
 entry(
-    index = 131,
+    index = 130,
     label = "(OROR)X",
     group=
 """
@@ -3500,7 +3477,6 @@ L1: RX
         L3: NXOX
             L4: N-XRO-X
             L4: N[+]=XR[-]O-X
-        L3: OXOX
     L2: RXbridgedBidentate
         L3: CXRCX
             L4: C#X-R-C#X
