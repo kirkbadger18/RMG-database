@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Abstraction_vdW_Bidentate_Beta/groups"
+name = "Surface_Abstraction_vdWBidentate_Beta/groups"
 shortDesc = u""
 longDesc = u"""
 Surface abstraction of one atom to another adsorbate. The bond fission occurs not at the binding atom, but in the beta position of the adsorbate, that is the bond between Atom *2 and *3 is broken. Atom *1 is bonded to the surface (*5). The bond order between *1/*3 and the surface decreases. An example for this reaction is: COH* + CH2* = CO* + CH3*. The bond between *2 and *3 must be single.
@@ -19,7 +19,7 @@ so k should be in (m2/mol/s).
 
 template(reactants=["Donating", "Abstracting"], products=["Adsorbate2","Adsorbate3", "VacantSite"], ownReverse=False)
 
-reverse = "Surface_Abstraction_vdW_Bidentate_reverse_Beta"
+reverse = "Surface_Abstraction_vdWBidentate_reverse_Beta"
 
 reactantNum=2
 productNum=3

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Abstraction_vdW_Bidentate_Beta/rules"
+name = "Surface_Abstraction_vdWBidentate_Beta/rules"
 shortDesc = u""
 longDesc = u"""
 """
