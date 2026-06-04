@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Monodentate_to_Bidentate/rules"
+name = "Surface_Monodentate_to_vdWBidentate/rules"
 shortDesc = u""
 longDesc = u"""
 """

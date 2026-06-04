@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Monodentate_to_vdW_Bidentate"
+name = "Surface_Monodentate_to_vdWBidentate"
 shortDesc = u""
 longDesc = u"""
 If a monodentate adsorbate has an internal double or triple bond, then it can fall over onto a vacant site, creating a bidentate.
@@ -17,7 +17,7 @@ so k should be in (m2/mol/s)
 
 template(reactants=["Monodentate", "VacantSite"], products=["Bidentate"], ownReverse=False)
 
-reverse = "Surface_vdW_Bidentate_to_Monodentate"
+reverse = "Surface_vdWBidentate_to_Monodentate"
 
 recipe(actions=[
     ['FORM_BOND', '*3', 1, '*5'],
