@@ -10,7 +10,7 @@ were trained using the same DFT data.
 """
 entry(
     index = 0,
-    label = "R*",
+    label = "RX",
     group = 
 """
 1   R ux
@@ -26,13 +26,13 @@ entry(
 
 entry(
     index = 1,
-    label = "(OR2)*",
+    label = "RXbidentate",
     group = 
 """
-1   O u0 p2 c0 {2,S} {3,S}
-2   R u0 c0 {1,S}
-3   R u0 c0 {1,S}
-4 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,[S,D,T]}
+2   X   u0 p0 c0 {4,[S,D,T]}
+3   R!H u0 {1,[S,D,T]} {4,[S,D,T]}
+4   R!H u0 {2,[S,D,T]} {3,[S,D,T]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -44,12 +44,13 @@ entry(
 
 entry(
     index = 2,
-    label = "O-*R",
+    label = "CXCX",
     group = 
 """
-1   O u0 p2 c0 {2,S} {3,S}
-2 * X u0 p0 c0 {1,S}
-3   R u0 c0 {1,S}
+1 * X u0 p0 c0 {3,[S,D,T]}
+2   X u0 p0 c0 {4,[S,D,T]}
+3   C u0 {1,[S,D,T]} {4,[S,D,T]}
+4   C u0 {2,[S,D,T]} {3,[S,D,T]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -61,14 +62,14 @@ entry(
 
 entry(
     index = 3,
-    label = "(OROR)*",
+    label = "C#XC-XR",
     group = 
 """
-1   O u0 p2 c0 {2,S} {3,S}
-2   O u0 p2 c0 {1,S} {4,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {2,S}
-5 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,T}
+2   X   u0 p0 c0 {4,S}
+3   C   u0 p0 c0 {1,T} {4,S}
+4   C   u0 p0 c0 {2,S} {3,S} {5,D}
+5   R!H u0 c0 {4,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -80,13 +81,15 @@ entry(
 
 entry(
     index = 4,
-    label = "O*O*",
+    label = "C#XC-XR2",
     group = 
 """
-1   O u0 p2 c0 {2,S} {3,S}
-2   O u0 p2 c0 {1,S} {4,S}
-3 * X u0 p0 c0 {1,S}
-4   X u0 p0 c0 {2,S}
+1 * X u0 p0 c0 {3,T}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,T} {4,S}
+4   C u0 p0 c0 {2,S} {3,S} {5,S} {6,S}
+5   R u0 c0 {4,S}
+6   R u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -98,13 +101,14 @@ entry(
 
 entry(
     index = 5,
-    label = "O-*OR",
+    label = "C#XC=XR",
     group = 
 """
-1   O u0 p2 c0 {2,S} {3,S}
-2   O u0 p2 c0 {1,S} {4,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {2,S}
+1 * X u0 p0 c0 {3,T}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,T} {4,S}
+4   C u0 p0 c0 {2,D} {3,S} {5,S}
+5   R u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -116,11 +120,13 @@ entry(
 
 entry(
     index = 6,
-    label = "O=*",
+    label = "C-XC-X",
     group = 
 """
-1 * X u0 p0 c0 {2,D}
-2   O u0 p2 c0 {1,D}
+1 * X u0 p0 c0 {3,D}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,D} {4,D}
+4   C u0 p0 c0 {2,D} {3,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -132,14 +138,16 @@ entry(
 
 entry(
     index = 7,
-    label = "O-*NR2",
+    label = "C-XR2C-XR",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   O u0 p2 c0 {1,S} {5,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5 * X u0 p0 c0 {2,S}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {4,S}
+3   C   u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   C   u0 p0 c0 {2,S} {3,S} {7,D}
+5   R   u0 c0 {3,S}
+6   R   u0 c0 {3,S}
+7   R!H u0 c0 {4,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -151,15 +159,17 @@ entry(
 
 entry(
     index = 8,
-    label = "O-*CR3",
+    label = "C-XR2C-XR2",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   O u0 p2 c0 {1,S} {6,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6 * X u0 p0 c0 {2,S}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   C u0 p0 c0 {2,S} {3,S} {7,S} {8,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {3,S}
+7   R u0 c0 {4,S}
+8   R u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -171,14 +181,16 @@ entry(
 
 entry(
     index = 9,
-    label = "(NR3)*",
+    label = "C-XR2C=XR",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   R u0 c0 {1,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5 * X u0 p0 c0
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   C u0 p0 c0 {2,D} {3,S} {7,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {3,S}
+7   R u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -190,12 +202,15 @@ entry(
 
 entry(
     index = 10,
-    label = "N-*R2",
+    label = "C-XRC-XR",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,[S,D]}
-2 * X u0 p0 c0 {1,S}
-3   R u0 c0 {1,[S,D]}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,S} {4,D} {5,S}
+4   C u0 p0 c0 {2,S} {3,D} {6,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -207,12 +222,14 @@ entry(
 
 entry(
     index = 11,
-    label = "N=*R",
+    label = "C-XRC=X",
     group = 
 """
-1   N u0 p1 c0 {2,D} {3,S}
-2 * X u0 p0 c0 {1,D}
-3   R u0 c0 {1,S}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,S} {4,D} {5,S}
+4   C u0 p0 c0 {2,D} {3,D}
+5   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -224,11 +241,15 @@ entry(
 
 entry(
     index = 12,
-    label = "N#*",
+    label = "C=XRC-XR",
     group = 
 """
-1 * X u0 p0 {2,T}
-2   N u0 p1 {1,T}
+1 * X   u0 p0 c0 {3,D}
+2   X   u0 p0 c0 {4,S}
+3   C   u0 p0 c0 {1,D} {4,S} {5,S}
+4   C   u0 p0 c0 {2,S} {3,S} {6,D}
+5   R   u0 c0 {3,S}
+6   R!H u0 c0 {4,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -240,15 +261,15 @@ entry(
 
 entry(
     index = 13,
-    label = "(NR2OR)*",
+    label = "C=XRC=XR",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   O u0 p2 c0 {1,S} {5,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
-6 * X u0 p0 c0
+1 * X u0 p0 c0 {3,D}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,D} {4,S} {5,S}
+4   C u0 p0 c0 {2,D} {3,S} {6,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -260,13 +281,13 @@ entry(
 
 entry(
     index = 14,
-    label = "(NRO)*",
+    label = "CXNX",
     group = 
 """
-1   N u0 p1 c0 {2,D} {3,S}
-2   O u0 p2 c0 {1,D}
-3   R u0 p0 c0 {1,S}
-4 * X u0 p0 c0
+1   X u0 p0 c0 {3,[S,D,T]}
+2 * X u0 p0 c0 {4,[S,D]}
+3   C u0 p0 c0 {1,[S,D,T]} {4,[S,D]}
+4   N u0 p1 c0 {2,[S,D]} {3,[S,D]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -278,14 +299,16 @@ entry(
 
 entry(
     index = 15,
-    label = "N-*ROR",
+    label = "C-XR2N-XR",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   O u0 p2 c0 {1,S} {5,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
+1   X u0 p0 c0 {3,S}
+2 * X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   N u0 p1 c0 {2,S} {3,S} {7,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {3,S}
+7   R u0 p0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -297,12 +320,15 @@ entry(
 
 entry(
     index = 16,
-    label = "N-*O",
+    label = "C-XR2N=X",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,D}
-2 * X u0 p0 c0 {1,S}
-3   O u0 p2 c0 {1,D}
+1   X u0 p0 c0 {3,S}
+2 * X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   N u0 p1 c0 {2,D} {3,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -314,13 +340,14 @@ entry(
 
 entry(
     index = 17,
-    label = "N=*O-*",
+    label = "C-XRN-X",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,D}
-2   O u0 p2 c0 {1,S} {4,S}
-3 * X u0 p0 c0 {1,D}
-4   X u0 p0 c0 {2,S}
+1   X u0 p0 c0 {3,S}
+2 * X u0 p0 c0 {5,S}
+3   C u0 p0 c0 {1,S} {4,S} {5,D}
+4   R u0 c0 {3,S}
+5   N u0 p1 c0 {2,S} {3,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -332,13 +359,15 @@ entry(
 
 entry(
     index = 18,
-    label = "N=*OR",
+    label = "C-XRN-XR",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,D}
-2   O u0 p2 c0 {1,S} {4,S}
-3 * X u0 p0 c0 {1,D}
-4   R u0 p0 c0 {2,S}
+1   X   u0 p0 c0 {3,S}
+2 * X   u0 p0 c0 {4,S}
+3   C   u0 p0 c0 {1,S} {4,S} {5,D}
+4   N   u0 p1 c0 {2,S} {3,S} {6,S}
+5   R!H u0 c0 {3,D}
+6   R   u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -350,16 +379,14 @@ entry(
 
 entry(
     index = 19,
-    label = "(NR2NR2)*",
+    label = "C-XRN=X",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   N u0 p1 c0 {1,S} {5,S} {6,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
-6   R u0 p0 c0 {2,S}
-7 * X u0 p0 c0
+1   X   u0 p0 c0 {3,S}
+2 * X   u0 p0 c0 {4,D}
+3   C   u0 p0 c0 {1,S} {4,S} {5,D}
+4   N   u0 p1 c0 {2,D} {3,S}
+5   R!H u0 c0 {3,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -371,14 +398,15 @@ entry(
 
 entry(
     index = 20,
-    label = "(NRNR)*",
+    label = "C=XRN-XR",
     group = 
 """
-1   N u0 p1 c0 {2,D} {3,S}
-2   N u0 p1 c0 {1,D} {4,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {2,S}
-5 * X u0 p0 c0
+1   X u0 p0 c0 {3,D}
+2 * X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,D} {4,S} {5,S}
+4   N u0 p1 c0 {2,S} {3,S} {6,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -390,15 +418,14 @@ entry(
 
 entry(
     index = 21,
-    label = "N-*RNR2",
+    label = "C=XRN=X",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   N u0 p1 c0 {1,S} {5,S} {6,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
-6   R u0 p0 c0 {2,S}
+1   X u0 p0 c0 {3,D}
+2 * X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,D} {4,S} {5,S}
+4   N u0 p1 c0 {2,D} {3,S}
+5   R u0 p0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -410,13 +437,13 @@ entry(
 
 entry(
     index = 22,
-    label = "N-*NR",
+    label = "CXOX",
     group = 
 """
-1   N u0 p1 c0 {2,D} {3,S}
-2   N u0 p1 c0 {1,D} {4,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {2,S}
+1 * X u0 p0 c0 {3,[S,D,T]}
+2   X u0 p0 c0 {4,S}
+3   C u0 {1,[S,D,T]} {4,S}
+4   O u0 p2 {2,S} {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -428,14 +455,15 @@ entry(
 
 entry(
     index = 23,
-    label = "N=*NR2",
+    label = "C-XR2O-X",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   N u0 p1 c0 {1,S} {5,D}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5 * X u0 p0 c0 {2,D}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   O u0 p2 c0 {2,S} {3,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -447,15 +475,14 @@ entry(
 
 entry(
     index = 24,
-    label = "N-*RN-*R",
+    label = "C-XRO-X",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {5,S}
-2   N u0 p1 c0 {1,S} {4,S} {6,S}
-3 * X u0 p0 c0 {1,S}
-4   X u0 p0 c0 {2,S}
-5   R u0 p0 c0 {1,S}
-6   R u0 p0 c0 {2,S}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {4,S}
+3   C   u0 p0 c0 {1,S} {4,S} {5,D}
+4   O   u0 p2 c0 {2,S} {3,S}
+5   R!H u0 c0 {3,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -467,16 +494,14 @@ entry(
 
 entry(
     index = 25,
-    label = "N-*RCR3",
+    label = "C=XRO-X",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   N u0 p1 c0 {1,S} {6,S} {7,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {1,S}
-6 * X u0 p0 c0 {2,S}
-7   R u0 p0 c0 {2,S}
+1 * X u0 p0 c0 {3,D}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,D} {4,S} {5,S}
+4   O u0 p2 c0 {2,S} {3,S}
+5   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -488,14 +513,13 @@ entry(
 
 entry(
     index = 26,
-    label = "N-*CR2",
+    label = "NXCX",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   N u0 p1 c0 {1,D} {5,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5 * X u0 p0 c0 {2,S}
+1 * X u0 p0 c0 {3,[S,D,T]}
+2   X u0 p0 c0 {4,[S,D]}
+3   C u0 p0 c0 {1,[S,D,T]} {4,[S,D]}
+4   N u0 p1 c0 {2,[S,D]} {3,[S,D]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -507,15 +531,16 @@ entry(
 
 entry(
     index = 27,
-    label = "N=*CR3",
+    label = "inv(C-XR2N-XR)",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   N u0 p1 c0 {1,S} {6,D}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {1,S}
-6 * X u0 p0 c0 {2,D}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   N u0 p1 c0 {2,S} {3,S} {7,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {3,S}
+7   R u0 p0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -527,11 +552,15 @@ entry(
 
 entry(
     index = 28,
-    label = "Cq*",
+    label = "inv(C-XR2N=X)",
     group = 
 """
-1 * X u0 p0 c0 {2,Q}
-2   C u0 p0 c0 {1,Q}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4   N u0 p1 c0 {2,D} {3,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -543,13 +572,14 @@ entry(
 
 entry(
     index = 29,
-    label = "C-*C-*",
+    label = "inv(C-XRN-X)",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,D}
-2   C u0 p0 c0 {1,D} {4,D}
-3 * X u0 p0 c0 {1,D}
-4   X u0 p0 c0 {2,D}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {5,S}
+3   C u0 p0 c0 {1,S} {4,S} {5,D}
+4   R u0 c0 {3,S}
+5   N u0 p1 c0 {2,S} {3,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -561,12 +591,15 @@ entry(
 
 entry(
     index = 30,
-    label = "C=*(=R)",
+    label = "inv(C-XRN-XR)",
     group = 
 """
-1   C   u0 p0 c0 {2,D} {3,D}
-2 * X   u0 p0 c0 {1,D}
-3   R!H u0 c0 {1,D}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {4,S}
+3   C   u0 p0 c0 {1,S} {4,S} {5,D}
+4   N   u0 p1 c0 {2,S} {3,S} {6,S}
+5   R!H u0 c0 {3,D}
+6   R   u0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -578,15 +611,14 @@ entry(
 
 entry(
     index = 31,
-    label = "C#*CR3",
+    label = "inv(C-XRN=X)",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C u0 p0 c0 {1,S} {6,T}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6 * X u0 p0 c0 {2,T}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {4,D}
+3   C   u0 p0 c0 {1,S} {4,S} {5,D}
+4   N   u0 p1 c0 {2,D} {3,S}
+5   R!H u0 c0 {3,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -598,12 +630,15 @@ entry(
 
 entry(
     index = 32,
-    label = "C#*R",
+    label = "inv(C=XRN-XR)",
     group = 
 """
-1   C u0 p0 c0 {2,T} {3,S}
-2 * X u0 p0 c0 {1,T}
-3   R u0 c0 {1,S}
+1 * X u0 p0 c0 {3,D}
+2   X u0 p0 c0 {4,S}
+3   C u0 p0 c0 {1,D} {4,S} {5,S}
+4   N u0 p1 c0 {2,S} {3,S} {6,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -615,15 +650,14 @@ entry(
 
 entry(
     index = 33,
-    label = "C=*RC=*R",
+    label = "inv(C=XRN=X)",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,D} {5,S}
-2   C u0 p0 c0 {1,S} {4,D} {6,S}
-3 * X u0 p0 c0 {1,D}
-4   X u0 p0 c0 {2,D}
-5   R u0 c0 {1,S}
-6   R u0 c0 {2,S}
+1 * X u0 p0 c0 {3,D}
+2   X u0 p0 c0 {4,D}
+3   C u0 p0 c0 {1,D} {4,S} {5,S}
+4   N u0 p1 c0 {2,D} {3,S}
+5   R u0 p0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -635,13 +669,13 @@ entry(
 
 entry(
     index = 34,
-    label = "C=*R2",
+    label = "NXNX",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2 * X u0 p0 c0 {1,D}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
+1 * X u0 p0 c0 {3,[S,D]}
+2   X u0 p0 c0 {4,[S,D]}
+3   N u0 {1,[S,D]} {4,[S,D]}
+4   N u0 {2,[S,D]} {3,[S,D]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -653,17 +687,15 @@ entry(
 
 entry(
     index = 35,
-    label = "C-*R2C-*R2",
+    label = "N-XRN-XR",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {5,S} {6,S}
-2   C u0 p0 c0 {1,S} {4,S} {7,S} {8,S}
-3 * X u0 p0 c0 {1,S}
-4   X u0 p0 c0 {2,S}
-5   R u0 c0 {1,S}
-6   R u0 c0 {1,S}
-7   R u0 c0 {2,S}
-8   R u0 c0 {2,S}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,S}
+3   N u0 p1 c0 {1,S} {4,S} {5,S}
+4   N u0 p1 c0 {2,S} {3,S} {6,S}
+5   R u0 p0 c0 {3,S}
+6   R u0 p0 c0 {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -675,14 +707,14 @@ entry(
 
 entry(
     index = 36,
-    label = "C-*R3",
+    label = "N-XRN=X",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2 * X u0 p0 c0 {1,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,D}
+3   N u0 p1 c0 {1,S} {4,S} {5,S}
+4   N u0 p1 c0 {2,D} {3,S}
+5   R u0 p0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -694,18 +726,13 @@ entry(
 
 entry(
     index = 37,
-    label = "(CR3CR3)*",
+    label = "NXOX",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6   R u0 c0 {2,S}
-7   R u0 c0 {2,S}
-8   R u0 c0 {2,S}
-9 * X u0 p0 c0
+1 * X u0 p0 c0 {3,[S,D]}
+2   X u0 p0 c0 {4,S}
+3   N u0 {1,[S,D]} {4,[S,D]}
+4   O u0 p2 c0 {2,S} {3,[S,D]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -717,15 +744,14 @@ entry(
 
 entry(
     index = 38,
-    label = "(CR4)*",
+    label = "N-XRO-X",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   R u0 c0 {1,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6 * X u0 p0 c0
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {4,S}
+3   N u0 p1 c0 {1,S} {4,S} {5,S}
+4   O u0 p2 c0 {2,S} {3,S}
+5   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -737,13 +763,14 @@ entry(
 
 entry(
     index = 39,
-    label = "C=*N-*",
+    label = "N[+]=XR[-]O-X",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,D}
-2   N u0 p1 c0 {1,D} {4,S}
-3 * X u0 p0 c0 {1,D}
-4   X u0 p0 c0 {2,S}
+1 * X   u0 p0 c0 {3,D}
+2   X   u0 p0 c0 {4,S}
+3   N   u0 p0 c+1 {1,D} {4,S} {5,S}
+4   O   u0 p2 c0 {2,S} {3,S}
+5   R!H u0 p[1,2,3] c-1 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -755,13 +782,14 @@ entry(
 
 entry(
     index = 40,
-    label = "C=*(=NR)",
+    label = "RXbridgedBidentate",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,D}
-2   N u0 p1 c0 {1,D} {4,S}
-3 * X u0 p0 c0 {1,D}
-4   R u0 p0 c0 {2,S}
+1 * X   u0 {3,[S,D,T]}
+2   X   u0 {4,[S,D,T]}
+3   R!H ux {1,[S,D,T]} {5,[S,D,T]}
+4   R!H ux {2,[S,D,T]} {5,[S,D,T]}
+5   R!H ux {3,[S,D,T]} {4,[S,D,T]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -773,14 +801,14 @@ entry(
 
 entry(
     index = 41,
-    label = "C#*NR2",
+    label = "CXRCX",
     group = 
 """
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   C u0 p0 c0 {1,S} {5,T}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5 * X u0 p0 c0 {2,T}
+1 * X   u0 {3,[S,D,T]}
+2   X   u0 {4,[S,D,T]}
+3   C   u0 {1,[S,D,T]} {5,[S,D,T]}
+4   C   u0 {2,[S,D,T]} {5,[S,D,T]}
+5   R!H u0 {3,[S,D,T]} {4,[S,D,T]}
 """,
     thermo = None,
     shortDesc = """""",
@@ -792,13 +820,14 @@ entry(
 
 entry(
     index = 42,
-    label = "C#*OR",
+    label = "C#X-R-C#X",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,T}
-2   O u0 p2 c0 {1,S} {4,S}
-3 * X u0 p0 c0 {1,T}
-4   R u0 c0 {2,S}
+1 * X   u0 p0 c0 {3,T}
+2   X   u0 p0 c0 {5,T}
+3   C   u0 p0 c0 {1,T} {4,S}
+4   R!H u0 c0 {3,S} {5,S}
+5   C   u0 p0 c0 {2,T} {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -810,16 +839,16 @@ entry(
 
 entry(
     index = 43,
-    label = "C-*R2C=*R",
+    label = "C#X-R-C-XR2",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C u0 p0 c0 {1,S} {6,D} {7,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6   X u0 p0 c0 {2,D}
-7   R u0 c0 {2,S}
+1 * X   u0 p0 c0 {3,T}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,T} {4,S}
+4   R!H u0 c0 {3,S} {5,S}
+5   C   u0 p0 c0 {2,S} {4,S} {6,S} {7,S}
+6   R   u0 c0 {5,S}
+7   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -831,17 +860,15 @@ entry(
 
 entry(
     index = 44,
-    label = "C-*R2CR3",
+    label = "C#X-R-C=XR",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6   R u0 c0 {2,S}
-7   R u0 c0 {2,S}
-8   R u0 c0 {2,S}
+1 * X   u0 p0 c0 {3,T}
+2   X   u0 p0 c0 {5,D}
+3   C   u0 p0 c0 {1,T} {4,S}
+4   R!H u0 c0 {3,S} {5,S}
+5   C   u0 p0 c0 {2,D} {4,S} {6,S}
+6   R   u0 p0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -853,15 +880,15 @@ entry(
 
 entry(
     index = 45,
-    label = "(CR2NR)*",
+    label = "C#X-R=C-XR",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   N u0 p1 c0 {1,D} {5,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
-6 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,T}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,T} {4,S}
+4   R!H u0 c0 {3,S} {5,D}
+5   C   u0 p0 c0 {2,S} {4,D} {6,S}
+6   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -873,16 +900,16 @@ entry(
 
 entry(
     index = 46,
-    label = "C-*R2NR2",
+    label = "C=X=R-C-XR2",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   N u0 p1 c0 {1,S} {6,S} {7,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {1,S}
-6   R u0 p0 c0 {2,S}
-7   R u0 p0 c0 {2,S}
+1 * X   u0 p0 c0 {3,D}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,D} {4,D}
+4   R!H u0 c0 {3,D} {5,S}
+5   C   u0 p0 c0 {2,S} {4,S} {6,S} {7,S}
+6   R   u0 c0 {5,S}
+7   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -894,14 +921,18 @@ entry(
 
 entry(
     index = 47,
-    label = "(CR2O)*",
+    label = "R2C-X-R-C-XR2",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   O u0 p2 c0 {1,D}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,S} {4,S} {8,S} {9,S}
+4   R!H u0 c0 {3,S} {5,S}
+5   C   u0 p0 c0 {2,S} {4,S} {6,S} {7,S}
+6   R   u0 c0 {5,S}
+7   R   u0 c0 {5,S}
+8   R   u0 c0 {3,S}
+9   R   u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -913,15 +944,14 @@ entry(
 
 entry(
     index = 48,
-    label = "C-*R2OR",
+    label = "(OROR)X",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   O u0 p2 c0 {1,S} {6,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6   R u0 c0 {2,S}
+1 * X u0 p0 c0
+2   O u0 p2 c0 {3,S} {4,S}
+3   O u0 p2 c0 {2,S} {5,S}
+4   R u0 p0 c0 {2,S}
+5   R u0 p0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -933,17 +963,17 @@ entry(
 
 entry(
     index = 49,
-    label = "(CR3NR2)*",
+    label = "RC-X=R-C-XR2",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   N u0 p1 c0 {1,S} {6,S} {7,S}
-3   R u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {1,S}
-6   R u0 p0 c0 {2,S}
-7   R u0 p0 c0 {2,S}
-8 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,S} {4,D} {6,S}
+4   R!H u0 c0 {3,D} {5,S}
+5   C   u0 p0 c0 {2,S} {4,S} {7,S} {8,S}
+6   R   u0 c0 {3,S}
+7   R   u0 c0 {5,S}
+8   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -955,16 +985,16 @@ entry(
 
 entry(
     index = 50,
-    label = "(CR3OR)*",
+    label = "RC-X=R=C-XR",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   O u0 p2 c0 {1,S} {6,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6   R u0 c0 {2,S}
-7 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,S} {4,D} {6,S}
+4   R!H u0 p0 c0 {3,D} {5,D}
+5   C   u0 p0 c0 {2,S} {4,D} {7,S}
+6   R   u0 c0 {3,S}
+7   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -976,14 +1006,15 @@ entry(
 
 entry(
     index = 51,
-    label = "C-*RC=*",
+    label = "RC-X=R=C=X",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   C u0 p0 c0 {1,D} {5,D}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   X u0 p0 c0 {2,D}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {5,D}
+3   C   u0 p0 c0 {1,S} {4,D} {6,S}
+4   R!H u0 p0 c0 {3,D} {5,D}
+5   C   u0 p0 c0 {2,D} {4,D}
+6   R   u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -995,15 +1026,17 @@ entry(
 
 entry(
     index = 52,
-    label = "C-*RCR2",
+    label = "RC=X-R-C-XR2",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   C u0 p0 c0 {1,D} {5,S} {6,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {2,S}
-6   R u0 c0 {2,S}
+1 * X   u0 p0 c0 {3,D}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,D} {4,S} {6,S}
+4   R!H u0 c0 {3,S} {5,S}
+5   C   u0 p0 c0 {2,S} {4,S} {7,S} {8,S}
+6   R   u0 c0 {3,S}
+7   R   u0 c0 {5,S}
+8   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1015,16 +1048,16 @@ entry(
 
 entry(
     index = 53,
-    label = "C=*RCR3",
+    label = "RC=X-R-C=XR",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C u0 p0 c0 {1,S} {6,D} {7,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6 * X u0 p0 c0 {2,D}
-7   R u0 c0 {2,S}
+1 * X   u0 p0 c0 {3,D}
+2   X   u0 p0 c0 {5,D}
+3   C   u0 p0 c0 {1,D} {4,S} {6,S}
+4   R!H u0 c0 {3,S} {5,S}
+5   C   u0 p0 c0 {2,D} {4,S} {7,S}
+6   R   u0 c0 {3,S}
+7   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1036,13 +1069,16 @@ entry(
 
 entry(
     index = 54,
-    label = "(CRN)*",
+    label = "RC=X-R=C-XR",
     group = 
 """
-1   C u0 p0 c0 {2,T} {3,S}
-2   N u0 p1 c0 {1,T}
-3   R u0 p0 c0 {1,S}
-4 * X u0 p0 c0
+1 * X   u0 p0 c0 {3,D}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,D} {4,S} {6,S}
+4   R!H u0 c0 {3,S} {5,D}
+5   C   u0 p0 c0 {2,S} {4,D} {7,S}
+6   R   u0 c0 {3,S}
+7   R   u0 c0 {5,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1054,14 +1090,14 @@ entry(
 
 entry(
     index = 55,
-    label = "C=*RN=*",
+    label = "CXROX",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,D} {4,S}
-2   N u0 p1 c0 {1,S} {5,D}
-3 * X u0 p0 c0 {1,D}
-4   R u0 p0 c0 {1,S}
-5   X u0 p0 c0 {2,D}
+1 * X   u0 {3,[S,D,T]}
+2   X   u0 {4,S}
+3   C   u0 {1,[S,D,T]} {5,[S,D,T]}
+4   O   u0 p2 {2,S} {5,S}
+5   R!H u0 {3,[S,D,T]} {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1073,14 +1109,15 @@ entry(
 
 entry(
     index = 56,
-    label = "C-*RNR",
+    label = "RC-X=R-O-X",
     group = 
 """
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   N u0 p1 c0 {1,D} {5,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {5,S}
+3   C   u0 p0 c0 {1,S} {4,D} {6,S}
+4   R!H u0 c0 {3,D} {5,S}
+5   O   u0 p2 c0 {2,S} {4,S}
+6   R   u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1092,15 +1129,14 @@ entry(
 
 entry(
     index = 57,
-    label = "C=*RN-*R",
+    label = "OXROX",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,D} {5,S}
-2   N u0 p1 c0 {1,S} {4,S} {6,S}
-3 * X u0 p0 c0 {1,D}
-4   X u0 p0 c0 {2,S}
-5   R u0 p0 c0 {1,S}
-6   R u0 p0 c0 {2,S}
+1 * X   u0 p0 c0 {3,S}
+2   X   u0 p0 c0 {4,S}
+3   O   u0 p2 c0 {1,S} {5,S}
+4   O   u0 p2 c0 {2,S} {5,S}
+5   R!H u0 c0 {3,S} {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1112,15 +1148,14 @@ entry(
 
 entry(
     index = 58,
-    label = "C=*RNR2",
+    label = "O-X-C-O-X",
     group = 
 """
-1   C u0 p0 c0 {2,S} {3,D} {4,S}
-2   N u0 p1 c0 {1,S} {5,S} {6,S}
-3 * X u0 p0 c0 {1,D}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {2,S}
-6   R u0 p0 c0 {2,S}
+1 * X u0 p0 c0 {3,S}
+2   X u0 p0 c0 {5,S}
+3   O u0 p2 c0 {1,S} {4,S}
+4   C u0 p0 c0 {3,S} {5,S}
+5   O u0 p2 c0 {2,S} {4,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1132,111 +1167,7 @@ entry(
 
 entry(
     index = 59,
-    label = "C-*RO",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,D} {4,S}
-2 * X u0 p0 c0 {1,S}
-3   O u0 p2 c0 {1,D}
-4   R u0 c0 {1,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 60,
-    label = "C=*RO-*",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,D} {4,S}
-2   O u0 p2 c0 {1,S} {5,S}
-3 * X u0 p0 c0 {1,D}
-4   R u0 c0 {1,S}
-5   X u0 p0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 61,
-    label = "C=*ROR",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,D} {4,S}
-2   O u0 p2 c0 {1,S} {5,S}
-3 * X u0 p0 c0 {1,D}
-4   R u0 c0 {1,S}
-5   R u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 62,
-    label = "C*",
-    group = 
-"""
-1 * X u0 {2,[S,D,T,Q]}
-2   C ux {1,[S,D,T,Q]}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 63,
-    label = "N*",
-    group = 
-"""
-1 * X u0 {2,[S,D,T]}
-2   N ux {1,[S,D,T]}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 64,
-    label = "O*",
-    group = 
-"""
-1 * X u0 {2,[S,D]}
-2   O ux {1,[S,D]}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 65,
-    label = "R*single-chemisorbed",
+    label = "RXsingleChemisorbed",
     group = 
 """
 1 * X u0 {2,[S,D,T,Q]}
@@ -1251,14 +1182,121 @@ entry(
 )
 
 entry(
-    index = 66,
-    label = "C*C*",
+    index = 60,
+    label = "CX",
     group = 
 """
-1   C u0 {2,[S,D,T]} {3,[S,D,T]}
-2   C u0 {1,[S,D,T]} {4,[S,D,T]}
-3 * X u0 {1,[S,D,T]}
-4   X u0 {2,[S,D,T]}
+1 * X u0 {2,[S,D,T,Q]}
+2   C ux {1,[S,D,T,Q]}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 61,
+    label = "C#XR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,T}
+2   C u0 p0 c0 {1,T} {3,S}
+3   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 62,
+    label = "C#XCR2",
+    group = 
+"""
+1 * X   u0 p0 c0 {3,T}
+2   C   u0 p0 c0 {3,S} {4,S} {5,D}
+3   C   u0 p0 c0 {1,T} {2,S}
+4   R   u0 c0 {2,S}
+5   R!H u0 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 63,
+    label = "C#XCR3",
+    group = 
+"""
+1 * X u0 p0 c0 {3,T}
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   C u0 p0 c0 {1,T} {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 64,
+    label = "C#XN",
+    group = 
+"""
+1 * X u0 p0 c0 {2,T}
+2   C u0 p0 c0 {1,T} {3,S}
+3   N u0 p1 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 65,
+    label = "C#XOR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,T}
+2   C u0 p0 c0 {1,T} {3,S}
+3   O u0 p2 c0 {2,S} {4,S}
+4   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 66,
+    label = "C-XR2",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,S}
+2   C   u0 p0 c0 {1,S} {3,D} {4,S}
+3   R!H u0 c0 {2,D}
+4   R   u0 c0 {2,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1270,13 +1308,15 @@ entry(
 
 entry(
     index = 67,
-    label = "C*N*",
+    label = "C-XRCR2",
     group = 
 """
-1   C u0 {2,[S,D,T]} {3,[S,D]}
-2   N u0 {1,[S,D,T]} {4,[S,D,T]}
-3 * X u0 {1,[S,D]}
-4   X u0 {2,[S,D,T]}
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,D} {4,S}
+3   C u0 p0 c0 {2,D} {5,S} {6,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1288,13 +1328,13 @@ entry(
 
 entry(
     index = 68,
-    label = "C*O*",
+    label = "C-XRN",
     group = 
 """
-1   C u0 {2,S} {3,[S,D,T]}
-2   O u0 p2 {1,S} {4,S}
-3 * X u0 {1,[S,D,T]}
-4   X u0 {2,S}
+1 * X   u0 p0 c0 {2,S}
+2   C   u0 p0 c0 {1,S} {3,S} {4,D}
+3   N   u0 p1 c0 {2,S}
+4   R!H u0 p[1,2,3] c0 {2,D}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1306,13 +1346,14 @@ entry(
 
 entry(
     index = 69,
-    label = "N*N*",
+    label = "C-XRNR",
     group = 
 """
-1   N u0 {2,[S,D]} {3,[S,D]}
-2   N u0 {1,[S,D]} {4,[S,D]}
-3 * X u0 {1,[S,D]}
-4   X u0 {2,[S,D]}
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,D} {4,S}
+3   N u0 p1 c0 {2,D} {5,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1324,13 +1365,13 @@ entry(
 
 entry(
     index = 70,
-    label = "R*bidentate",
+    label = "C-XRO",
     group = 
 """
-1   R!H ux {2,[S,D,T]} {3,[S,D,T]}
-2   R!H ux {1,[S,D,T]} {4,[S,D,T]}
-3 * X   u0 {1,[S,D,T]}
-4   X   u0 {2,[S,D,T]}
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,D} {4,S}
+3   O u0 p2 c0 {2,D}
+4   R u0 c0 {2,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -1342,7 +1383,670 @@ entry(
 
 entry(
     index = 71,
-    label = "R*vdW",
+    label = "C-XR3",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
+3   R u0 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 72,
+    label = "C-XR2CR3",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
+3   C u0 p0 c0 {2,S} {6,S} {7,S} {8,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {3,S}
+7   R u0 c0 {3,S}
+8   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 73,
+    label = "C-XR2N",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
+3   N u0 p1 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 74,
+    label = "C-XR2OR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   C u0 p0 c0 {1,S} {3,S} {4,S} {5,S}
+3   O u0 p2 c0 {2,S} {6,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 75,
+    label = "C=X(=R)",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,D}
+2   C   u0 p0 c0 {1,D} {3,D}
+3   R!H u0 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 76,
+    label = "C=X(=C)",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   C u0 p0 c0 {1,D} {3,D}
+3   C u0 p0 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 77,
+    label = "C=X(=NR)",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   C u0 p0 c0 {1,D} {3,D}
+3   N u0 p1 c0 {2,D} {4,S}
+4   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 78,
+    label = "C=XR2",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   C u0 p0 c0 {1,D} {3,S} {4,S}
+3   R u0 c0 {2,S}
+4   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 79,
+    label = "C=XRCR2",
+    group = 
+"""
+1 * X   u0 p0 c0 {3,D}
+2   C   u0 p0 c0 {3,S} {4,S} {5,D}
+3   C   u0 p0 c0 {1,D} {2,S} {6,S}
+4   R   u0 c0 {2,S}
+5   R!H u0 c0 {2,D}
+6   R   u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 80,
+    label = "C=XRCR3",
+    group = 
+"""
+1 * X u0 p0 c0 {3,D}
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   C u0 p0 c0 {1,D} {2,S} {7,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+7   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 81,
+    label = "C=XRN",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   C u0 p0 c0 {1,D} {3,S} {4,S}
+3   N u0 p1 c0 {2,S}
+4   R u0 p0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 82,
+    label = "C=XROR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   C u0 p0 c0 {1,D} {3,S} {4,S}
+3   O u0 p2 c0 {2,S} {5,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 83,
+    label = "NX",
+    group = 
+"""
+1 * X u0 {2,[S,D,T]}
+2   N u0 {1,[S,D,T]}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 84,
+    label = "N-XR",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,S}
+2   N   u0 p1 c0 {1,S} {3,D}
+3   R!H u0 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 85,
+    label = "N-XCR",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,S}
+2   N   u0 p1 c0 {1,S} {3,D}
+3   C   u0 p0 c0 {2,D} {4,D}
+4   R!H u0 c0 {3,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 86,
+    label = "N-XCR2",
+    group = 
+"""
+1 * X u0 p0 c0 {3,S}
+2   C u0 p0 c0 {3,D} {4,S} {5,S}
+3   N u0 p1 c0 {1,S} {2,D}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 87,
+    label = "N-XNR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   N u0 p1 c0 {1,S} {3,D}
+3   N u0 p1 c0 {2,D} {4,S}
+4   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 88,
+    label = "N-XR2",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,[S,D]}
+2   N   u0 {1,[S,D]} {3,[S,D]} {4,[S,D]}
+3   R!H u0 {2,[S,D]}
+4   R   u0 c0 {2,[S,D]}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 89,
+    label = "N-XRCR",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,S}
+2   N   u0 p1 c0 {1,S} {3,S} {4,S}
+3   C   u0 p0 c0 {2,S} {5,D}
+4   R   u0 c0 {2,S}
+5   R!H u0 c0 {3,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 90,
+    label = "N-XRCR3",
+    group = 
+"""
+1 * X u0 p0 c0 {3,S}
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   N u0 p1 c0 {1,S} {2,S} {7,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+7   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 91,
+    label = "N-XRNR",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,S}
+2   N   u0 p1 c0 {1,S} {3,S} {4,S}
+3   N   u0 p1 c0 {2,S} {5,D}
+4   R   u0 c0 {2,S}
+5   R!H u0 c0 {3,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 92,
+    label = "N-XRNR2",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   N u0 p1 c0 {1,S} {3,S} {4,S}
+3   N u0 p1 c0 {2,S} {5,S} {6,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {3,S}
+6   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 93,
+    label = "N-XROR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   N u0 p1 c0 {1,S} {3,S} {4,S}
+3   O u0 p2 c0 {2,S} {5,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 94,
+    label = "N[+]-XR[-]R",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,S}
+2   N   u0 p0 c+1 {1,S} {3,S} {4,D}
+3   R!H u0 p[1,2,3] c-1 {2,S}
+4   R!H u0 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 95,
+    label = "N[+]=XR[-]R",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,D}
+2   N   u0 p0 c+1 {1,D} {3,S} {4,S}
+3   R!H u0 p[1,2,3] c-1 {2,S}
+4   R   u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 96,
+    label = "N=XR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   N u0 p1 c0 {1,D} {3,S}
+3   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 97,
+    label = "N=XC#R",
+    group = 
+"""
+1 * X   u0 p0 c0 {2,D}
+2   N   u0 p1 c0 {1,D} {3,S}
+3   C   u0 p0 c0 {2,S} {4,T}
+4   R!H u0 c0 {3,T}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 98,
+    label = "N=XC-R",
+    group = 
+"""
+1 * X u0 p0 c0 {3,D}
+2   C u0 p0 c0 {3,S} {4,S}
+3   N u0 p1 c0 {1,D} {2,S}
+4   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 99,
+    label = "N=XN",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   N u0 p1 c0 {1,D} {3,S}
+3   N u0 p1 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 100,
+    label = "N=XOR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,D}
+2   N u0 p1 c0 {1,D} {3,S}
+3   O u0 p2 c0 {2,S} {4,S}
+4   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 101,
+    label = "OX",
+    group = 
+"""
+1 * X u0 {2,[S,D]}
+2   O ux {1,[S,D]}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 102,
+    label = "O-XR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   O u0 p2 c0 {1,S} {3,S}
+3   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 103,
+    label = "O-XCR2",
+    group = 
+"""
+1 * X   u0 p0 c0 {3,S}
+2   C   u0 p0 c0 {3,S} {4,S} {5,D}
+3   O   u0 p2 c0 {1,S} {2,S}
+4   R   u0 c0 {2,S}
+5   R!H u0 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 104,
+    label = "O-XCR3",
+    group = 
+"""
+1 * X u0 p0 c0 {3,S}
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   O u0 p2 c0 {1,S} {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 105,
+    label = "O-XN",
+    group = 
+"""
+1 * X u0 p0 c0 {3,S}
+2   N u0 p1 c0 {3,S}
+3   O u0 p2 c0 {1,S} {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 106,
+    label = "O-XOR",
+    group = 
+"""
+1 * X u0 p0 c0 {2,S}
+2   O u0 p2 c0 {1,S} {3,S}
+3   O u0 p2 c0 {2,S} {4,S}
+4   R u0 p0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 107,
+    label = "RXvdW",
     group = 
 """
 1 * X u0
@@ -1357,725 +2061,14 @@ entry(
 )
 
 entry(
-    index = 72,
-    label = "N*O*",
-    group = 
-"""
-1   N u0 p1 c0 {2,[S,D]} {3,[S,D]}
-2   O u0 p2 c0 {1,[S,D]} {4,[S,D]}
-3 * X u0 p0 c0 {1,[S,D]}
-4   X u0 p0 c0 {2,[S,D]}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 73,
-    label = "(CR3)*",
-    group = 
-"""
-1   C   u0 {2,D} {3,S} {4,S}
-2   R!H u0 {1,D}
-3   R   u0 {1,S}
-4   R   u0 {1,S}
-5 * X   u0
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 74,
-    label = "(CR2)*",
-    group = 
-"""
-1   C   u0 {2,T} {3,S}
-2   R!H u0 {1,T}
-3   R   u0 {1,S}
-4 * X   u0
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 75,
-    label = "(N=[O,N]R)*",
-    group = 
-"""
-1   N     u0 {2,D} {3,S}
-2   [N,O] u0 {1,D}
-3   R     u0 {1,S}
-4 * X     u0
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 76,
-    label = "N-*RN=*",
-    group = 
-"""
-1   N u0 p1 c0 {2,S} {3,S} {4,S}
-2   N u0 p1 c0 {1,S} {5,D}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   X u0 p0 c0 {2,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 77,
-    label = "(CRCR)*",
-    group = 
-"""
-1   C u0 p0 c0 {2,T} {3,S}
-2   C u0 p0 c0 {1,T} {4,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {2,S}
-5 * X u0 p0 c0
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 78,
-    label = "C-*R2N=*",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   N u0 p1 c0 {1,S} {6,D}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {1,S}
-6   X u0 p0 c0 {2,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 79,
-    label = "C-*R2N-*R",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   N u0 p1 c0 {1,S} {6,S} {7,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 p0 c0 {1,S}
-5   R u0 p0 c0 {1,S}
-6   X u0 p0 c0 {2,S}
-7   R u0 p0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 80,
-    label = "C=*(=C)",
-    group = 
-"""
-1   C u0 p0 c0 {2,D} {3,D}
-2 * X u0 p0 c0 {1,D}
-3   C u0 p0 c0 {1,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 81,
-    label = "C-*R2O-*",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   O u0 p2 c0 {1,S} {6,S}
-3 * X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6   X u0 p0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 82,
-    label = "(CR2CR)*",
-    group = 
-"""
-1   C u0 p0 c0 {2,D} {3,S} {4,S}
-2   C u0 p0 c0 {1,D} {5,S}
-3   R u0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {2,S}
-6 * X u0 p0 c0
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 83,
-    label = "C=*RC-*R",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {3,D} {5,S}
-2   C   u0 p0 c0 {1,S} {4,S} {6,D}
-3 * X   u0 p0 c0 {1,D}
-4   X   u0 p0 c0 {2,S}
-5   R   u0 c0 {1,S}
-6   R!H u0 c0 {2,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 84,
-    label = "C#*C-*R",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {3,S} {4,D}
-2   C   u0 p0 c0 {1,S} {5,T}
-3   X   u0 p0 c0 {1,S}
-4   R!H u0 c0 {1,D}
-5 * X   u0 p0 c0 {2,T}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 85,
-    label = "C#*C-*R2",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C u0 p0 c0 {1,S} {6,T}
-3   X u0 p0 c0 {1,S}
-4   R u0 c0 {1,S}
-5   R u0 c0 {1,S}
-6 * X u0 p0 c0 {2,T}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 86,
-    label = "C-*R2C-*R",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
-2   C   u0 p0 c0 {1,S} {6,S} {7,D}
-3 * X   u0 p0 c0 {1,S}
-4   R   u0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   X   u0 p0 c0 {2,S}
-7   R!H u0 c0 {2,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 87,
-    label = "C-*RC-*R",
-    group = 
-"""
-1   C u0 p0 c0 {2,D} {3,S} {5,S}
-2   C u0 p0 c0 {1,D} {4,S} {6,S}
-3 * X u0 p0 c0 {1,S}
-4   X u0 p0 c0 {2,S}
-5   R u0 c0 {1,S}
-6   R u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 88,
-    label = "C#*C=*R",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,D} {4,S}
-2   C u0 p0 c0 {1,S} {5,T}
-3   X u0 p0 c0 {1,D}
-4   R u0 c0 {1,S}
-5 * X u0 p0 c0 {2,T}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 89,
-    label = "C=*=R-C-*R2",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
-2   R!H u0 c0 {1,S} {3,D}
-3   C   u0 p0 c0 {2,D} {7,D}
-4   X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   R   u0 c0 {1,S}
-7 * X   u0 p0 c0 {3,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 90,
-    label = "R2C-*-R-C-*R2",
-    group = 
-"""
-1   C   u0 p0 c0 {3,S} {4,S} {8,S} {9,S}
-2   C   u0 p0 c0 {3,S} {5,S} {6,S} {7,S}
-3   R!H u0 c0 {1,S} {2,S}
-4 * X   u0 p0 c0 {1,S}
-5   X   u0 p0 c0 {2,S}
-6   R   u0 c0 {2,S}
-7   R   u0 c0 {2,S}
-8   R   u0 c0 {1,S}
-9   R   u0 c0 {1,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 91,
-    label = "RC=*-R=C-*R",
-    group = 
-"""
-1   C   u0 p0 c0 {3,S} {4,D} {6,S}
-2   C   u0 p0 c0 {3,D} {5,S} {7,S}
-3   R!H u0 c0 {1,S} {2,D}
-4 * X   u0 p0 c0 {1,D}
-5   X   u0 p0 c0 {2,S}
-6   R   u0 c0 {1,S}
-7   R   u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 92,
-    label = "RC-*=R-C-*R2",
-    group = 
-"""
-1   C   u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
-2   C   u0 p0 c0 {3,D} {7,S} {8,S}
-3   R!H u0 c0 {1,S} {2,D}
-4   X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   R   u0 c0 {1,S}
-7 * X   u0 p0 c0 {2,S}
-8   R   u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 93,
-    label = "RC=*-R-C-*R2",
-    group = 
-"""
-1   C   u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
-2   C   u0 p0 c0 {3,S} {7,D} {8,S}
-3   R!H u0 c0 {1,S} {2,S}
-4   X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   R   u0 c0 {1,S}
-7 * X   u0 p0 c0 {2,D}
-8   R   u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 94,
-    label = "RC-*=R=C-*R",
-    group = 
-"""
-1   C   u0 p0 c0 {3,D} {4,S} {6,S}
-2   C   u0 p0 c0 {3,D} {5,S} {7,S}
-3   R!H u0 p0 c0 {1,D} {2,D}
-4 * X   u0 p0 c0 {1,S}
-5   X   u0 p0 c0 {2,S}
-6   R   u0 c0 {1,S}
-7   R   u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 95,
-    label = "RC-*=R=C=*",
-    group = 
-"""
-1   C   u0 p0 c0 {2,D} {4,S} {5,S}
-2   R!H u0 p0 c0 {1,D} {3,D}
-3   C   u0 p0 c0 {2,D} {6,D}
-4 * X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   X   u0 p0 c0 {3,D}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 96,
-    label = "O-*-C-O-*",
-    group = 
-"""
-1   C u0 p0 c0 {2,S} {3,S}
-2   O u0 p2 c0 {1,S} {4,S}
-3   O u0 p2 c0 {1,S} {5,S}
-4 * X u0 p0 c0 {2,S}
-5   X u0 p0 c0 {3,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 97,
-    label = "RC-*=R-O-*",
-    group = 
-"""
-1   C   u0 p0 c0 {2,D} {4,S} {5,S}
-2   R!H u0 c0 {1,D} {3,S}
-3   O   u0 p2 c0 {2,S} {6,S}
-4 * X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   X   u0 p0 c0 {3,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 98,
-    label = "C-*R2",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {3,D} {4,S}
-2 * X   u0 p0 c0 {1,S}
-3   R!H u0 c0 {1,D}
-4   R   u0 c0 {1,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 99,
-    label = "C=*RCR2",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {4,S} {5,D}
-2   C   u0 p0 c0 {1,S} {3,D} {6,S}
-3 * X   u0 p0 c0 {2,D}
-4   R   u0 c0 {1,S}
-5   R!H u0 c0 {1,D}
-6   R   u0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 100,
-    label = "C#*CR2",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {3,S} {4,D}
-2   C   u0 p0 c0 {1,S} {5,T}
-3   R   u0 c0 {1,S}
-4   R!H u0 c0 {1,D}
-5 * X   u0 p0 c0 {2,T}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 101,
-    label = "O-*CR2",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {3,S} {4,D}
-2   O   u0 p2 c0 {1,S} {5,S}
-3   R   u0 c0 {1,S}
-4   R!H u0 c0 {1,D}
-5 * X   u0 p0 c0 {2,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 102,
-    label = "C*RC*",
-    group = 
-"""
-1   R!H u0 {2,[S,D,T]} {3,[S,D,T]}
-2   C   u0 {1,[S,D,T]} {4,[S,D,T]}
-3   C   u0 {1,[S,D,T]} {5,[S,D,T]}
-4 * X   u0 {2,[S,D,T]}
-5   X   u0 {3,[S,D,T]}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 103,
-    label = "R*bridged-bidentate",
-    group = 
-"""
-1   R!H ux {2,[S,D,T]} {3,[S,D,T]}
-2   R!H ux {1,[S,D,T]} {4,[S,D,T]}
-3   R!H ux {1,[S,D,T]} {5,[S,D,T]}
-4 * X   u0 {2,[S,D,T]}
-5   X   u0 {3,[S,D,T]}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 104,
-    label = "C*RO*",
-    group = 
-"""
-1   R!H u0 {2,[S,D,T]} {3,S}
-2   C   u0 {1,[S,D,T]} {4,[S,D,T]}
-3   O   u0 p2 {1,S} {5,S}
-4 * X   u0 {2,[S,D,T]}
-5   X   u0 {3,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 105,
-    label = "O*RO*",
-    group = 
-"""
-1   R!H u0 c0 {2,S} {3,S}
-2   O   u0 p2 c0 {1,S} {4,S}
-3   O   u0 p2 c0 {1,S} {5,S}
-4 * X   u0 p0 c0 {2,S}
-5   X   u0 p0 c0 {3,S}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 106,
-    label = "C#*-R-C-*R2",
-    group = 
-"""
-1   C   u0 p0 c0 {2,S} {4,S} {5,S} {6,S}
-2   R!H u0 c0 {1,S} {3,S}
-3   C   u0 p0 c0 {2,S} {7,T}
-4   X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6   R   u0 c0 {1,S}
-7 * X   u0 p0 c0 {3,T}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
-    index = 107,
-    label = "C#*-R=C-*R",
-    group = 
-"""
-1   C   u0 p0 c0 {2,D} {4,S} {5,S}
-2   R!H u0 c0 {1,D} {3,S}
-3   C   u0 p0 c0 {2,S} {6,T}
-4   X   u0 p0 c0 {1,S}
-5   R   u0 c0 {1,S}
-6 * X   u0 p0 c0 {3,T}
-""",
-    thermo = None,
-    shortDesc = """""",
-    longDesc = 
-"""
-
-""",
-)
-
-entry(
     index = 108,
-    label = "C#*-R-C#*",
+    label = "(CR2)X",
     group = 
 """
-1   R!H u0 c0 {2,S} {3,S}
-2   C   u0 p0 c0 {1,S} {4,T}
-3   C   u0 p0 c0 {1,S} {5,T}
-4 * X   u0 p0 c0 {2,T}
-5   X   u0 p0 c0 {3,T}
+1 * X   u0
+2   C   u0 {3,T} {4,S}
+3   R!H u0 {2,T}
+4   R   u0 {2,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -2087,16 +2080,14 @@ entry(
 
 entry(
     index = 109,
-    label = "RC=*-R-C=*R",
+    label = "(CRCR)X",
     group = 
 """
-1   C   u0 p0 c0 {3,S} {4,D} {6,S}
-2   C   u0 p0 c0 {3,S} {5,D} {7,S}
-3   R!H u0 c0 {1,S} {2,S}
-4 * X   u0 p0 c0 {1,D}
-5   X   u0 p0 c0 {2,D}
-6   R   u0 c0 {1,S}
-7   R   u0 c0 {2,S}
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,T} {4,S}
+3   C u0 p0 c0 {2,T} {5,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {3,S}
 """,
     thermo = None,
     shortDesc = """""",
@@ -2108,15 +2099,340 @@ entry(
 
 entry(
     index = 110,
-    label = "C#*-R-C=*R",
+    label = "(CRN)X",
     group = 
 """
-1   C   u0 p0 c0 {2,S} {4,D} {5,S}
-2   R!H u0 c0 {1,S} {3,S}
-3   C   u0 p0 c0 {2,S} {6,T}
-4   X   u0 p0 c0 {1,D}
-5   R   u0 c0 {1,S}
-6 * X   u0 p0 c0 {3,T}
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,T} {4,S}
+3   N u0 p1 c0 {2,T}
+4   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 111,
+    label = "(CR3)X",
+    group = 
+"""
+1 * X   u0
+2   C   u0 {3,D} {4,S} {5,S}
+3   R!H u0 {2,D}
+4   R   u0 {2,S}
+5   R   u0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 112,
+    label = "(CR2CR)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,D} {4,S} {5,S}
+3   C u0 p0 c0 {2,D} {6,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 113,
+    label = "(CR2N)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,D} {4,S} {5,S}
+3   N u0 p1 c0 {2,D}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 114,
+    label = "(CR2O)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,D} {4,S} {5,S}
+3   O u0 p2 c0 {2,D}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 115,
+    label = "(CR4)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   R u0 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 116,
+    label = "(CR3CR3)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   C u0 p0 c0 {2,S} {7,S} {8,S} {9,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+7   R u0 c0 {3,S}
+8   R u0 c0 {3,S}
+9   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 117,
+    label = "(CR3N)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   N u0 p1 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 118,
+    label = "(CR3OR)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   C u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3   O u0 p2 c0 {2,S} {7,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+6   R u0 c0 {2,S}
+7   R u0 p0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 119,
+    label = "(N=C)X",
+    group = 
+"""
+1 * X   u0 p0 c0
+2   N   u0 p1 c0 {3,D} {4,S}
+3   C   u0 p0 c0 {2,D} {5,D}
+4   R   u0 p0 c0 {2,S}
+5   R!H u0 p[1,2] c0 {3,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 120,
+    label = "(NR3)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   N u0 p1 c0 {3,S} {4,S} {5,S}
+3   R u0 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 121,
+    label = "(NN)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   N u0 p1 c0 {3,S} {4,S} {5,S}
+3   N u0 p1 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 122,
+    label = "(NO)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   N u0 p1 c0 {3,S} {4,S} {5,S}
+3   O u0 p2 c0 {2,S}
+4   R u0 c0 {2,S}
+5   R u0 c0 {2,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 123,
+    label = "(OR)X",
+    group = 
+"""
+1 * X   u0 p0 c0
+2   O   u0 p2 c0 {3,D}
+3   R!H u0 p1 c0 {2,D}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 124,
+    label = "(ONR)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   O u0 p2 c0 {3,D}
+3   N u0 p1 c0 {2,D} {4,S}
+4   R u0 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 125,
+    label = "(ONN)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   O u0 p2 c0 {3,D}
+3   N u0 p1 c0 {2,D} {4,S}
+4   N u0 p2 c0 {3,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 126,
+    label = "(ONOR)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   O u0 p2 c0 {3,D}
+3   N u0 p1 c0 {2,D} {4,S}
+4   O u0 p2 c0 {3,S} {5,S}
+5   R u0 c0 {4,S}
+""",
+    thermo = None,
+    shortDesc = """""",
+    longDesc = 
+"""
+
+""",
+)
+
+entry(
+    index = 127,
+    label = "(OR2)X",
+    group = 
+"""
+1 * X u0 p0 c0
+2   O u0 p2 c0 {3,S} {4,S}
+3   R u0 p[0,1,2] c0 {2,S}
+4   R u0 p[0,1,2] c0 {2,S}
 """,
     thermo = None,
     shortDesc = """""",
