@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Dissociation_vdW_Bidentate/rules"
+name = "Surface_Dissociation_vdWBidentate/rules"
 shortDesc = u""
 longDesc = u"""
 """

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-name = "Surface_Dissociation_vdW_Bidentate/groups"
+name = "Surface_Dissociation_vdWBidentate/groups"
 shortDesc = u""
 longDesc = u"""
 Surface bond fission of one species into two distinct adsorbates. Atom *1 is bonded to the surface (*3). The image below shows a single bond, but single, double, and triple are possible. What matters is that the bond between *1 and *2 must be single.
@@ -19,7 +19,7 @@ so k should be in (m2/mol/s)
 
 template(reactants=["Combined"], products=["Adsorbate1", "Adsorbate2"], ownReverse=False)
 
-reverse = "Surface_Association_vdW_Bidentate"
+reverse = "Surface_Association_vdWBidentate"
 
 reactantNum=1
 productNum=2
