@@ -45,7 +45,7 @@ entry(
 multiplicity [1]
 1 *1 R!H u0 px c0 {2,S} {4,S}
 2 *2 R!H u0 px c0 {1,S} {3,D}
-3 *3 R   u0 px c0 {2,D}
+3 *3 R!H u0 px c0 {2,D}
 4 *4 R   u0 px c0 {1,S}
 5 *5 Xv  u0 p0 c0
 """,
