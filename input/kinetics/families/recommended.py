@@ -133,6 +133,7 @@ surface = {
     'Surface_Dissociation_vdWBidentate',
     'Surface_Dissociation_vdWBidentate_Beta',
     'Surface_Abstraction_vdWBidentate_Beta',
+    'Surface_Dissociation_vdW_to_vdWBidentate',
     #'Surface_Carbonate_Deposition',
     #'Surface_Carbonate_F_CO_Decomposition',
     #'Surface_Carbonate_2F_Decomposition',
