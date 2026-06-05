@@ -4667,7 +4667,7 @@ entry(
     group=
 """
 1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {3,vdW}
+2 X u0 p0 c0 {4,vdW}
 3 R!H u0 px c0 {1,S} {5,[S,D]}
 4 R!H u0 px c0 {2,vdW} {5,D}
 5 R!H u0 px cx {3,[S,D]} {4,D}
@@ -4705,7 +4705,7 @@ entry(
     group=
 """
 1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {3,vdW}
+2 X u0 p0 c0 {4,vdW}
 3 O u0 p2 c0 {1,S} {5,S}
 4 O u0 p2 c0 {2,vdW} {5,D}
 5 C u0 p0 c0 {3,S} {4,D}
@@ -4743,7 +4743,7 @@ entry(
     group=
 """
 1 * X u0 p0 c0 {3,S}
-2 X u0 p0 c0 {3,vdW}
+2 X u0 p0 c0 {4,vdW}
 3 O u0 p2 c0 {1,S} {5,S}
 4 O u0 p2 c0 {2,vdW} {5,D}
 5 N u0 px cx {3,S} {4,D}
