@@ -4,9 +4,10 @@
 name = "Surface_Dissociation_vdWBidentate_Beta/groups"
 shortDesc = u""
 longDesc = u"""
-Surface bond fission of one species into two distinct adsorbates. Atom *1 is bonded to the surface (*3). The image below shows a single bond, but single, double, and triple are possible. What matters is that the bond between *1 and *2 must be single.
-    # NOTE: we should probably include vdW, too!
-
+Surface bond fission of a vdW bidentate adsorbate via beta-scission into a physisorbed species and an adsorbate with a single bond.
+Example: [X]~OC(H)O[X] -> OCO.[X] + H[X]
+The *1-*2 bond order (O-C) increases as *2 (C) releases *4 (R), 
+and the *3 (O) vdW bond 'breaks', releasing the physisorbed species.
     *4
      |
  *1-*2=*3           *1=*2=*3  *4
@@ -15,8 +16,8 @@ Surface bond fission of one species into two distinct adsorbates. Atom *1 is bon
 
 
 The rate, which should be in mol/m2/s,
-will be given by k * (mol/m2) * (mol/m2)
-so k should be in (m2/mol/s)
+will be given by k * (mol/m2)
+so k should be in (1/s)
 """
 
 template(reactants=["Combined"], products=["Adsorbate1", "Adsorbate2"], ownReverse=False)
