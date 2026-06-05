@@ -4,7 +4,9 @@
 name = "Surface_Monodentate_to_vdWBidentate"
 shortDesc = u""
 longDesc = u"""
-If a monodentate adsorbate has an internal double or triple bond, then it can fall over onto a vacant site, creating a bidentate.
+If a monodentate adsorbate bound through oxygen with a single bond has
+double bond to another oxygen in the beta position, the adsorbate can fall
+over into a resonant vdW bidentate configuration.
 
  *1-*2=*3                 *1-*2=*3  
   |              ---->     |     :     
