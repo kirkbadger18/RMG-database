@@ -20,10 +20,6 @@ template(reactants=["Monodentate", "VacantSite"], products=["Bidentate"], ownRev
 reverse = "Surface_vdWBidentate_to_Monodentate"
 
 recipe(actions=[
-    # ['FORM_BOND', '*3', 1, '*5'],
-    # ['CHANGE_BOND', '*2', -1, '*3'],
-    # ['CHANGE_BOND', '*1', 1, '*2'],
-    # ['CHANGE_BOND', '*1', -1, '*4'],
 ['FORM_BOND', '*3', 1, '*5'],
 ['CHANGE_BOND', '*3', -1, '*5'],
 ]) 
