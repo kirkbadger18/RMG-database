@@ -4,7 +4,8 @@
 name = "Surface_Dissociation_vdW_to_vdWBidentate/groups"
 shortDesc = u""
 longDesc = u"""
-Dissociation of a physisorbed species (e.g., formic acid HCOOH) into a vdW bidentate (e.g., formate XOCHXO) 
+Dissociation of a physisorbed species (e.g., formic acid HCOOH) into a vdW bidentate (e.g., formate XOCHXO)
+Example: HOC(H)O.[X] + [X] + [X] -> [X]~OC(H)O[X] + [X]H
 and an adsorbate with a single bond to the surface (e.g., XH). The formic acid is initially physisorbed via a vdW 
 interaction through the carbonyl oxygen (*3). Upon dissociation, the R!H-R bond (*1-*4) breaks, 
 the R!H (*1) forms a single bond to the surface site (*5), the carbonyl oxygen (*3) 
