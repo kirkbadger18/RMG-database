@@ -6,8 +6,8 @@ shortDesc = u""
 longDesc = u"""
 If a monodentate adsorbate has an internal double or triple bond, then it can fall over onto a vacant site, creating a bidentate.
 
- *1-*2=*3                 *1=*2-*3  
-  |              ---->     :     |     
+ *1-*2=*3                 *1-*2=*3  
+  |              ---->     |     :     
 ~*4~ + ~*5~~             ~*4~~~~*5~~ 
 
 The rate, which should be in mol/m2/s,
@@ -20,10 +20,12 @@ template(reactants=["Monodentate", "VacantSite"], products=["Bidentate"], ownRev
 reverse = "Surface_vdWBidentate_to_Monodentate"
 
 recipe(actions=[
-    ['FORM_BOND', '*3', 1, '*5'],
-    ['CHANGE_BOND', '*2', -1, '*3'],
-    ['CHANGE_BOND', '*1', 1, '*2'],
-    ['CHANGE_BOND', '*1', -1, '*4'],
+    # ['FORM_BOND', '*3', 1, '*5'],
+    # ['CHANGE_BOND', '*2', -1, '*3'],
+    # ['CHANGE_BOND', '*1', 1, '*2'],
+    # ['CHANGE_BOND', '*1', -1, '*4'],
+['FORM_BOND', '*3', 1, '*5'],
+['CHANGE_BOND', '*3', -1, '*5'],
 ]) 
 
 entry(
