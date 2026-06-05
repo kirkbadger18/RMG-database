@@ -4,7 +4,12 @@
 name = "Surface_Abstraction_vdWBidentate_Beta/groups"
 shortDesc = u""
 longDesc = u"""
-Surface abstraction of one atom to another adsorbate. The bond fission occurs not at the binding atom, but in the beta position of the adsorbate, that is the bond between Atom *2 and *3 is broken. Atom *1 is bonded to the surface (*5). The bond order between *1/*3 and the surface decreases. An example for this reaction is: COH* + CH2* = CO* + CH3*. The bond between *2 and *3 must be single.
+Surface abstraction of the beta R!H-R atom of a vdW bidentate by a neighboring surface adsorbate. 
+Example:  [X]~OC(H)O[X] + O=[X]-> OCO.[X] + O[X] + [X]
+The bond fission occurs at the beta position: the R!H-H bond (*2-*4) breaks, and *4 (R) 
+is transferred to the abstracting adsorbate *7, which weakens its own surface bond (*7-*8) upon 
+gaining R. Simultaneously, the *1-*2 bond (O-R) strengthens and *3 (O) detaches from surface 
+site *6, releasing CO2. A vacant site (*6) is produced as a product.
 
     *4
      |
