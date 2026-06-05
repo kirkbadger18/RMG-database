@@ -4,7 +4,12 @@
 name = "Surface_Dissociation_vdW_to_vdWBidentate/groups"
 shortDesc = u""
 longDesc = u"""
-Surface bond fission of one vdW species into two distinct adsorbates. Atom *3 is vdW, but we leave that out of the graph.
+Dissociation of a physisorbed species (e.g., formic acid HCOOH) into a vdW bidentate (e.g., formate XOCHXO) 
+and an adsorbate with a single bond to the surface (e.g., XH). The formic acid is initially physisorbed via a vdW 
+interaction through the carbonyl oxygen (*3). Upon dissociation, the R!H-R bond (*1-*4) breaks, 
+the R!H (*1) forms a single bond to the surface site (*5), the carbonyl oxygen (*3) 
+retains a vdW interaction with a neighboring vacant site (*6), and the R (*4) adsorbs 
+onto a second vacant site (*7), yielding bidentate formate.
 
  *4-*1--*2=*3                                *1-*2=*3      *4
      :                             ---->      |     :       |
@@ -12,8 +17,8 @@ Surface bond fission of one vdW species into two distinct adsorbates. Atom *3 is
 
 
 The rate, which should be in mol/m2/s,
-will be given by k * (mol/m2) * (mol/m2)
-so k should be in (m2/mol/s)
+will be given by k * (mol/m2) * (mol/m2)* (mol/m2)
+so k should be in (m4/mol2/s)
 """
 
 template(reactants=["Combined", "VacantSite1", "VacantSite2"], products=["Adsorbate1", "Adsorbate2"], ownReverse=False)
