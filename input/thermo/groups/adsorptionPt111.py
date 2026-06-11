@@ -1,22 +1,11 @@
 #!/usr/bin/env python
 # encoding: utf-8
-
-name = "Surface Adsorption Corrections Pt(111)"
-shortDesc = u"Surface adsorption corrections Pt(111)"
-longDesc = u"""
-Changes in thermophysical properties due to adsorption on a surface, here Pt(111). Adsorption corrections are based on DFT calculations performed by Katrin Blondal and 
-Bjarne Kreitz (Brown University). The computational methods and details are explained in Kreitz, Blöndal, Goldsmith et al. ACS Catal, 2022, 12,
-11137-11151 (https://doi.org/10.1021/acscatal.2c03378) and Kreitz, Goldsmith et al., Angew. Chem. Int. Ed., 2023, 62, e202306514 (https://onlinelibrary.wiley.com/doi/10.1002/anie.202306514). 
-The calculation of the adsorption corrections is explained in detail in the SI. 
-If you use these adsorption corrections database in your work, please cite the publications mentioned above. 
-
--Update: Kirk Badger at Brown University added many nitrogen containing adsorbates to the Pt(111) thermolibrary and integrated
-this data with the data from Kreitz to retrain every level of the adsorption correction tree. There were a few bugs that were resolved
-from the prior scripts. The prior scripts were misidentifying linear species in some cases, and were using the same function to assign
-thermo for the gas species as for the surface species, this meant that enthalpy was accidentally set equal to internal energy, and the 
-constant pressure heat capacity was set equal to the cosntant volume heat capacity. This is fixed as of 2026.
+name = " "
+shortDesc = u"""
 """
-
+longDesc = u"""
+ 
+"""
 entry(
     index = 1,
     label = "RX",
@@ -28,9 +17,6 @@ entry(
     thermo=None,
     shortDesc=u"""Anything adsorbed anyhow.""",
     longDesc=u"""
- R
- |
-***********
 """,
     metal = "Pt",
     facet = "111",
@@ -58,20 +44,20 @@ shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC'
 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XO', 'XOXCNH',
 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH',
 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XNHXNH', 'CH3XNXNOH', 'XNHXN',
-'XNXNCH3', 'XOXNH', 'XOXNO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R---R
- |   |
-*** ***
+'XNXNCH3', 'XOXNH', 'XOXNO', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC',
+'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3',
+'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3',
+'XCXCCH3', 'XCXC', 'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH',
+'XCHXCHCH3', 'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH', 'XCH2XNH', 'XCH2XN',
+'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN',
+'XNXCOH', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH',
+'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XO',
+'XOXCNH', 'XCHXO', 'XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
+'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH',
+'XNHXNH', 'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH', 'CH3XNXNOH', 'XNHXN',
+'XNXNCH3', 'XOXNH', 'XOXNO', 'XOXNH', 'XOXNO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -95,20 +81,10 @@ entry(
     ),
 shortDesc=u"""Averaged from: ['XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC', 'XCH2XCCH2',
 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3', 'XCHXCCH3',
-'XCHXC', 'XCHXCO', 'XCHXCH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C-C
- | |
-*** ***
+'XCHXC', 'XCHXCO', 'XCHXCH', 'XCXCCH2', 'XCXCH2', 'XCXCHCH3', 'XCXCCH3', 'XCXC',
+'XCH2XCCH2', 'XCH2XCH2', 'CH3XCHXCH2', 'XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3',
+'XCHXCCH3', 'XCHXC', 'XCHXCO', 'XCHXCH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -132,19 +108,7 @@ entry(
         S298=(-204.353, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C---C=R
- |||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -169,19 +133,7 @@ entry(
         S298=(-201.882, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCH2', 'XCXCHCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C---CR2
- |||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -205,19 +157,7 @@ entry(
         S298=(-152.622, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXCCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C---C-R
- ||| ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -240,19 +180,7 @@ entry(
         S298=(-172.682, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCXC']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C==C
- || ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -278,19 +206,7 @@ entry(
         S298=(-191.92, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XCCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---C=R
-  |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -317,19 +233,7 @@ entry(
         S298=(-192.345, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XCH2', 'CH3XCHXCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---CR2
-  |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -355,19 +259,7 @@ entry(
         S298=(-214.968, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XCH', 'XCH2XCOH', 'XCHXCHCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---C-R
-  |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -392,19 +284,7 @@ entry(
         S298=(-194.29, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXCCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=C-R
-   | |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -428,19 +308,7 @@ entry(
         S298=(-193.307, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXC']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=C
-   | ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -465,19 +333,7 @@ entry(
         S298=(-211.081, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXCO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---C=R
-   ||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -502,19 +358,7 @@ entry(
         S298=(-184.879, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXCH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---C-R
-   ||  ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -537,20 +381,9 @@ entry(
         S298=(-186.3, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
-'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C-N
- | |
-*** ***
+'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -576,19 +409,7 @@ entry(
         S298=(-197.829, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---N-R
-  |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -613,19 +434,7 @@ entry(
         S298=(-193.314, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XN']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---N
-  |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -649,19 +458,7 @@ entry(
         S298=(-171.411, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=N
-   |  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -686,19 +483,7 @@ entry(
         S298=(-183.708, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C---N-R
-   |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -722,19 +507,7 @@ entry(
         S298=(-188.758, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C---N
-   |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -759,19 +532,7 @@ entry(
         S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---N-R
-   ||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -795,19 +556,7 @@ entry(
         S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---N
-   ||  ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -829,20 +578,8 @@ entry(
         H298=(-77.447, 'kJ/mol'),
         S298=(-170.773, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCH2XO', 'XOXCNH', 'XCHXO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C-O
- | |
-*** ***
+shortDesc=u"""Averaged from: ['XCH2XO', 'XOXCNH', 'XCHXO', 'XCH2XO', 'XOXCNH', 'XCHXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -867,19 +604,7 @@ entry(
         S298=(-170.273, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---O
-  |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -903,19 +628,7 @@ entry(
         S298=(-174.316, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C---O
-   |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -939,19 +652,7 @@ entry(
         S298=(-167.729, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---O
-   ||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -974,20 +675,9 @@ entry(
         S298=(-186.3, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH', 'XCH2XN', 'XCHXN', 'NHXCXNH', 'XNHXCO', 'XNXCO',
-'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C-N
- | |
-*** ***
+'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH', 'XCH2XNH', 'XCH2XN', 'XCHXN',
+'NHXCXNH', 'XNHXCO', 'XNXCO', 'XNXCNH', 'XCHXNH', 'OHXCXNH', 'XCHXN', 'XNXCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1013,19 +703,7 @@ entry(
         S298=(-197.829, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---N-R
-  |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1050,19 +728,7 @@ entry(
         S298=(-193.314, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2XN']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C---N
-  |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1086,19 +752,7 @@ entry(
         S298=(-171.411, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=N
-   |  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1123,19 +777,7 @@ entry(
         S298=(-183.708, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NHXCXNH', 'XNHXCO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C---N-R
-   |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1159,19 +801,7 @@ entry(
         S298=(-188.758, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNXCO', 'XNXCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C---N
-   |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1196,19 +826,7 @@ entry(
         S298=(-195.23, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXNH', 'OHXCXNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---N-R
-   ||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1232,19 +850,7 @@ entry(
         S298=(-175.675, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHXN', 'XNXCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C---N
-   ||  ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1262,24 +868,13 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-1.208, 2.257, 4.13, 5.109, 5.838, 5.997, 6.042], 'J/(mol*K)'),
+        Cpdata=([-1.208, 2.256, 4.13, 5.109, 5.838, 5.997, 6.042], 'J/(mol*K)'),
         H298=(-109.477, 'kJ/mol'),
         S298=(-177.885, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXN', 'XNXNCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-N
- | |
-*** ***
+shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH', 'XNHXN', 'XNXNCH3', 'XNHXNH',
+'CH3XNXNOH', 'XNHXN', 'XNXNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1304,19 +899,7 @@ entry(
         S298=(-159.55, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHXNH', 'CH3XNXNOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N---N-R
-   |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1340,19 +923,7 @@ entry(
         S298=(-196.22, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHXN', 'XNXNCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N---N
-   |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1374,20 +945,8 @@ entry(
         H298=(-120.538, 'kJ/mol'),
         S298=(-164.124, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOXNH', 'XOXNO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-O
- | |
-*** ***
+shortDesc=u"""Averaged from: ['XOXNH', 'XOXNO', 'XOXNH', 'XOXNO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1411,19 +970,7 @@ entry(
         S298=(-186.753, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N---O
-   |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1447,19 +994,7 @@ entry(
         S298=(-141.494, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOXNO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R[-]-N[+]-O
-      ||    |
-   ***      ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1484,20 +1019,13 @@ entry(
     ),
 shortDesc=u"""Averaged from: ['XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
 'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
-'XCHCHXCH', 'XCHCHXO', 'XOC(O)XO', 'H2C(XO)XO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-R-R
- |   |
-*** ***
+'XCHCHXCH', 'XCHCHXO', 'XOC(O)XO', 'H2C(XO)XO', 'XCCH2XC', 'XCCH2XCH2',
+'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2', 'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH',
+'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH', 'XCHCHXCH', 'XCCH2XC', 'XCCH2XCH2',
+'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2', 'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH',
+'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH', 'XCHCHXCH', 'XCHCHXO', 'XCHCHXO',
+'XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1522,20 +1050,10 @@ entry(
     ),
 shortDesc=u"""Averaged from: ['XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
 'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
+'XCHCHXCH', 'XCCH2XC', 'XCCH2XCH2', 'XCHCH2XC', 'XCHCHXC', 'XCCHXCH2',
+'XCH2CH2XCH2', 'XCHCHXCH2', 'XCHCXCH', 'XCHCXC', 'XCHCH2XCH2', 'XCHCH2XCH',
 'XCHCHXCH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C-R-C
- |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1559,19 +1077,7 @@ entry(
         S298=(-243.646, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCH2XC']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C-R-C
- ||| |||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1597,19 +1103,7 @@ entry(
         S298=(-200.61, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCH2XCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C-R-CR2
- |||  |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1634,19 +1128,7 @@ entry(
         S298=(-222.487, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCH2XC']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C-R-C-R
- |||  ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1671,19 +1153,7 @@ entry(
         S298=(-202.293, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCHXC']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C-R=C-R
- |||   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1709,19 +1179,7 @@ entry(
         S298=(-217.923, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCHXCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  C=R-CR2
-  ||   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1749,19 +1207,7 @@ entry(
         S298=(-209.34, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2CH2XCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C-R-CR2
-   |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
@@ -1769,42 +1215,6 @@ R2C-R-CR2
 
 entry(
     index = 49,
-    label = "(OROR)X",
-    group=
-"""
-1 * X u0 p0 c0
-2 O  u0 p2 c0 {3,S} {4,S}
-3 O  u0 p2 c0 {2,S} {5,S}
-4 R  u0 p0 c0 {2,S}
-5 R  u0 p0 c0 {3,S}
-""",
-    thermo=ThermoData(
-        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-1.999, -1.084, -0.634, -0.367, -0.023, 0.197, 0.393], 'J/(mol*K)'),
-        H298=(-27.657, 'kJ/mol'),
-        S298=(-110.352, 'J/(mol*K)'),
-    ),
-shortDesc=u"""Averaged from: ['HOOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-O-R
-    :
-***********
-""",
-    metal = "Pt",
-    facet = "111",
-)
-
-entry(
-    index = 50,
     label = "RC-X=R-C-XR2",
     group=
 """
@@ -1824,26 +1234,14 @@ entry(
         S298=(-227.783, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCHXCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=R-CR2
-   |    |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 51,
+    index = 50,
     label = "RC-X=R=C-XR",
     group=
 """
@@ -1862,26 +1260,14 @@ entry(
         S298=(-196.347, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCXCH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=R=C-R
-   |    |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 52,
+    index = 51,
     label = "RC-X=R=C=X",
     group=
 """
@@ -1899,26 +1285,14 @@ entry(
         S298=(-188.069, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCXC']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=R=C
-   |   ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 53,
+    index = 52,
     label = "RC=X-R-C-XR2",
     group=
 """
@@ -1938,26 +1312,14 @@ entry(
         S298=(-196.129, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCH2XCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C-R-CR2
-   ||   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 54,
+    index = 53,
     label = "RC=X-R-C=XR",
     group=
 """
@@ -1976,26 +1338,14 @@ entry(
         S298=(-203.938, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCH2XCH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C-R-C-R
-   ||  ||
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 55,
+    index = 54,
     label = "RC=X-R=C-XR",
     group=
 """
@@ -2014,26 +1364,14 @@ entry(
         S298=(-200.988, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCHXCH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C-R=C-R
-   ||   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 56,
+    index = 55,
     label = "CXROX",
     group=
 """
@@ -2050,27 +1388,15 @@ entry(
         H298=(-408.836, 'kJ/mol'),
         S298=(-211.148, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCHCHXO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C-R-O
- |   |
-*** ***
+shortDesc=u"""Averaged from: ['XCHCHXO', 'XCHCHXO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 57,
+    index = 56,
     label = "RC-X=R-O-X",
     group=
 """
@@ -2088,26 +1414,14 @@ entry(
         S298=(-211.148, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCHXO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=R-O
-   |    |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 58,
+    index = 57,
     label = "OXROX",
     group=
 """
@@ -2123,27 +1437,15 @@ entry(
         H298=(-280.57, 'kJ/mol'),
         S298=(-179.723, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- O-R-O
- |   |
-*** ***
+shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO', 'XOC(O)XO', 'H2C(XO)XO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 59,
+    index = 58,
     label = "O-X-C-O-X",
     group=
 """
@@ -2160,26 +1462,14 @@ entry(
         S298=(-179.723, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOC(O)XO', 'H2C(XO)XO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  O-C-O
-  |   |
-*** ***
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 60,
+    index = 59,
     label = "RXsingleChemisorbed",
     group=
 """
@@ -2188,9 +1478,9 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-6.617, -3.602, -1.749, -0.566, 0.759, 1.44, 2.21], 'J/(mol*K)'),
-        H298=(-270.231, 'kJ/mol'),
-        S298=(-167.731, 'J/(mol*K)'),
+        Cpdata=([-6.437, -3.459, -1.628, -0.459, 0.853, 1.529, 2.296], 'J/(mol*K)'),
+        H298=(-268.979, 'kJ/mol'),
+        S298=(-167.851, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCHCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2',
@@ -2202,27 +1492,46 @@ shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2C
 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2', 'XNHCHO', 'XNHCH3',
 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH',
 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XOH', 'XOCHCH2', 'HC(O)XO',
-'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R
- |
-***********
+'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XCN', 'XCH',
+'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH',
+'XCHCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2',
+'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO', 'CH3CH2XCO',
+'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2',
+'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2',
+'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2',
+'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
+'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCHCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2',
+'XCHCH2', 'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO',
+'XCOOH', 'CH3XCO', 'CH3CH2XCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2',
+'XCHCHCH3', 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH',
+'CH3XCO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3',
+'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH',
+'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO',
+'XCCCH2', 'XCCH2', 'XCNH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCH2',
+'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2',
+'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3',
+'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH',
+'CH3XCOH', 'XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2', 'XNHCHO',
+'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH',
+'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNO', 'XNCNH', 'XNCO',
+'XNCH2', 'XNNH', 'XNNCH3', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2',
+'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO',
+'CH3NXNOH', 'CH3XNNOH', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2',
+'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2',
+'XNOH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XOH', 'XOCHCH2', 'HC(O)XO',
+'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOH', 'XOCHCH2',
+'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH',
+'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2',
+'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 61,
+    index = 60,
     label = "CX",
     group=
 """
@@ -2231,9 +1540,9 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-8.191, -5.034, -3.001, -1.657, -0.103, 0.709, 1.594], 'J/(mol*K)'),
-        H298=(-326.902, 'kJ/mol'),
-        S298=(-169.831, 'J/(mol*K)'),
+        Cpdata=([-8.059, -4.93, -2.911, -1.575, -0.025, 0.787, 1.674], 'J/(mol*K)'),
+        H298=(-324.771, 'kJ/mol'),
+        S298=(-169.93, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3',
 'XCCH2OH', 'XCNO', 'XCNH2', 'XCOH', 'XCHCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2',
@@ -2241,27 +1550,28 @@ shortDesc=u"""Averaged from: ['XCN', 'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2C
 'XCOOH', 'CH3XCO', 'CH3CH2XCO', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2',
 'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
-'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C
- |
-***********
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2',
+'XCOH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH', 'XCNO', 'XCNH2',
+'XCOH', 'XCHCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
+'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO',
+'CH3CH2XCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2',
+'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO', 'CH3CH2XCO',
+'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2',
+'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3',
+'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCCO', 'XCCCH2', 'XCCH2', 'XCNH',
+'XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3',
+'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH',
+'CH3XCOH', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3',
+'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 62,
+    index = 61,
     label = "C#XR",
     group=
 """
@@ -2271,32 +1581,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-9.675, -6.277, -4.07, -2.601, -0.892, 0.029, 1.183], 'J/(mol*K)'),
-        H298=(-515.321, 'kJ/mol'),
-        S298=(-177.049, 'J/(mol*K)'),
+        Cpdata=([-9.096, -5.869, -3.758, -2.343, -0.685, 0.216, 1.352], 'J/(mol*K)'),
+        H298=(-509.334, 'kJ/mol'),
+        S298=(-177.185, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH',
+'XCNO', 'XCNH2', 'XCOH', 'XCCHCH2', 'XCCHO', 'XCCH3', 'XCCH2CH3', 'XCCH2OH',
 'XCNO', 'XCNH2', 'XCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C
-   |||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 63,
+    index = 62,
     label = "C#XCR2",
     group=
 """
@@ -2313,26 +1612,14 @@ entry(
         S298=(-183.565, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCHCH2', 'XCCHO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-  R=C-C
-      |||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 64,
+    index = 63,
     label = "C#XCR3",
     group=
 """
@@ -2350,26 +1637,14 @@ entry(
         S298=(-180.123, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCH3', 'XCCH2CH3', 'XCCH2OH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-C
-     |||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 65,
+    index = 64,
     label = "C#XN",
     group=
 """
@@ -2384,26 +1659,14 @@ entry(
         S298=(-161.835, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCNO', 'XCNH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-C
-   |||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 66,
+    index = 65,
     label = "C#XOR",
     group=
 """
@@ -2419,26 +1682,14 @@ entry(
         S298=(-187.544, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-C
-     |||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 67,
+    index = 66,
     label = "C-XR2",
     group=
 """
@@ -2449,33 +1700,22 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-8.229, -5.137, -3.085, -1.728, -0.209, 0.527, 1.229], 'J/(mol*K)'),
-        H298=(-257.484, 'kJ/mol'),
-        S298=(-165.923, 'J/(mol*K)'),
+        Cpdata=([-7.788, -4.718, -2.682, -1.337, 0.163, 0.885, 1.572], 'J/(mol*K)'),
+        H298=(-257.443, 'kJ/mol'),
+        S298=(-166.062, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3',
 'OXCNH2', 'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO',
-'CH3CH2XCO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C-R
-   |
-***********
+'CH3CH2XCO', 'CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3', 'OXCNH2',
+'NH2XCNH', 'XCHNH', 'OHXCNH', 'NH2XCNH', 'XCHO', 'XCOOH', 'CH3XCO', 'CH3CH2XCO']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 68,
+    index = 67,
     label = "C-XRCR2",
     group=
 """
@@ -2493,26 +1733,14 @@ entry(
         S298=(-182.514, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2XCCH3', 'CH2XCOH', 'XCHCCH2', 'XCHCH2', 'XCHCHCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=CR2
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 69,
+    index = 68,
     label = "C-XRN",
     group=
 """
@@ -2528,26 +1756,14 @@ entry(
         S298=(-153.59, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['OXCNH2', 'NH2XCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-C=R
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 70,
+    index = 69,
     label = "C-XRNR",
     group=
 """
@@ -2564,26 +1780,14 @@ entry(
         S298=(-151.565, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHNH', 'OHXCNH', 'NH2XCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=N-R
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 71,
+    index = 70,
     label = "C-XRO",
     group=
 """
@@ -2599,26 +1803,14 @@ entry(
         S298=(-163.124, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHO', 'XCOOH', 'CH3XCO', 'CH3CH2XCO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C=O
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 72,
+    index = 71,
     label = "C-XR3",
     group=
 """
@@ -2635,27 +1827,16 @@ entry(
         S298=(-177.467, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH',
-'XCH2NH2', 'XCH2OH', 'CH3XCHOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-CR2
-   |
-***********
+'XCH2NH2', 'XCH2OH', 'CH3XCHOH', 'XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3',
+'CH3XCHCH3', 'CH3XCHOH', 'XCH2NH2', 'XCH2OH', 'CH3XCHOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 73,
+    index = 72,
     label = "C-XR2CR3",
     group=
 """
@@ -2675,26 +1856,14 @@ entry(
         S298=(-192.287, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2CH2CH3', 'XCH2CH2OH', 'XCH2CH3', 'CH3XCHCH3', 'CH3XCHOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C-CR3
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 74,
+    index = 73,
     label = "C-XR2N",
     group=
 """
@@ -2711,26 +1880,14 @@ entry(
         S298=(-143.176, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2NH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C-N
-    |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 75,
+    index = 74,
     label = "C-XR2OR",
     group=
 """
@@ -2748,26 +1905,14 @@ entry(
         S298=(-157.564, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2OH', 'CH3XCHOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
-R2C-OR
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 76,
+    index = 75,
     label = "C=X(=R)",
     group=
 """
@@ -2781,27 +1926,16 @@ entry(
         H298=(-342.815, 'kJ/mol'),
         S298=(-170.526, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2', 'XCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C
-   ||
-***********
+shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2', 'XCNH', 'XCCO', 'XCCCH2', 'XCCH2',
+'XCNH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 77,
+    index = 76,
     label = "C=X(=C)",
     group=
 """
@@ -2816,26 +1950,14 @@ entry(
         S298=(-171.763, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCCO', 'XCCCH2', 'XCCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- C=C
-   ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 78,
+    index = 77,
     label = "C=X(=NR)",
     group=
 """
@@ -2851,26 +1973,14 @@ entry(
         S298=(-166.816, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N=C
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 79,
+    index = 78,
     label = "C=XR2",
     group=
 """
@@ -2881,32 +1991,22 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-7.263, -4.167, -2.297, -1.096, 0.291, 1.044, 1.921], 'J/(mol*K)'),
-        H298=(-337.246, 'kJ/mol'),
-        S298=(-164.709, 'J/(mol*K)'),
+        Cpdata=([-6.999, -4.068, -2.302, -1.166, 0.157, 0.879, 1.725], 'J/(mol*K)'),
+        H298=(-334.667, 'kJ/mol'),
+        S298=(-164.206, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCH2', 'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH',
-'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-CR
-   ||
-***********
+'XCHCH2CH3', 'XCHCH3', 'XCHNH2', 'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH',
+'XCHCHCH2', 'XCHCHO', 'CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3', 'XCHNH2',
+'OHXCNH2', 'NH2XCNH2', 'XCHOH', 'CH3XCOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 80,
+    index = 79,
     label = "C=XRCR2",
     group=
 """
@@ -2924,26 +2024,14 @@ entry(
         S298=(-179.047, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHCHCH2', 'XCHCHO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C-C-R
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 81,
+    index = 80,
     label = "C=XRCR3",
     group=
 """
@@ -2962,26 +2050,14 @@ entry(
         S298=(-179.041, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH3XCCH3', 'CH3XCOH', 'XCHCH2CH3', 'XCHCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-C-R
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 82,
+    index = 81,
     label = "C=XRN",
     group=
 """
@@ -2997,26 +2073,14 @@ entry(
         S298=(-144.277, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHNH2', 'OHXCNH2', 'NH2XCNH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-C-R
-   ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 83,
+    index = 82,
     label = "C=XROR",
     group=
 """
@@ -3033,26 +2097,14 @@ entry(
         S298=(-146.569, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XCHOH', 'CH3XCOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-C-R
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 84,
+    index = 83,
     label = "NX",
     group=
 """
@@ -3061,33 +2113,26 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-4.245, -1.035, 0.763, 1.813, 2.873, 3.381, 4.003], 'J/(mol*K)'),
-        H298=(-192.491, 'kJ/mol'),
-        S298=(-168.306, 'J/(mol*K)'),
+        Cpdata=([-3.842, -0.733, 0.996, 2.001, 3.013, 3.5, 4.107], 'J/(mol*K)'),
+        H298=(-190.59, 'kJ/mol'),
+        S298=(-168.016, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNH2',
 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO',
-'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N
- |
-***********
+'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNO', 'XNCNH',
+'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3',
+'XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2', 'OXNNH', 'HXNO',
+'CH3NXNOH', 'CH3XNNOH', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2',
+'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNH', 'XNCN', 'XNCH3', 'XNNH2',
+'XNOH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 85,
+    index = 84,
     label = "N-XR",
     group=
 """
@@ -3097,31 +2142,20 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-5.514, -2.968, -1.574, -0.768, 0.034, 0.402, 0.82], 'J/(mol*K)'),
-        H298=(-162.587, 'kJ/mol'),
-        S298=(-163.05, 'J/(mol*K)'),
+        Cpdata=([-5.452, -2.951, -1.585, -0.791, 0.014, 0.399, 0.862], 'J/(mol*K)'),
+        H298=(-164.777, 'kJ/mol'),
+        S298=(-161.628, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=N
-   |
-***********
+shortDesc=u"""Averaged from: ['XNO', 'XNCNH', 'XNCO', 'XNCH2', 'XNNH', 'XNNCH3', 'XNCNH',
+'XNCO', 'XNCH2', 'XNNH', 'XNNCH3']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 86,
+    index = 85,
     label = "N-XCR",
     group=
 """
@@ -3137,26 +2171,14 @@ entry(
         S298=(-145.417, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCNH', 'XNCO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C=N
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 87,
+    index = 86,
     label = "N-XCR2",
     group=
 """
@@ -3173,26 +2195,14 @@ entry(
         S298=(-180.636, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C=N
-    |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 88,
+    index = 87,
     label = "N-XNR",
     group=
 """
@@ -3208,26 +2218,14 @@ entry(
         S298=(-164.071, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNNH', 'XNNCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N=N
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 89,
+    index = 88,
     label = "N-XR2",
     group=
 """
@@ -3238,32 +2236,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-2.47, 0.767, 2.688, 3.875, 5.176, 5.85, 6.65], 'J/(mol*K)'),
-        H298=(-168.957, 'kJ/mol'),
-        S298=(-171.136, 'J/(mol*K)'),
+        Cpdata=([-2.012, 1.065, 2.884, 4.006, 5.238, 5.88, 6.65], 'J/(mol*K)'),
+        H298=(-167.045, 'kJ/mol'),
+        S298=(-170.982, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNH2', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2', 'XNHOH', 'XNO2',
-'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N-R
-   |
-***********
+'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH', 'XNHCHO', 'XNHCH3', 'XNHNO', 'XNHNH2',
+'XNHOH', 'XNO2', 'OXNNH', 'HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 90,
+    index = 89,
     label = "N-XRCR",
     group=
 """
@@ -3280,26 +2267,14 @@ entry(
         S298=(-216.907, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHCHO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C-N-R
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 91,
+    index = 90,
     label = "N-XRCR3",
     group=
 """
@@ -3318,26 +2293,14 @@ entry(
         S298=(-167.995, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-N-R
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 92,
+    index = 91,
     label = "N-XRNR",
     group=
 """
@@ -3354,26 +2317,14 @@ entry(
         S298=(-189.56, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHNO']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=N-N-R
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 93,
+    index = 92,
     label = "N-XRNR2",
     group=
 """
@@ -3391,26 +2342,14 @@ entry(
         S298=(-188.5, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHNH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2N-N-R
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 94,
+    index = 93,
     label = "N-XROR",
     group=
 """
@@ -3427,26 +2366,14 @@ entry(
         S298=(-189.451, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNHOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-N-R
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 95,
+    index = 94,
     label = "N[+]-XR[-]R",
     group=
 """
@@ -3462,26 +2389,14 @@ entry(
         S298=(-163.298, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNO2', 'OXNNH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=N[+]-R[-]
-    |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 96,
+    index = 95,
     label = "N[+]=XR[-]R",
     group=
 """
@@ -3497,26 +2412,14 @@ entry(
         S298=(-143.039, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['HXNO', 'CH3NXNOH', 'CH3XNNOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R[-]-N[+]-R
-      ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 97,
+    index = 96,
     label = "N=XR",
     group=
 """
@@ -3526,31 +2429,20 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-6.626, -2.68, -0.666, 0.371, 1.212, 1.524, 1.998], 'J/(mol*K)'),
-        H298=(-280.15, 'kJ/mol'),
-        S298=(-168.387, 'J/(mol*K)'),
+        Cpdata=([-5.16, -1.482, 0.319, 1.196, 1.832, 2.031, 2.398], 'J/(mol*K)'),
+        H298=(-272.432, 'kJ/mol'),
+        S298=(-168.194, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N
-   ||
-***********
+shortDesc=u"""Averaged from: ['XNH', 'XNCN', 'XNCH3', 'XNNH2', 'XNOH', 'XNCN', 'XNCH3',
+'XNNH2', 'XNOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 98,
+    index = 97,
     label = "N=XC#R",
     group=
 """
@@ -3566,26 +2458,14 @@ entry(
         S298=(-142.031, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCN']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R≡C-N
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 99,
+    index = 98,
     label = "N=XC-R",
     group=
 """
@@ -3601,26 +2481,14 @@ entry(
         S298=(-176.565, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNCH3']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C-N
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 100,
+    index = 99,
     label = "N=XN",
     group=
 """
@@ -3635,26 +2503,14 @@ entry(
         S298=(-174.51, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNNH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-N
-   ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 101,
+    index = 100,
     label = "N=XOR",
     group=
 """
@@ -3670,26 +2526,14 @@ entry(
         S298=(-178.708, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XNOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-N
-     ||
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 102,
+    index = 101,
     label = "OX",
     group=
 """
@@ -3698,32 +2542,22 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.845, -2.082, -1.071, -0.436, 0.285, 0.678, 1.177], 'J/(mol*K)'),
-        H298=(-151.719, 'kJ/mol'),
-        S298=(-154.89, 'J/(mol*K)'),
+        Cpdata=([-3.311, -1.586, -0.606, 0.006, 0.702, 1.083, 1.573], 'J/(mol*K)'),
+        H298=(-150.355, 'kJ/mol'),
+        S298=(-156.463, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
-'XOCH2OH', 'XONH2', 'XOOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- O
- |
-***********
+'XOCH2OH', 'XONH2', 'XOOH', 'XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
+'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O',
+'XOCH3', 'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 103,
+    index = 102,
     label = "O-XR",
     group=
 """
@@ -3733,32 +2567,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.845, -2.082, -1.071, -0.436, 0.285, 0.678, 1.177], 'J/(mol*K)'),
-        H298=(-151.719, 'kJ/mol'),
-        S298=(-154.89, 'J/(mol*K)'),
+        Cpdata=([-3.029, -1.323, -0.36, 0.241, 0.923, 1.297, 1.782], 'J/(mol*K)'),
+        H298=(-149.633, 'kJ/mol'),
+        S298=(-157.296, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3', 'XOCH2CH3',
-'XOCH2OH', 'XONH2', 'XOOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O
-   |
-***********
+'XOCH2OH', 'XONH2', 'XOOH', 'XOCHCH2', 'HC(O)XO', 'XOC(OH)O', 'XOCH3',
+'XOCH2CH3', 'XOCH2OH', 'XONH2', 'XOOH']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 104,
+    index = 103,
     label = "O-XCR2",
     group=
 """
@@ -3775,26 +2598,14 @@ entry(
         S298=(-194.234, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOCHCH2', 'HC(O)XO', 'XOC(OH)O']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=C-O
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 105,
+    index = 104,
     label = "O-XCR3",
     group=
 """
@@ -3812,26 +2623,14 @@ entry(
         S298=(-147.3, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOCH3', 'XOCH2CH3', 'XOCH2OH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-O
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 106,
+    index = 105,
     label = "O-XN",
     group=
 """
@@ -3847,26 +2646,14 @@ entry(
         S298=(-134.71, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XONH2']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-O
-   |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 107,
+    index = 106,
     label = "O-XOR",
     group=
 """
@@ -3882,26 +2669,14 @@ entry(
         S298=(-120.712, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['XOOH']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-O
-     |
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 108,
+    index = 107,
     label = "RXvdW",
     group=
 """
@@ -3910,35 +2685,33 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-2.697, -1.427, -0.713, -0.282, 0.19, 0.43, 0.673], 'J/(mol*K)'),
-        H298=(-54.007, 'kJ/mol'),
-        S298=(-128.976, 'J/(mol*K)'),
+        Cpdata=([-2.739, -1.476, -0.766, -0.337, 0.132, 0.372, 0.613], 'J/(mol*K)'),
+        H298=(-55.017, 'kJ/mol'),
+        S298=(-130.866, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X',
 'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X',
 'CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X',
 'CH3OCH2OHX', 'H2C(OH)OHX', 'OCNHX', 'NHCNHX', 'NH3X', 'NH2NH2X', 'NH2NCH3CH3X',
-'H2NOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'H2OX', 'HOOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R
- :
-***********
+'H2NOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'H2OX', 'HOOHX', 'CHCHX', 'CHCCH3X',
+'NCOHX', 'CHCHX', 'CHCCH3X', 'NCOHX', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X',
+'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X',
+'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX',
+'CH3CHOX', 'HCOOHX', 'OCHNH2X', 'CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX',
+'CH3NH2X', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3CH3X',
+'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX',
+'H2C(OH)OHX', 'OCNHX', 'NHCNHX', 'NH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX',
+'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X',
+'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'H2OX', 'HOOHX',
+'HOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 109,
+    index = 108,
     label = "(CR2)X",
     group=
 """
@@ -3953,27 +2726,15 @@ entry(
         H298=(-47.085, 'kJ/mol'),
         S298=(-120.514, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C
-  :
-***********
+shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X', 'NCOHX', 'CHCHX', 'CHCCH3X', 'NCOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 110,
+    index = 109,
     label = "(CRCR)X",
     group=
 """
@@ -3990,26 +2751,14 @@ entry(
         S298=(-119.645, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CHCHX', 'CHCCH3X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C≡C-R
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 111,
+    index = 110,
     label = "(CRN)X",
     group=
 """
@@ -4025,26 +2774,14 @@ entry(
         S298=(-122.254, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NCOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-C≡N
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 112,
+    index = 111,
     label = "(CR3)X",
     group=
 """
@@ -4061,27 +2798,16 @@ entry(
         S298=(-131.72, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X', 'CH2NHX', 'CH2COX', 'CH2OX',
-'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C=R
-   :
-***********
+'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X', 'CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X',
+'CH2NHX', 'CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 113,
+    index = 112,
     label = "(CR2CR)X",
     group=
 """
@@ -4099,26 +2825,14 @@ entry(
         S298=(-143.863, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2CH2X', 'CH3CHCH2X', 'CH2CCH2X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C=C-R
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 114,
+    index = 113,
     label = "(CR2N)X",
     group=
 """
@@ -4135,26 +2849,14 @@ entry(
         S298=(-135.288, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2NHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C=N
-   :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 115,
+    index = 114,
     label = "(CR2O)X",
     group=
 """
@@ -4171,26 +2873,14 @@ entry(
         S298=(-125.054, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH2COX', 'CH2OX', 'OC(OH)OHX', 'CH3CHOX', 'HCOOHX', 'OCHNH2X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2C=O
-   :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 116,
+    index = 115,
     label = "(CR4)X",
     group=
 """
@@ -4203,32 +2893,21 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-0.611, 0.464, 1.02, 1.329, 1.626, 1.755, 1.861], 'J/(mol*K)'),
-        H298=(-50.72, 'kJ/mol'),
-        S298=(-127.608, 'J/(mol*K)'),
+        Cpdata=([-0.601, 0.513, 1.09, 1.41, 1.719, 1.853, 1.964], 'J/(mol*K)'),
+        H298=(-51.612, 'kJ/mol'),
+        S298=(-132.892, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH4X', 'CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX', 'CH3NH2X',
-'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- CR4
-  :
-***********
+'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX', 'CH3CH3X', 'CH3CH2CH3X',
+'CH3CH2OHX', 'CH3NH2X', 'CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 117,
+    index = 116,
     label = "(CR3CR3)X",
     group=
 """
@@ -4249,26 +2928,14 @@ entry(
         S298=(-137.338, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH3CH3X', 'CH3CH2CH3X', 'CH3CH2OHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-CR3
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 118,
+    index = 117,
     label = "(CR3N)X",
     group=
 """
@@ -4286,26 +2953,14 @@ entry(
         S298=(-141.215, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH3NH2X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-N
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 119,
+    index = 118,
     label = "(CR3OR)X",
     group=
 """
@@ -4324,26 +2979,14 @@ entry(
         S298=(-139.363, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['CH3OHX', 'CH3OCH3X', 'CH3OCH2OHX', 'H2C(OH)OHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3C-O-R
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 120,
+    index = 119,
     label = "(N=C)X",
     group=
 """
@@ -4360,26 +3003,14 @@ entry(
         S298=(-122.197, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['OCNHX', 'NHCNHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N=C=R
-     :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 121,
+    index = 120,
     label = "(NR3)X",
     group=
 """
@@ -4391,31 +3022,20 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-5.265, -2.782, -1.287, -0.345, 0.702, 1.225, 1.746], 'J/(mol*K)'),
-        H298=(-82.344, 'kJ/mol'),
-        S298=(-139.465, 'J/(mol*K)'),
+        Cpdata=([-5.59, -3.27, -1.885, -1.016, -0.058, 0.418, 0.889], 'J/(mol*K)'),
+        H298=(-83.564, 'kJ/mol'),
+        S298=(-141.62, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['NH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R3N
-  :
-***********
+shortDesc=u"""Averaged from: ['NH3X', 'NH2NH2X', 'NH2NCH3CH3X', 'H2NOHX', 'NH2NH2X',
+'NH2NCH3CH3X', 'H2NOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 122,
+    index = 121,
     label = "(NN)X",
     group=
 """
@@ -4432,26 +3052,14 @@ entry(
         S298=(-150.696, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['NH2NH2X', 'NH2NCH3CH3X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2N-N
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 123,
+    index = 122,
     label = "(NO)X",
     group=
 """
@@ -4468,26 +3076,14 @@ entry(
         S298=(-132.089, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['H2NOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R2N-O
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 124,
+    index = 123,
     label = "(OR)X",
     group=
 """
@@ -4501,27 +3097,16 @@ entry(
         H298=(-70.962, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R=O
-  :
-***********
+shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
+'ONOHX', 'ONNH2X', 'ONNCH3CH3X', 'ONOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 125,
+    index = 124,
     label = "(ONR)X",
     group=
 """
@@ -4536,27 +3121,16 @@ entry(
         H298=(-70.962, 'kJ/mol'),
         S298=(-141.385, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-N=O
-    :
-***********
+shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X', 'ONOHX', 'ONNH2X', 'ONNCH3CH3X',
+'ONOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 126,
+    index = 125,
     label = "(ONN)X",
     group=
 """
@@ -4572,26 +3146,14 @@ entry(
         S298=(-139.884, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['ONNH2X', 'ONNCH3CH3X']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- N-N=O
-    :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 127,
+    index = 126,
     label = "(ONOR)X",
     group=
 """
@@ -4608,26 +3170,14 @@ entry(
         S298=(-144.387, 'J/(mol*K)'),
     ),
 shortDesc=u"""Averaged from: ['ONOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
-
- R-O-N=O
-     :
-***********
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",
 )
 
 entry(
-    index = 128,
+    index = 127,
     label = "(OR2)X",
     group=
 """
@@ -4638,24 +3188,36 @@ entry(
 """,
     thermo=ThermoData(
         Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
-        Cpdata=([-3.434, -2.005, -1.266, -0.832, -0.334, -0.054, 0.209], 'J/(mol*K)'),
-        H298=(-20.353, 'kJ/mol'),
-        S298=(-101.295, 'J/(mol*K)'),
+        Cpdata=([-2.956, -1.698, -1.056, -0.677, -0.23, 0.029, 0.27], 'J/(mol*K)'),
+        H298=(-22.787, 'kJ/mol'),
+        S298=(-104.314, 'J/(mol*K)'),
     ),
-shortDesc=u"""Averaged from: ['H2OX', 'HOOHX']""",
-longDesc=u""" Calculated by Kirk Badger at Brown University using statistical mechanics
-methods implemented in Franklin Goldsmith's thermo_kinetics_scripts repository
-in the new_workflow folder:  https://github.com/franklingoldsmith/thermo_kinetic
-s_scripts/tree/main/new_workflow  DFT calculations were performed with Quantum
-Espresso using PAW pseudopotentals and the BEEF-vdW functional for an optimized
-3x3x4 supercell with the bottom 2 layers fixed. The following settings were
-applied: kpoints=5x5x1, ecutwfc=50 Ry (60 Ry single point evaluation after),
-smearing='marzari-vanderbilt', degauss=0.02, mixing_mode='local-TF',
-conv_thr=1e-12, fmax=1e-3.
+shortDesc=u"""Averaged from: ['H2OX', 'HOOHX', 'HOOHX']""",
+longDesc=u"""
+""",
+    metal = "Pt",
+    facet = "111",
+)
 
- R-O-R
-    :
-***********
+entry(
+    index = 128,
+    label = "(OROR)X",
+    group=
+"""
+1 * X u0 p0 c0
+2 O  u0 p2 c0 {3,S} {4,S}
+3 O  u0 p2 c0 {2,S} {5,S}
+4 R  u0 p0 c0 {2,S}
+5 R  u0 p0 c0 {3,S}
+""",
+    thermo=ThermoData(
+        Tdata=([300, 400, 500, 600, 800, 1000, 1500], 'K'),
+        Cpdata=([-1.999, -1.084, -0.634, -0.367, -0.023, 0.197, 0.393], 'J/(mol*K)'),
+        H298=(-27.657, 'kJ/mol'),
+        S298=(-110.352, 'J/(mol*K)'),
+    ),
+shortDesc=u"""Averaged from: ['HOOHX']""",
+longDesc=u"""
 """,
     metal = "Pt",
     facet = "111",

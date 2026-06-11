@@ -104,7 +104,7 @@ liquid_peroxide = {
 
 # Surface chemistry for heterogeneous catalysis.
 surface = {
-    'Surface_Adsorption_Single',
+    #'Surface_Adsorption_Single',
     'Surface_Adsorption_vdW',
     'Surface_Adsorption_Dissociative',
     'Surface_Dissociation',
@@ -113,7 +113,7 @@ surface = {
     'Surface_Dissociation_vdW',
     'Surface_Abstraction_vdW',
     'Surface_Dissociation_Beta',
-    'Surface_Adsorption_Bidentate',
+    #'Surface_Adsorption_Bidentate',
     'Surface_Bidentate_Dissociation',
     ###'Surface_Monodentate_to_Bidentate',
     'Surface_Dissociation_to_Bidentate',
