@@ -1083,23 +1083,28 @@ http://dx.doi.org/10.6028/NBS.NSRDS.37
 
 entry(
     index = 43,
-    label = "NOJ",
-    molecule = 
+    label = "NO",
+    molecule =
 """
 multiplicity 2
 1 N u1 p1 c0 {2,D}
 2 O u0 p2 c0 {1,D}
 """,
-    thermo = ThermoData(
-        Tdata = ([300,400,500,600,800,1000,1500],'K'),
-        Cpdata = ([6.97,7.06,7.2,7.37,7.72,8,8.46],'cal/(mol*K)'),
-        H298 = (21.85,'kcal/mol'),
-        S298 = (49.02,'cal/(mol*K)'),
+    thermo = NASA(
+        polynomials = [
+            NASAPolynomial(coeffs=[4.08518,-0.00364693,8.49608e-06,-6.62406e-09,1.77647e-12,9840.61,2.83578], Tmin=(200,'K'), Tmax=(1000,'K')),
+            NASAPolynomial(coeffs=[3.25487,0.0011987,-4.33029e-07,7.02943e-11,-4.09789e-15,9907,6.40395], Tmin=(1000,'K'), Tmax=(6000,'K')),
+        ],
+        Tmin = (200,'K'),
+        Tmax = (6000,'K'),
     ),
     shortDesc = u"""""",
-    longDesc = 
+    longDesc =
 u"""
-level of theory: CCSD(T)F12A/cc-pVTZ-F12//B3LYP/6-311++g(d,p) + BAC
+ATcT3E
+
+NO <g> ATcT ver. 1.122, DHf298 = 91.121 ? 0.065 kJ/mol - fit JAN17.
+[N]=O
 """,
 )
 
