@@ -379,7 +379,7 @@ entry(
 3 O  u0  p2 c0 {2,D}
 """: {
                'model': 'polynomial',
-               'enthalpy-coefficients': [(0.0, 'eV/molecule'), (0.8, 'eV/molecule'), (0, 'eV/molecule')],
+               'enthalpy-coefficients': [(-0.05, 'eV/molecule'), (0.8575, 'eV/molecule'), (0.0, 'eV/molecule')],
                'entropy-coefficients': [(0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)')],
          }
     },
@@ -774,6 +774,20 @@ entry(
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
+        thermo_coverage_dependence = {
+"""
+1 X  u0 p0 c0 {3,T}
+2 C  u0 p0 c0 {3,S} {4,S} {5,S} {6,S}
+3 C  u0 p0 c0 {1,T} {2,S}
+4 H  u0 p0 c0 {2,S}
+5 H  u0 p0 c0 {2,S}
+6 H  u0 p0 c0 {2,S}
+""": {
+               'model': 'polynomial',
+               'enthalpy-coefficients': [(-0.683, 'eV/molecule'), (4.269, 'eV/molecule'), (0.0, 'eV/molecule')],
+               'entropy-coefficients': [(0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)')],
+         }
+    },
     ),
 longDesc = u"""
 Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
@@ -2829,6 +2843,16 @@ entry(
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
+        thermo_coverage_dependence = {
+"""
+1 X  u0 p0 c0 {2,D}
+2 O  u0 p2 c0 {1,D}
+""": {
+               'model': 'polynomial',
+               'enthalpy-coefficients': [(-0.04, 'eV/molecule'), (1.04225839, 'eV/molecule'), (0.0, 'eV/molecule')],
+               'entropy-coefficients': [(0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)')],
+         }
+    },
     ),
 longDesc = u"""
 Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
@@ -4266,6 +4290,17 @@ entry(
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
+        thermo_coverage_dependence = {
+"""
+1 X  u0 p0 c0 {2,S}
+2 N  u0 p1 c0 {1,S} {3,D}
+3 O  u0 p2 c0 {2,D}
+""": {
+               'model': 'polynomial',
+               'enthalpy-coefficients': [(0.102, 'eV/molecule'), (0.599, 'eV/molecule'), (0, 'eV/molecule')],
+               'entropy-coefficients': [(0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)')],
+         }
+    },
     ),
 longDesc = u"""
 Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
@@ -6716,6 +6751,18 @@ entry(
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
+        thermo_coverage_dependence = {
+"""
+1 X  u0  p0 c0  {2,S}
+2 N  u0  p0 c+1  {1,S} {3,D} {4,S}
+3 O  u0  p2 c0  {2,D}
+4 O  u0  p3 c-1  {2,S}
+""": {
+               'model': 'polynomial',
+               'enthalpy-coefficients': [(0.908, 'eV/molecule'), (-5.83, 'eV/molecule'), (9.26, 'eV/molecule')],
+               'entropy-coefficients': [(0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)')],
+         }
+    },
     ),
 longDesc = u"""
 Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
