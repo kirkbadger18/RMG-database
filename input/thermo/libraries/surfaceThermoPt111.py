@@ -372,6 +372,17 @@ entry(
         ],
         Tmin = (298.0,'K'),
         Tmax = (2000.0,'K'),
+        thermo_coverage_dependence = {
+"""
+1 X  u0  p0 c0 {2,D}
+2 C  u0  p0 c0 {1,D} {3,D}
+3 O  u0  p2 c0 {2,D}
+""": {
+               'model': 'polynomial',
+               'enthalpy-coefficients': [(0.0, 'eV/molecule'), (0.8, 'eV/molecule'), (0, 'eV/molecule')],
+               'entropy-coefficients': [(0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)'), (0.0, 'eV/(molecule*K)')],
+         }
+    },
     ),
 longDesc = u"""
 Calculated by Kirk Badger at Brown University using statistical mechanics methods implemented in
